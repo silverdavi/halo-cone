@@ -1,8 +1,11 @@
-% code_release.tex: the analysis-code archive, read by main.tex and by the PRD cover letter.
-% CODE-DOI: after the GitHub release and Zenodo archive, fill the two lines below
-% (repository URL; Zenodo concept DOI without "https://doi.org/"), then run
-% submissions/prd/oct23_first_submission/build_package.py, which copies both values into
-% the letter's .md/.txt and the portal text files. While both are empty the paper prints
+% code_release.tex: the analysis-code release, read by main.tex and by the PRD cover letter.
+% CODE-DOI: \codeRepo, \codeVersion and \codeCommit name the GitHub release; \codeDOI is the
+% Zenodo concept DOI without "https://doi.org/" (empty until the Zenodo archive exists; the
+% paper and letter then cite the GitHub release alone). After any change run
+% submissions/prd/oct23_first_submission/build_package.py, which writes the same values into
+% the letter's .md/.txt and the portal text files. While \codeRepo is empty the paper prints
 % no code-archive sentence and no code reference.
-\newcommand*{\codeRepo}{}
+\newcommand*{\codeRepo}{https://github.com/silverdavi/halo-cone}
+\newcommand*{\codeVersion}{v1.0.0}
+\newcommand*{\codeCommit}{6077959}
 \newcommand*{\codeDOI}{}
