@@ -1,0 +1,268 @@
+{
+  "note": "forecast; CaWO4 efficiencies from CRESST-III Detector A release; xenon self-consistent fold",
+  "cawo4_neutrinos_per_ty": 350.2238285411255,
+  "cawo4_8b_per_ty": 300.4032389128223,
+  "cresst_iii_detA_exposure_ty": 1.5575633127994526e-05,
+  "results": {
+    "streams|m=5.5|xenonnt_sr0sr1": {
+      "halo_class": "streams",
+      "mass": 5.5,
+      "xenon_exposure_ty": 3.517,
+      "xenon_only_deviance": 3.1059843376281346e-10,
+      "cawo4_untagged_ty_for_deviance_9": 3.7206729276351114,
+      "best_single_bin_keV": [
+        9.483977727620656,
+        12.318426995437784
+      ],
+      "best_single_bin_neutrinos_per_ty": 0.23957599356447326,
+      "best_single_bin_ty_for_deviance_9": 148.83624342096041
+    },
+    "streams|m=5.5|xenon_20ty": {
+      "halo_class": "streams",
+      "mass": 5.5,
+      "xenon_exposure_ty": 20.0,
+      "xenon_only_deviance": 1.7662691712414754e-09,
+      "cawo4_untagged_ty_for_deviance_9": 3.6278842681090055,
+      "best_single_bin_keV": [
+        9.483977727620656,
+        12.318426995437784
+      ],
+      "best_single_bin_neutrinos_per_ty": 0.23957599356447326,
+      "best_single_bin_ty_for_deviance_9": 33.36615181611431
+    },
+    "streams|m=6.0|xenonnt_sr0sr1": {
+      "halo_class": "streams",
+      "mass": 6.0,
+      "xenon_exposure_ty": 3.517,
+      "xenon_only_deviance": 2.996977355554554e-10,
+      "cawo4_untagged_ty_for_deviance_9": 3.0450371967041883,
+      "best_single_bin_keV": [
+        9.483977727620656,
+        12.318426995437784
+      ],
+      "best_single_bin_neutrinos_per_ty": 0.23957599356447326,
+      "best_single_bin_ty_for_deviance_9": 68.61345221352049
+    },
+    "streams|m=6.0|xenon_20ty": {
+      "halo_class": "streams",
+      "mass": 6.0,
+      "xenon_exposure_ty": 20.0,
+      "xenon_only_deviance": 1.7042805547651716e-09,
+      "cawo4_untagged_ty_for_deviance_9": 2.9759266925066448,
+      "best_single_bin_keV": [
+        9.483977727620656,
+        12.318426995437784
+      ],
+      "best_single_bin_neutrinos_per_ty": 0.23957599356447326,
+      "best_single_bin_ty_for_deviance_9": 25.249376461949716
+    },
+    "streams|m=7.0|xenonnt_sr0sr1": {
+      "halo_class": "streams",
+      "mass": 7.0,
+      "xenon_exposure_ty": 3.517,
+      "xenon_only_deviance": 3.005533834604875e-10,
+      "cawo4_untagged_ty_for_deviance_9": 2.8866791497297526,
+      "best_single_bin_keV": [
+        7.301730454003311,
+        9.483977727620656
+      ],
+      "best_single_bin_neutrinos_per_ty": 0.396513000342442,
+      "best_single_bin_ty_for_deviance_9": null
+    },
+    "streams|m=7.0|xenon_20ty": {
+      "halo_class": "streams",
+      "mass": 7.0,
+      "xenon_exposure_ty": 20.0,
+      "xenon_only_deviance": 1.7091463375631932e-09,
+      "cawo4_untagged_ty_for_deviance_9": 2.5735984381625494,
+      "best_single_bin_keV": [
+        7.301730454003311,
+        9.483977727620656
+      ],
+      "best_single_bin_neutrinos_per_ty": 0.396513000342442,
+      "best_single_bin_ty_for_deviance_9": 20.1993498493742
+    },
+    "streams|m=8.0|xenonnt_sr0sr1": {
+      "halo_class": "streams",
+      "mass": 8.0,
+      "xenon_exposure_ty": 3.517,
+      "xenon_only_deviance": 2.9428511820488856e-10,
+      "cawo4_untagged_ty_for_deviance_9": 3.1895908625639735,
+      "best_single_bin_keV": [
+        7.301730454003311,
+        9.483977727620656
+      ],
+      "best_single_bin_neutrinos_per_ty": 0.396513000342442,
+      "best_single_bin_ty_for_deviance_9": 357.0905320525767
+    },
+    "streams|m=8.0|xenon_20ty": {
+      "halo_class": "streams",
+      "mass": 8.0,
+      "xenon_exposure_ty": 20.0,
+      "xenon_only_deviance": 1.6735008143581948e-09,
+      "cawo4_untagged_ty_for_deviance_9": 2.6710203219363824,
+      "best_single_bin_keV": [
+        7.301730454003311,
+        9.483977727620656
+      ],
+      "best_single_bin_neutrinos_per_ty": 0.396513000342442,
+      "best_single_bin_ty_for_deviance_9": 15.511244845841992
+    },
+    "streams|m=10.0|xenonnt_sr0sr1": {
+      "halo_class": "streams",
+      "mass": 10.0,
+      "xenon_exposure_ty": 3.517,
+      "xenon_only_deviance": 2.991478573922094e-10,
+      "cawo4_untagged_ty_for_deviance_9": 5.506147932524811,
+      "best_single_bin_keV": [
+        7.301730454003311,
+        9.483977727620656
+      ],
+      "best_single_bin_neutrinos_per_ty": 0.396513000342442,
+      "best_single_bin_ty_for_deviance_9": 57.044892305548125
+    },
+    "streams|m=10.0|xenon_20ty": {
+      "halo_class": "streams",
+      "mass": 10.0,
+      "xenon_exposure_ty": 20.0,
+      "xenon_only_deviance": 1.7011535819858368e-09,
+      "cawo4_untagged_ty_for_deviance_9": 4.542542987398843,
+      "best_single_bin_keV": [
+        7.301730454003311,
+        9.483977727620656
+      ],
+      "best_single_bin_neutrinos_per_ty": 0.396513000342442,
+      "best_single_bin_ty_for_deviance_9": 12.617125658387108
+    },
+    "isotropic|m=5.5|xenonnt_sr0sr1": {
+      "halo_class": "isotropic",
+      "mass": 5.5,
+      "xenon_exposure_ty": 3.517,
+      "xenon_only_deviance": 1.3291872557986879e-09,
+      "cawo4_untagged_ty_for_deviance_9": 0.2925299839419944,
+      "best_single_bin_keV": [
+        9.483977727620656,
+        12.318426995437784
+      ],
+      "best_single_bin_neutrinos_per_ty": 0.23957599356447326,
+      "best_single_bin_ty_for_deviance_9": 39.811652896699414
+    },
+    "isotropic|m=5.5|xenon_20ty": {
+      "halo_class": "isotropic",
+      "mass": 5.5,
+      "xenon_exposure_ty": 20.0,
+      "xenon_only_deviance": 7.558642341761092e-09,
+      "cawo4_untagged_ty_for_deviance_9": 0.29059535503813244,
+      "best_single_bin_keV": [
+        9.483977727620656,
+        12.318426995437784
+      ],
+      "best_single_bin_neutrinos_per_ty": 0.23957599356447326,
+      "best_single_bin_ty_for_deviance_9": 23.373508974352983
+    },
+    "isotropic|m=6.0|xenonnt_sr0sr1": {
+      "halo_class": "isotropic",
+      "mass": 6.0,
+      "xenon_exposure_ty": 3.517,
+      "xenon_only_deviance": 1.3146905337201609e-09,
+      "cawo4_untagged_ty_for_deviance_9": 0.24330304732081934,
+      "best_single_bin_keV": [
+        9.483977727620656,
+        12.318426995437784
+      ],
+      "best_single_bin_neutrinos_per_ty": 0.23957599356447326,
+      "best_single_bin_ty_for_deviance_9": 29.904786441318745
+    },
+    "isotropic|m=6.0|xenon_20ty": {
+      "halo_class": "isotropic",
+      "mass": 6.0,
+      "xenon_exposure_ty": 20.0,
+      "xenon_only_deviance": 7.476204343020535e-09,
+      "cawo4_untagged_ty_for_deviance_9": 0.2414959284419692,
+      "best_single_bin_keV": [
+        9.483977727620656,
+        12.318426995437784
+      ],
+      "best_single_bin_neutrinos_per_ty": 0.23957599356447326,
+      "best_single_bin_ty_for_deviance_9": 18.90353917423196
+    },
+    "isotropic|m=7.0|xenonnt_sr0sr1": {
+      "halo_class": "isotropic",
+      "mass": 7.0,
+      "xenon_exposure_ty": 3.517,
+      "xenon_only_deviance": 1.316298019732114e-09,
+      "cawo4_untagged_ty_for_deviance_9": 0.17414545248011556,
+      "best_single_bin_keV": [
+        7.301730454003311,
+        9.483977727620656
+      ],
+      "best_single_bin_neutrinos_per_ty": 0.396513000342442,
+      "best_single_bin_ty_for_deviance_9": 49.16010439918043
+    },
+    "isotropic|m=7.0|xenon_20ty": {
+      "halo_class": "isotropic",
+      "mass": 7.0,
+      "xenon_exposure_ty": 20.0,
+      "xenon_only_deviance": 7.485345577094763e-09,
+      "cawo4_untagged_ty_for_deviance_9": 0.1721091516769442,
+      "best_single_bin_keV": [
+        9.483977727620656,
+        12.318426995437784
+      ],
+      "best_single_bin_neutrinos_per_ty": 0.23957599356447326,
+      "best_single_bin_ty_for_deviance_9": 18.882886746917293
+    },
+    "isotropic|m=8.0|xenonnt_sr0sr1": {
+      "halo_class": "isotropic",
+      "mass": 8.0,
+      "xenon_exposure_ty": 3.517,
+      "xenon_only_deviance": 1.3165034218716091e-09,
+      "cawo4_untagged_ty_for_deviance_9": 0.1273095732209276,
+      "best_single_bin_keV": [
+        7.301730454003311,
+        9.483977727620656
+      ],
+      "best_single_bin_neutrinos_per_ty": 0.396513000342442,
+      "best_single_bin_ty_for_deviance_9": 33.333855931639356
+    },
+    "isotropic|m=8.0|xenon_20ty": {
+      "halo_class": "isotropic",
+      "mass": 8.0,
+      "xenon_exposure_ty": 20.0,
+      "xenon_only_deviance": 7.48651363020534e-09,
+      "cawo4_untagged_ty_for_deviance_9": 0.12582771234701468,
+      "best_single_bin_keV": [
+        7.301730454003311,
+        9.483977727620656
+      ],
+      "best_single_bin_neutrinos_per_ty": 0.396513000342442,
+      "best_single_bin_ty_for_deviance_9": 11.829715360593395
+    },
+    "isotropic|m=10.0|xenonnt_sr0sr1": {
+      "halo_class": "isotropic",
+      "mass": 10.0,
+      "xenon_exposure_ty": 3.517,
+      "xenon_only_deviance": 2.8527014739803935e-09,
+      "cawo4_untagged_ty_for_deviance_9": 0.06911600667827233,
+      "best_single_bin_keV": [
+        0.0301,
+        0.039095900814151326
+      ],
+      "best_single_bin_neutrinos_per_ty": 18.106199231679796,
+      "best_single_bin_ty_for_deviance_9": null
+    },
+    "isotropic|m=10.0|xenon_20ty": {
+      "halo_class": "isotropic",
+      "mass": 10.0,
+      "xenon_exposure_ty": 20.0,
+      "xenon_only_deviance": 1.6222356974582847e-08,
+      "cawo4_untagged_ty_for_deviance_9": 0.06707307617005923,
+      "best_single_bin_keV": [
+        0.0301,
+        0.039095900814151326
+      ],
+      "best_single_bin_neutrinos_per_ty": 18.106199231679796,
+      "best_single_bin_ty_for_deviance_9": 0.72985475182209
+    }
+  }
+}

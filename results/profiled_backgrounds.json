@@ -1,0 +1,309 @@
+{
+  "source": "XENONnT light-WIMP data release (XENON:2024hup)",
+  "sigma_source": "data/xenonnt/light_wimp_data_release/data/statistical_model_base.yaml: ac_sr0_rate_multiplier uncertainty 0.0904, ac_sr1_rate_multiplier 0.0576, er_rate_multiplier 1.0, nr_rate_multiplier 0.58; relative_uncertainty true. XENON:2024hup Eq. (1) states Gaussian ancillary constraints and Table I gives the rounded combined expectations; the background text gives the rounded per-run rates and uncertainties.",
+  "yield_source": "data/xenonnt/light_wimp_data_release/data/statistical_model_base.yaml: t_ly and t_qy are shared shape parameters with uncertainty 1, anchors -3,...,3, and fit limits [-3,3]; data/xenonnt/light_wimp_data_release/utils.py:get_yield defines t=0 as the median YBe model and t=+/-1 as the upper/lower model. This analysis profiles the requested one-node range.",
+  "sigmas": {
+    "ac_sr0": 0.0904,
+    "ac_sr1": 0.0576,
+    "er": 1.0,
+    "rg": 0.58
+  },
+  "ac_correlation": "Independent SR0 and SR1 nuisance parameters, as defined in the release YAML. The count-weighted equivalent shared width is 4.8584%, but it is not used.",
+  "model": "truth eps*(8B+nominal backgrounds); hypothesis eps*(isotropic DM cone+profiled backgrounds); Poisson Asimov deviance plus Gaussian normalization constraints; D(eps)=9 solved in log eps",
+  "interpolation": "Radiogenic templates use simplicial piecewise-linear interpolation over t_ly,t_qy in [-1,1]. In each triangle, nonnegative node coefficients are affine expected-count parameters and their sum is the shared radiogenic normalization. The finite-prior fit is the minimum over eight convex subproblems.",
+  "free_definition": "Conic hull of the independent SR0/SR1 AC columns, the shared ER column, and all nine combined-run radiogenic nodes in [-1,1]^2. It drops Gaussian penalties and interpolation constraints, so it contains every finite-prior model and gives an exposure upper bound.",
+  "fixed_validation_max_relative_difference": 3.9669424054644686e-05,
+  "profiled_ratio_range": [
+    1.0359390440494225,
+    1.5118025912264241
+  ],
+  "free_ratio_range": [
+    1.1073423273073373,
+    2.42292837814282
+  ],
+  "runtime_seconds": 57.77817920799134,
+  "rows": [
+    {
+      "mass": 13.0,
+      "exposure_ty_fixed": 1211515.885195057,
+      "exposure_ty_profiled": 1664413.2572851798,
+      "exposure_ty_sigma_x3": 1665497.4441896167,
+      "exposure_ty_free": 1665633.950109184,
+      "ratio_profiled_over_fixed": 1.3738270192117252,
+      "ratio_sigma_x3_over_fixed": 1.374721920316767,
+      "ratio_free_over_fixed": 1.3748345939690365,
+      "theta": {
+        "ac_sr0": 0.00033230310202214675,
+        "ac_sr1": -0.00017991597335398346,
+        "er": 0.03456200038471868,
+        "rg": -0.04245502722244643
+      },
+      "theta_in_sigma": {
+        "ac_sr0": 0.0036759192701564906,
+        "ac_sr1": -0.003123541204062213,
+        "er": 0.03456200038471868,
+        "rg": -0.07319832279732143
+      },
+      "yield": {
+        "t_ly": 0.0,
+        "t_qy": 0.049891643015867335
+      },
+      "active_triangle": [
+        [
+          -1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "deviance_at_root": 9.000000004768017,
+      "kkt_max": 0.0,
+      "active_stationarity": 5.9150768008211406e-08,
+      "gradient_fd_relative_error": 4.211383775516514e-09,
+      "free_deviance_at_root": 9.000000003610246,
+      "free_kkt_max": 0.0,
+      "free_gradient_fd_relative_error": 4.208257889424186e-09
+    },
+    {
+      "mass": 15.0,
+      "exposure_ty_fixed": 2507.6899733166406,
+      "exposure_ty_profiled": 2614.7249229547656,
+      "exposure_ty_sigma_x3": 2686.0437805245815,
+      "exposure_ty_free": 2776.871251217723,
+      "ratio_profiled_over_fixed": 1.0426826883614173,
+      "ratio_sigma_x3_over_fixed": 1.0711227500630998,
+      "ratio_free_over_fixed": 1.1073423273073373,
+      "theta": {
+        "ac_sr0": 0.007098882928524564,
+        "ac_sr1": 0.004523157018760271,
+        "er": 0.032532119790315006,
+        "rg": 0.14302640108211628
+      },
+      "theta_in_sigma": {
+        "ac_sr0": 0.07852746602350182,
+        "ac_sr1": 0.07852703157569915,
+        "er": 0.032532119790315006,
+        "rg": 0.2465972432450281
+      },
+      "yield": {
+        "t_ly": 0.0,
+        "t_qy": -0.3291681599204629
+      },
+      "active_triangle": [
+        [
+          0.0,
+          -1.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "deviance_at_root": 9.000000000301782,
+      "kkt_max": 0.0,
+      "active_stationarity": 1.6393116598395454e-15,
+      "gradient_fd_relative_error": 4.101630554382319e-09,
+      "free_deviance_at_root": 8.999999999872445,
+      "free_kkt_max": 0.0,
+      "free_gradient_fd_relative_error": 4.218098965328031e-09
+    },
+    {
+      "mass": 16.0,
+      "exposure_ty_fixed": 360.4291749756144,
+      "exposure_ty_profiled": 544.897760681736,
+      "exposure_ty_sigma_x3": 600.423862559221,
+      "exposure_ty_free": 612.6191177379809,
+      "ratio_profiled_over_fixed": 1.5118025912264241,
+      "ratio_sigma_x3_over_fixed": 1.6658581054095967,
+      "ratio_free_over_fixed": 1.69969347730918,
+      "theta": {
+        "ac_sr0": 0.006057258042945213,
+        "ac_sr1": 0.014570725908458648,
+        "er": -0.8047839690682688,
+        "rg": 0.0020678787920047625
+      },
+      "theta_in_sigma": {
+        "ac_sr0": 0.06700506684673908,
+        "ac_sr1": 0.252963991466296,
+        "er": -0.8047839690682688,
+        "rg": 0.003565308262077177
+      },
+      "yield": {
+        "t_ly": 1.0,
+        "t_qy": -1.0
+      },
+      "active_triangle": [
+        [
+          0.0,
+          -1.0
+        ],
+        [
+          1.0,
+          -1.0
+        ],
+        [
+          1.0,
+          0.0
+        ]
+      ],
+      "deviance_at_root": 9.000000000000007,
+      "kkt_max": 0.0,
+      "active_stationarity": 8.801951141036199e-16,
+      "gradient_fd_relative_error": 3.793134362771619e-09,
+      "free_deviance_at_root": 9.000000000310491,
+      "free_kkt_max": 0.0,
+      "free_gradient_fd_relative_error": 4.179240882372926e-09
+    },
+    {
+      "mass": 18.0,
+      "exposure_ty_fixed": 42.92574743250151,
+      "exposure_ty_profiled": 51.64307433726693,
+      "exposure_ty_sigma_x3": 59.75927506744496,
+      "exposure_ty_free": 62.70176450105081,
+      "ratio_profiled_over_fixed": 1.2030792106409554,
+      "ratio_sigma_x3_over_fixed": 1.3921545608824468,
+      "ratio_free_over_fixed": 1.4607029172793333,
+      "theta": {
+        "ac_sr0": 0.014864075578970626,
+        "ac_sr1": 0.017112586893096804,
+        "er": -1.0,
+        "rg": -0.03682803277382396
+      },
+      "theta_in_sigma": {
+        "ac_sr0": 0.164425614811622,
+        "ac_sr1": 0.2970935224495973,
+        "er": -1.0,
+        "rg": -0.06349660823073097
+      },
+      "yield": {
+        "t_ly": 1.0,
+        "t_qy": -1.0
+      },
+      "active_triangle": [
+        [
+          0.0,
+          -1.0
+        ],
+        [
+          1.0,
+          -1.0
+        ],
+        [
+          1.0,
+          0.0
+        ]
+      ],
+      "deviance_at_root": 9.0,
+      "kkt_max": 0.0,
+      "active_stationarity": 2.1669988148141362e-15,
+      "gradient_fd_relative_error": 2.0214654844474236e-09,
+      "free_deviance_at_root": 9.000000000000002,
+      "free_kkt_max": 0.0,
+      "free_gradient_fd_relative_error": 4.041793961158483e-09
+    },
+    {
+      "mass": 20.0,
+      "exposure_ty_fixed": 18.018491958725804,
+      "exposure_ty_profiled": 19.352960675142846,
+      "exposure_ty_sigma_x3": 22.409105020134483,
+      "exposure_ty_free": 24.079065484616812,
+      "ratio_profiled_over_fixed": 1.074061065680405,
+      "ratio_sigma_x3_over_fixed": 1.2436726154145459,
+      "ratio_free_over_fixed": 1.3363529833558607,
+      "theta": {
+        "ac_sr0": 0.01981950171781377,
+        "ac_sr1": 0.016854492830589818,
+        "er": -0.5843371124870016,
+        "rg": 0.010054310486673268
+      },
+      "theta_in_sigma": {
+        "ac_sr0": 0.21924227563953286,
+        "ac_sr1": 0.2926127227532955,
+        "er": -0.5843371124870016,
+        "rg": 0.01733501808047115
+      },
+      "yield": {
+        "t_ly": 1.0,
+        "t_qy": -1.0
+      },
+      "active_triangle": [
+        [
+          0.0,
+          -1.0
+        ],
+        [
+          1.0,
+          -1.0
+        ],
+        [
+          1.0,
+          0.0
+        ]
+      ],
+      "deviance_at_root": 8.99999999999998,
+      "kkt_max": 0.0,
+      "active_stationarity": 5.507240579520701e-15,
+      "gradient_fd_relative_error": 1.1671616555610263e-09,
+      "free_deviance_at_root": 8.999999999999753,
+      "free_kkt_max": 0.0,
+      "free_gradient_fd_relative_error": 3.838915416538037e-09
+    },
+    {
+      "mass": 25.0,
+      "exposure_ty_fixed": 7.974157840796145,
+      "exposure_ty_profiled": 8.260741450693565,
+      "exposure_ty_sigma_x3": 9.51032501441993,
+      "exposure_ty_free": 19.320813324255052,
+      "ratio_profiled_over_fixed": 1.0359390440494225,
+      "ratio_sigma_x3_over_fixed": 1.192643186188852,
+      "ratio_free_over_fixed": 2.42292837814282,
+      "theta": {
+        "ac_sr0": 0.023968271989733392,
+        "ac_sr1": 0.017843248375121856,
+        "er": -0.22202935038674643,
+        "rg": 0.05068675729982264
+      },
+      "theta_in_sigma": {
+        "ac_sr0": 0.26513575209882073,
+        "ac_sr1": 0.30977861762364334,
+        "er": -0.22202935038674643,
+        "rg": 0.08739096086176318
+      },
+      "yield": {
+        "t_ly": 1.0,
+        "t_qy": -1.0
+      },
+      "active_triangle": [
+        [
+          0.0,
+          -1.0
+        ],
+        [
+          1.0,
+          -1.0
+        ],
+        [
+          1.0,
+          0.0
+        ]
+      ],
+      "deviance_at_root": 8.99999999999972,
+      "kkt_max": 0.0,
+      "active_stationarity": 9.031512207484302e-15,
+      "gradient_fd_relative_error": 5.63514936646071e-10,
+      "free_deviance_at_root": 8.999999999999984,
+      "free_kkt_max": 0.0,
+      "free_gradient_fd_relative_error": 3.71644226418672e-09
+    }
+  ]
+}

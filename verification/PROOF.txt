@@ -1,0 +1,170 @@
+CERTIFICATE FOR THE ATTACHED 8B TABLE
+===================================
+
+Run: python certify.py
+Requires Python 3 standard library only. No packages or network access.
+The script writes certificate.json and asserts all claimed signs and bounds.
+An optional command-line argument selects the input CSV, but its SHA256 must
+match the supplied table. The certificate is tied to that exact numerical input.
+
+INPUT IDENTIFICATION AND CONVENTIONS
+
+SHA256: b07b3ba052c08cf675c8fcc5c5f674e0946390b721a0ea4da719077bdf5bc892
+829 rows, four columns, energies in MeV. Decimal CSV values are exact rationals.
+These values are the previously supplied Bahcall et al. (1996) table, whose
+original header labels the last two columns +3 and -3 effective standard
+deviations. This attachment is not an independently supplied Winter et al.
+(2006) or +/-1 sigma evaluation.
+Original table/header:
+https://www.sns.ias.edu/~jnb/SNdata/Export/B8spectrum/b8spectrum.txt
+https://www.sns.ias.edu/~jnb/SNdata/b8spectrum.html
+Winter reference, which is a different evaluation:
+https://doi.org/10.1103/PhysRevC.73.025503
+
+Each spectrum is the continuous piecewise-linear interpolant, normalized by
+its exact rational integral, and set to zero after its first zero node following
+its final positive node. Its normalization and support endpoint are:
+  column 2: 0.999986544, U=16.36; final positive node 16.34
+  column 3: 0.999974576, U=16.16; final positive node 16.14
+  column 4: 0.999986630, U=16.56; final positive node 16.54
+The program additionally certifies the literal alternative of truncating at
+the final positive node. That convention has a jump at U and does not have
+phi(U-)=0. These are separate targets, separately renormalized.
+
+THEOREM: UNIMODALITY SUFFICES
+
+Suppose phi is continuous on [0,U], phi(0)=0, phi>0 on (0,U), locally
+absolutely continuous, strictly increasing up to c, and nonincreasing after c.
+Define h(q)=q integral_q^U phi(u)/u^2 du. Then h' has exactly one zero q* in
+(0,c), and h'(q)>0 below q*, h'(q)<0 above q* up to U.
+
+Proof. Differentiation gives
+  h'=integral_q^U phi(u)/u^2 du - phi(q)/q,
+  h''=-phi'(q)/q almost everywhere.
+Thus h' is strictly decreasing on (0,c). Continuity at zero gives h(0+)=0:
+split the integral at epsilon, bounding the first part by
+sup_{[0,epsilon]} phi and the other part by O(q). Since h>0 inside, h' must
+be positive somewhere before c, and hence everywhere sufficiently near zero.
+For q>=c,
+  integral_q^U phi(u)/u^2 du <= phi(q)(1/q-1/U),
+so h'(q)<=-phi(q)/U<0. Continuity of h' and strict decrease before c prove
+existence, uniqueness, and the sign statement.
+
+The supplied table satisfies this hypothesis by exact rational comparisons
+of every consecutive ordinate: slopes are strictly positive before the first
+maximum and nonpositive afterward. The mode positions are 6.44, 6.34, 6.56.
+The proof therefore covers every q, not merely a numerical grid.
+
+Strict log-concavity, positivity inside, and vanishing endpoint values are a
+sufficient stronger hypothesis. For example u^alpha(U-u)^beta with alpha,beta>0
+is strictly log-concave. A product of positive log-concave factors preserves
+log-concavity. An actual beta-decay shape with Coulomb corrections or a mixture
+of final states must be checked; its physical name alone supplies no such proof.
+
+ELEMENTARY INTEGRALS AND RIGOROUS LOG BOUNDS
+
+On a segment [a,b], phi(u)=s*u+c. For q in [a,b],
+  J2(q)=J2(b)+s log(b/q)+c(1/q-1/b),
+  J1(q)=J1(b)+s(b-q)+c log(b/q),
+where Jk(q)=integral_q^U phi(u)/u^k du.
+
+For rational r in [1,2], set z=(r-1)/(r+1). Then
+  L_N=2 sum_{k=0}^{N-1} z^(2k+1)/(2k+1),
+  L_N <= log(r) <= L_N + 2 z^(2N+1)/[(2N+1)(1-z^2)].
+The upper bound follows by replacing all remaining denominators by 2N+1 and
+summing the geometric series. The script stops when this EXACT rational
+remainder is at most 10^-55. Reciprocal and power-of-two reductions handle
+other positive arguments.
+
+All interval operations use fractions.Fraction, with lower endpoints rounded
+DOWN and upper endpoints rounded UP to integer multiples of 10^-45. This keeps
+denominators bounded and encloses every accumulation error. No binary floating
+point, Decimal transcendental functions, or unbounded-error quadrature enters
+the certificate. Log intervals and all arithmetic are rational enclosures.
+
+Each root bracket has a strictly positive lower enclosure for h' at its left
+endpoint and a strictly negative upper enclosure at its right endpoint.
+Unimodality proves that the root enclosed is the unique root.
+
+RESULTS FOR THE CONTINUOUS INTERPOLANT
+
+Column 2: q* in [3.181534858300, 3.181534858301] MeV.
+Column 3: q* in [3.124360162459, 3.124360162460] MeV.
+Column 4: q* in [3.238706106718, 3.238706106719] MeV.
+
+For every column, with its own q* and U, delta=0.1 MeV gives
+  -h'(q) > 6e-9 MeV^-2 on [q*+delta, U-delta].
+The code evaluates a larger interval beginning at the LOWER root bracket plus
+delta. On each segment h''=-s/q, so extrema of h' occur at segment endpoints.
+All endpoints are enclosed; this certifies the whole interval. Sharper certified
+lower bounds, rounded downward, are in certificate.json.
+
+For central column and M=122300 MeV exactly,
+  E*=1000*(2 q*^2/M) in [0.165530074482,0.165530074483] keV.
+This does not include any uncertainty in the chosen nuclear mass.
+
+ENDPOINTS
+
+If phi(U-d)~C*d^beta with beta>0, then
+  -h'(U-d)~(C/U)*d^beta,
+  Psi(U-d)~2*C*d^(beta+2)/[U*(beta+1)*(beta+2)],
+  Psi''/Psi~(beta+1)*(beta+2)/d^2.
+Strict positivity holds for all q<U after q*. The limit Psi'' at U itself is 0.
+For a smooth quadratic endpoint beta=2, the ratio is asymptotic to 12/d^2.
+The supplied piecewise-linear interpolants instead have beta=1 exactly on their
+last segments; their ratio is asymptotic to 6/d^2. The central normalized slope
+coefficient is C=625/124998318 MeV^-2.
+
+For the literal last-positive-node truncation, the central root is instead
+in [3.181534857904,3.181534857905]. Then phi has a nonzero left limit at its
+cutoff; the vanishing-endpoint premise does not apply. The other two literal
+cutoff results are included in certificate.json.
+For that discontinuous-cutoff interpretation the proposed recoil correction
+has one curvature zero, also enclosed in the JSON. It remains convex above
+that zero inside the support, but its value becomes negative before reaching
+the cutoff: Psi_full(U-d)~-2*phi(U-)*U*d/M. Thus it is still not a nonnegative
+physical rate. This differs from the continuous vanishing-endpoint convention.
+
+THE PROPOSED RECOIL CORRECTION IS NOT CONVEX UP TO U
+
+Define Psi_full exactly as in the question, with LOWER LIMIT q (not the
+corrected kinematic lower limit), and put h_full=-Psi_full'/2. Then
+  h_full'=h'+[2 J1-3 phi-q phi']/M.
+On each linear segment,
+  h_full''=-[s*(M+6q)+2c]/(M*q).
+The latter has at most one zero on a segment. Checking endpoints and that
+possible rational critical point bounds h_full' throughout each segment.
+Both one-sided values at knots are checked because phi' can jump there.
+
+For the CONTINUOUS vanishing-endpoint convention the code proves there are
+exactly TWO zeros of Psi_full'' in (0,U), with
+Psi_full'' positive between them and negative on either side. For the central
+column they lie in
+  primary: [3.181491880852,3.181491880853] MeV,
+  endpoint: [16.357812848766,16.357812848767] MeV.
+The primary shift is in [-0.000042977449,-0.000042977447] MeV.
+For all three columns its magnitude is <0.000046 MeV (46 eV).
+For all three columns, on [q*+0.1,U-0.1],
+  -h_full'(q)>5e-9 MeV^-2, at differentiability points and both knot limits.
+
+The failure at the endpoint also has a purely analytic proof. On the final
+segment phi(U-d)=C*d, so
+  Psi_full(U-d)=-(C*U/M)*d^2+O(d^3),
+  Psi_full''(U-)=-2*C*U/M<0.
+For a power-law endpoint beta>0 with the additional derivative asymptotic
+phi'(U-d)~-C*beta*d^(beta-1), the corresponding leading terms are
+-2*C*U*d^(beta+1)/[M*(beta+1)] and -2*C*U*beta*d^(beta-1)/M.
+Thus a quadratic physical endpoint does not repair the stated correction.
+
+The nonnegative kernel has its zero at
+  u_min(q)=q^2/M+q*sqrt(1+q^2/M^2).
+Using this as the lower integration limit gives the kinematically corrected
+target, with endpoint q_max=U/sqrt(1+2U/M). That is a different mathematical
+function. This certificate does not claim a turning-point enclosure for it.
+
+SCOPE
+
+This is a rigorous computer-assisted statement about the precise uploaded
+table and the stated interpolation/normalization conventions. It is not a
+certificate for the unprovided Winter evaluation, unprovided +/-1 sigma
+spectra, nuclear-response uncertainties, or other interpolations.

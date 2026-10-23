@@ -1,0 +1,802 @@
+STRUCTURAL CERTIFICATES FOR XENON: PROVED RESULTS, FALSE CLAIMS, OPEN QUESTIONS
+============================================================================
+
+STATUS -- READ THIS FIRST
+
+PROVED, for the precise input model and the continuous interpolant below:
+
+1. A closed-form, form-factor-independent sufficient condition for the weighted
+   differential separator. All ten requested evaluations pass: Helm skins
+   0.8, 0.9, 1.0 fm, Engel, and the low-q truncation, at 0.51 and 0.30 keV.
+   No model is infeasible and no evaluation-point displacement is needed.
+   The upper mass bounds are 7.79321301728... and 5.89257133827... GeV.
+
+2. A stronger theorem using only second moments of nonnegative spherical
+   densities. Common neutrino/DM form factors with all <r^2> <=69 fm^2 at
+   0.51 keV, or <=44 fm^2 at 0.30 keV, satisfy an explicit separator.
+   These are sufficient caps, not optimal caps. A formal Taylor expansion
+   without a density assumption or a remainder bound is not enough.
+
+3. An explicit perturbation lemma for rho=F_nu^2/F_DM^2. For proton radii
+   specified below and 0<=Delta r_np<=0.3 fm, the local convexity needed for
+   the upper-mass exclusion survives for arbitrary nonnegative spherical
+   proton/neutron densities with those second moments. The natural-xenon
+   upper bounds also survive. For the separately specified proton/neutron
+   Helm model, convexity is certified on [q_*+0.1,U) and analytically through
+   the last segment. This is not a claim that skin thickness alone fixes rho.
+
+4. At the true endpoint there is no endpoint atom in the constructed speed
+   measure. For a cutoff, the proposed atom mass in the question is wrong for
+   F: it is missing the factor u=w_2-v_E. Other shifted atoms can occur in
+   the zero-slope-extension construction, and a valid cutoff solution does
+   not have to have any atom at the cutoff.
+
+5. At E_thr=0.51, E_cut=3.5 keV, every m<=6.0233 GeV is excluded, not just
+   the isolated mass in the earlier certificate. This is a finite, rigorous
+   separating-functional certificate over the entire mass interval.
+   Every possible member must therefore lie in
+       (6.0233, 7.79321301728673) GeV.
+   THIS IS AN EXCLUSION ENCLOSURE, NOT A TWO-SIDED BRACKET FOR A PROVED
+   NONEMPTY MEMBERSHIP SET.
+
+6. At E_thr=0.51, E_cut=5 keV the membership set is empty. Five keV exceeds
+   the largest neutrino recoil endpoint, 4.63904269347... keV. Its lower
+   edge, if defined as infimum of the empty set, is +infinity.
+
+7. Define critical thresholds for continuous equality, separately for each
+   cutoff. For E_cut>=4.63904269347... keV, including 5 keV, we prove
+       4.45 <= E_c(full endpoint) <= 4.58 keV.
+   This excludes equality with the critical threshold of ANY one of the
+   nine isotopes, whose critical thresholds are all below 0.415 keV.
+   For E_cut=3.5 keV we prove the much weaker, but genuine existence/exclusion
+   bracket
+       0.3128 <= E_c(3.5) <= 3.499 keV.
+   The upper bound uses an explicit continuous-spectrum realizing halo at
+   m=7 GeV on [3.499,3.5], not a bin fit.
+
+FALSE AS STATED:
+
+* A positive uniform convexity margin on the entire J for m in [7.7,40].
+  J reaches and then passes U for masses about 25.38--25.88 GeV. The target
+  then has a zero plateau on part of J. A local interval suffices instead.
+* A compulsory F-atom of mass -2v_E eta_nu'(w_2) at a truncated cutoff.
+* Endpoint support conditions as a sufficient criterion for a mixture.
+* Interpreting a 0.35--0.40 keV binned indication as a bracket for the exact
+  full-endpoint problem. The certified full-endpoint exclusion disproves it.
+
+NUMERICALLY INDICATED ONLY: the user's reported binned-cone windows. They
+are not used in any proof here. No new binned membership claim is made.
+
+STILL OPEN: membership/nonemptiness of M(0.51,3.5), its exact lower edge and
+sharp upper edge, a finite iff characterization for that target, and the
+sharp critical thresholds. In particular, the requested finite iff or
+two-sided lower-edge bracket at 3.5 keV is NOT supplied by this certificate.
+The narrow-interval member in item 7 does not solve the longer interval.
+
+Reproduction: python -m pip install -r requirements.txt; python certify.py.
+The sole nonstandard dependency is python-flint==0.9.0. All sign assertions
+use Arb at 192-bit precision, exact segment integrals, and outward enclosures.
+No optimization package, fitted halo, finite-difference derivative, numerical
+quadrature, or floating-point sign decision is required by the certificate.
+
+
+0. CONVENTIONS, DATA, AND REGULARITY
+---------------------------------
+
+E is in keV; x=sqrt(E) in sqrt(keV); nuclear masses M_i and DM mass m in GeV;
+speeds in km/s. Let a_E=232, V=544, S=776 km/s, c_light=299792.458 km/s,
+hbar*c=0.1973269804 GeV fm, U=16.36 MeV. The symbol a used in Section 1 is
+a form-factor slope statistic and is NOT a_E.
+
+The nine mass numbers are 124,126,128,129,130,131,132,134,136. Nuclear masses
+are atomic masses times 0.93149410242 minus 54*0.00051099895 GeV. The atomic
+masses and abundance inputs are embedded as exact decimals in certify.py,
+unchanged from the supplied certificate; abundances are divided by their sum.
+Q_i=A_i-54-(1-4*0.23857)*54. All these inputs are model constants; no nuclear
+mass, weak-charge, spectrum-shape, or abundance uncertainty is implied.
+
+The central column of b8_spectrum.csv is linearly interpolated and normalized.
+Its raw integral is 0.999986544. The byte-level SHA-256 is
+  b07b3ba052c08cf675c8fcc5c5f674e0946390b721a0ea4da719077bdf5bc892.
+The central column has mode 6.44 MeV, last positive node 16.34 MeV, and zero
+endpoint U=16.36 MeV. The columns extending to other endpoints are not used.
+The script verifies the monotonicity/positivity hypotheses and the root
+  3.181534858300 < q_* < 3.181534858301 MeV.
+
+CAUTION ABOUT MOMENTUM: q=sqrt(M_i E/2) MeV is the lower neutrino-energy
+integration limit. The nuclear momentum transfer is Qphys=2q, not q.
+Every radius and skin calculation here includes that factor of two.
+
+Write
+  Psi(q)=int_q^U phi(t)(1-q^2/t^2)dt,
+  h(q)=q int_q^U phi(t)/t^2 dt,
+  Psi'=-2h,    Psi''=-2h',    h''=-phi'/q a.e.
+Extend Psi by zero beyond U. It is C^2 because phi is continuous and phi(U)=0.
+On a segment phi(t)=s t+c, the exact antiderivatives used are
+  int phi = s t^2/2+c t,
+  int phi/t^2 = s log(t)-c/t.
+Only logarithms and elementary functions need transcendental ball evaluation.
+
+For q>q_*: Psi decreases, Psi' increases, and Psi'' increases up to the mode
+then decreases. Thus endpoint evaluations, with the mode added when needed,
+rigorously enclose all three on a q interval. No interpolation of signs is
+used. Arb also encloses evaluations straddling an input-table node.
+
+Let H_i=F_DM,i^2, W_i=f_i M_i A_i^2 H_i, and
+  lambda_i=c_light sqrt(M_i*10^-6/2)(1/m+1/M_i).
+For coincident form factors the target is
+  nu(E)=sum_i f_i M_i Q_i^2 H_i(E) Psi(sqrt(M_i E/2)).
+For unequal form factors replace H_i in nu by F_nu,i^2, retaining H_i in W_i.
+Normalization is free and absorbed into a finite nonnegative Galactic speed
+measure dF(u), 0<=u<=V. The shell kernel is
+  k(w,u)=[u+a_E-max(w,|u-a_E|)]_+/(2 a_E u), u>0.
+Its u=0 limit is the step at a_E. Equality means pointwise equality of the
+continuous recoil spectra, not equality of bin integrals.
+
+Each isotropic halo eta(w)=int k(w,u)dF(u) is nonnegative, nonincreasing, and
+concave on (0,a_E). The two shell kinks are at |u-a_E| (downward slope jump)
+and u+a_E (upward slope jump); the latter is never below a_E. This proves
+concavity for measures as well as ordinary densities.
+
+
+1. TASK A: A CLOSED-FORM ROBUST SEPARATOR
+--------------------------------------
+
+1.1 General sufficient lemma.
+
+Let H_i>0 be C^2 near x0, let ell_i=log H_i, and let nu>0 be C^2 there. Set
+  s_i=ell_i'(x0), t_i=ell_i''(x0)+s_i^2,
+  a=max_i(-2s_i), b=max_i t_i,
+  D=max_i s_i-min_i s_i, T=max_i ell_i''-min_i ell_i'',
+  B=nu'/nu, C=nu''/nu at x0.
+Thus min s_i=-a/2, max s_i=-a/2+D.
+
+If D>0, T>0, p=a+D>=0, and
+  G = C-b + (a+D)(B+a/2-D) - T > 0,                 (1)
+choose, in closed form,
+  p=a+D,   r=-b+(a+D)(a/2-D)-T.                    (2)
+Then, at x0,
+  2s_i+p >= D >0,
+  t_i+p s_i+r <= -T <0,
+  (Lnu)/nu=G>0,    L=d^2/dx^2+p d/dx+r.           (3)
+These inequalities hold on some neighborhood of x0, with p,r constant.
+
+Proof. The first bound follows from s_i>=-a/2. For the second, use t_i<=b,
+s_i<=-a/2+D, and p>=0. Substitute (2). The third is an identity. Continuity
+and the strict margins give a common neighborhood for finitely many isotopes.
+
+The positive-spread conditions in this convenient formula are not essential.
+More generally, choose ANY positive slacks d,e and set
+  p=max(a,0)+d, r=-b-p(-a/2+D)-e.
+The same conclusion holds if C+pB+r>0, with strict isotope margins d,e.
+This covers zero spreads, without falsely inferring a neighborhood from a
+non-strict point inequality. Formula (2) uses d=D,e=T in the cases at hand.
+
+For an isotropic halo, set g_i(x)=eta(lambda_i x). Whenever lambda_i x<a_E,
+g_i>=0, g_i'<=0, g_i''<=0 distributionally. The product rule gives
+  L(W_i g_i)=W_i[g_i''+(2ell_i'+p)g_i'
+                         +(ell_i''+ell_i'^2+p ell_i'+r)g_i] <=0.          (4)
+Summing gives LD<=0, contradicting D=positive_constant*nu and Lnu>0.
+
+At threshold E0, all isotope speeds are below a_E whenever
+  m>max_i m_hi,i(E0),
+  m_hi,i(E0)=M_i mu_i/(M_i-mu_i),
+  mu_i=c_light sqrt(M_i E0*10^-6/2)/a_E.
+For each such m take a sufficiently short interval immediately above E0,
+also below the specified upper cutoff. The maximum is certified at 136Xe.
+Hence (1) proves the stated upper-mass exclusion for every E_cut>E0.
+It proves a necessary upper bound; it does not prove that the bound is attained.
+
+1.2 Exact feasibility test and displacement caveat.
+
+The actual pointwise coefficient region is unbounded; it is a polyhedron,
+not necessarily a bounded polytope. It is
+  p>=a, r<=-t_i-p s_i for every i.
+It intersects {Lnu>0} if and only if
+  there is p>=a with f(p)=min_i[C-t_i+p(B-s_i)]>0.     (5)
+Necessity and sufficiency follow by eliminating r. This is an exact
+one-dimensional concave, piecewise-affine feasibility criterion. It can be
+checked at p=a and all pairwise line intersections p>=a, plus the unbounded
+direction: B>max s_i makes f grow to +infinity. Zero-slope final pieces are
+already covered by their finite endpoints. If B<=min s_i, f is nonincreasing
+and feasibility is simply f(a)>0. All ten requested cases satisfy this last
+condition. Their exact pointwise optimal gaps are included in results.json.
+
+Failure of (1), a sufficient bound using summaries, would not prove (5)
+infeasible. Failure at one old pair (p,r) certainly does not prove that.
+Here both the closed-form strict witness and the exact criterion certify
+feasibility, so there is no infeasible requested model to repair.
+
+Finding a separator only at a later E1>E_thr would not automatically recover
+the original threshold mass bound. It excludes masses for which all speeds
+are below a_E at E1, generally giving max m_hi,i(E1), a weaker bound. For
+m approaching the original upper bound from above, the available concavity
+interval shrinks to the threshold. Feasibility arbitrarily close to the
+threshold, or another argument covering those masses, is required.
+
+1.3 Numerical evaluations.
+
+For Helm use the supplied radius relation
+  R_i^2=(1.23 A_i^(1/3)-0.60)^2+7 pi^2(0.52)^2/3-5s^2,
+  F=3(sin z-z cos z)/z^3 exp[-(Qphys*s/(hbar*c))^2/2],
+  z=Qphys R_i/(hbar*c).
+The skin changes recompute R_i, preserving the mean-square radius.
+For Engel use s=1 and r_rms=0.93 A_i^(1/3), so R_i^2=5(r_rms^2-3s^2)/3.
+For the low-q case H=1-Qphys^2 <r^2>/(3(hbar*c)^2) exactly on the tested
+interval, with <r^2> from the nominal Helm model. This is a specified local
+model, not an asserted exact nuclear form factor at all momenta.
+
+The following rounded numbers summarize the rigorous balls in results.json.
+The exact constants used are the mathematical formulas (2), enclosed by Arb.
+The script also checks all three strict signs throughout
+[E0,E0+10^-10] keV with those same constants.
+
+ E0    model       p              r              G=(Lnu)/nu
+ .51   Helm .8     .1554451113    .0795331342     4.7875346644
+ .51   Helm .9     .1554214304    .0795062748     4.7875631975
+ .51   Helm 1      .1553956268    .0794771557     4.7875944516
+ .51   Engel       .1521402963    .0767397709     4.7871987816
+ .51   low-q       .1592801157    .0832686848     4.7821126694
+ .30   Helm .8     .1190581167    .0769475588     1.9658123405
+ .30   Helm .9     .1190474693    .0769322293     1.9658261330
+ .30   Helm 1      .1190358664    .0769156103     1.9658412428
+ .30   Engel       .1165462292    .0742967371     1.9655526837
+ .30   low-q       .1207666355    .0790523115     1.9632338861
+
+p has units keV^(-1/2); r,G have units keV^(-1). Each a,b,D,T,B,C and each
+neighborhood margin is recorded separately. No numerical search for p,r was
+performed: each pair is a direct substitution in (2).
+
+1.4 Eliminating the Helm functional form completely.
+
+Assume F_i is the normalized Fourier transform of a nonnegative spherical
+spatial probability distribution with second moment R2_i=<r^2>_i. At a fixed
+direction it can be written F_i(x)=E[cos(x Z_i)], with
+  t_i^mom=E[Z_i^2]=2 M_i*10^-6 R2_i/(3(hbar*c)^2).
+Finite second moment gives C^2 regularity by dominated differentiation, and
+  F_i >= 1-t_i^mom x^2/2,
+  |F_i'| <= t_i^mom |x|, |F_i''| <= t_i^mom.          (6)
+The first inequality is cos y>=1-y^2/2; the derivative bounds use
+|sin y|<=|y| and |cos y|<=1. No fourth moment or Taylor remainder is needed.
+
+Let t=max_i t_i^mom and f0=1-t x^2/2>0. Uniform bounds on a short interval are
+  beta1=2t |x|/f0,
+  beta2=2t/f0+2(t x/f0)^2,                            (7)
+with their suprema over that interval understood. Then |ell_i'|<=beta1 and
+|ell_i''|<=beta2. Set the CONSTANTS
+  p=3 beta1, r=-beta2-5 beta1^2.                      (8)
+The isotope margins are at least beta1 and beta1^2. For an arbitrary given
+target, C+3 beta1 B-beta2-5 beta1^2>0 suffices.
+
+There is also a condition independent of the detailed target form factors.
+For k_i=sqrt(M_i/2), set psi_i(x)=Psi(k_i x). Since psi_i'<0,
+  L(H_i psi_i)/H_i >=
+     k_i^2 Psi'' - 5 beta1 k_i |Psi'|
+                      -(2 beta2+8 beta1^2)Psi.       (9)
+Indeed 2ell_i'+p<=5beta1, and the zero-order coefficient is bounded below
+by -beta2-p beta1+r=-2beta2-8beta1^2. Positive isotope weights can be summed.
+
+The script proves (9)/Psi>0 for EVERY isotope with the following caps:
+  E_thr=.51: all R2_i<=69 fm^2, margin >.02076 keV^(-1);
+  E_thr=.30: all R2_i<=44 fm^2, margin >.007549 keV^(-1).
+The caps imply f0>.9618 and >.9856 respectively. These margins cover the
+entire stated 10^-10 keV neighborhood. Exact uniform beta constants and p,r
+are in results.json. They are deliberately conservative.
+
+The nominal nine moments range from 22.1083831183 to 23.4040356552 fm^2,
+with spread 1.2956525369 fm^2. A sufficient admissible spread, with the
+minimum moment fixed at the nominal lightest value, is
+  0 <= max R2_i-min R2_i <=46.8916168817 fm^2 at .51,
+  0 <= max R2_i-min R2_i <=21.8916168817 fm^2 at .30,
+provided the respective maximum-moment cap is respected. More generally the
+right side is cap-min R2_i. This is NOT a claim that spread alone, without
+an absolute-radius scale, controls the derivatives. Even zero spread can
+have arbitrarily large common radii.
+
+If only H=1-cx^2+O(x^4) is asserted, without a positive-density hypothesis or
+a quantitative remainder bound, no finite derivative bound follows at x0>0.
+For example ell(x)=-c x^2+epsilon b(x) cos(n(x-x0)), with a smooth bump b
+supported away from zero and b=1 near x0, leaves every coefficient at zero
+unchanged and H=exp(ell)>0, while ell''(x0) contains -epsilon n^2. Reversing
+the sign gives arbitrarily large positive curvature. Thus the unqualified
+Taylor-only version of the requested assertion is false; (6) supplies the
+additional physical hypothesis that makes a moment-only theorem valid.
+
+
+2. TASK B: UNEQUAL WEAK AND MASS FORM FACTORS
+-------------------------------------------
+
+2.1 Perturbation lemma.
+
+Let rho>0 be C^2 on a q interval K in (q_*,U), and put
+  eta_nu(w)=constant*rho(q)Psi(q), q=kappa w,
+  kappa=1000 mu_N/c_light MeV/(km/s).
+If pointwise bounds |rho'/rho|<=b1(q), |rho''/rho|<=b2(q) satisfy
+  4 b1 h+b2 Psi < 2(-h'),                            (10)
+then eta_nu is strictly convex on K mapped to w. This follows immediately
+from
+  (rho Psi)''/rho=Psi''+2(rho'/rho)Psi'+(rho''/rho)Psi
+              >=2(-h')-4 b1 h-b2 Psi>0.
+The dimensionless loss is
+  R(q)=[2 b1 |Psi'|+b2 Psi]/Psi''.                   (11)
+Bounds b1,b2 may be constants, but the test should retain the q dependence
+of Psi, Psi', Psi''. If rho'<=0 the mixed term is favorable and can instead
+be kept with its actual sign. No such sign assumption is needed here.
+
+An explicit sufficient derivative box, independent of any skin model, is
+  |rho'/rho|<=.00485 MeV^(-1), |rho''/rho|<=.00051 MeV^(-2)
+throughout [q_*+.1,U). The interval calculation gives R<.992712 before the
+last segment; the analytic last-segment bound is .000194102. Thus any
+positive C^2 ratio satisfying this box preserves strict convexity there.
+
+For monotonicity, separately require b1 Psi<|Psi'| when no sign of rho' is
+known. Convexity alone is enough for the upper-bound necessity argument;
+full single-isotope sufficiency also requires decreasing eta_nu.
+
+2.2 A specified skin model, and what the literature input means.
+
+The proton rms inputs, in isotope order, are
+  4.766,4.774,4.777,4.777,4.781,4.780,4.785,4.789,4.796 fm.
+They are the nominal proton-radius entries of Table I of Aristizabal Sierra,
+Liao and Marfatia, arXiv:1902.07398, JHEP 06 (2019) 141. That paper uses
+0--0.3 fm as an envelope of neutron-radius models for xenon, rather than an
+experimental determination of its skin. We treat these rounded radii and
+the range as exact hypotheses, not as measurements with certified coverage.
+
+For the Helm test, F_p and F_n are separate normalized Helm amplitudes with
+s=.9 fm and rms radii r_p and r_n=r_p+d, for the ENTIRE interval 0<=d<=.3 fm.
+For isoscalar SI DM, with eps=1-4 sin^2(theta_W)=.04572, define
+  F_W=(N F_n-eps Z F_p)/(N-eps Z),
+  F_M=(N F_n+Z F_p)/A, rho=(F_W/F_M)^2.              (12)
+The weak and mass radii are not identified with r_n and r_p separately.
+This distinction and Qphys=2q are both necessary for a consistent skin test.
+
+Arb evaluates derivatives analytically. The spherical factor has the stable
+series
+  3j1(z)/z=sum_{n>=0} (-1)^n 6(n+1) z^(2n)/(2n+3)!.
+The first 20 terms and their first two derivatives are used. For |z|<2 and
+n>=20, successive absolute tail terms have ratio <1/4, also after either
+derivative; hence 4/3 of the first omitted term bounds each entire tail.
+The Gaussian factor is differentiated analytically. These are certified
+series enclosures, not truncated series treated as exact form factors.
+
+The script covers q from 3.281534858300 to 16.34 in 653 rational cells and
+d in the whole ball [0,.3] in every cell, for all nine isotopes. It proves
+  maximum R(q) < .203,
+  |rho'/rho| < .004809 MeV^(-1),
+  |rho''/rho| < .000506 MeV^(-2),
+where the derivative bounds also cover the final segment to U. These
+global bounds are conservative; the loss bound uses the sharper
+cell-specific bounds. At the final segment the
+analytic argument in 2.5 gives loss <.000193. Thus 0.1--0.3 fm is included,
+and convexity is certified on [q_*+.1,U), continuously reaching zero
+curvature at U. This does not assert stability all the way down to q_*
+for an arbitrary perturbation, where the unperturbed curvature vanishes.
+
+On the requested compact interval the old margin is re-certified as
+  -h' >=6.1162910145327...*10^-9 MeV^(-2)>6*10^-9.
+Combining this tiny minimum with global maxima of h and Psi would give a
+useless loss bound about 148455. That failure is a failure of this crude
+estimate, not an infeasibility or loss of convexity. The pointwise scaled
+bound (11) is <.203 and resolves the issue.
+
+2.3 A local skin result without a Helm shape assumption.
+
+Assume only nonnegative spherical proton and neutron densities with the
+specified r_p and 0<=d<=.3. Define the squared-radius bounds
+  R_W,abs^2=(N r_n^2+eps Z r_p^2)/Q,
+  R_M^2=(N r_n^2+Z r_p^2)/A.                         (13)
+The first uses the absolute coefficients in the signed weak amplitude.
+For X=W,M, set t_X=4 R_X^2/(3(hbar*c in MeV fm)^2), f_X=1-t_X q^2/2,
+u_X=t_X q/f_X, v_X=t_X/f_X. Where f_X>0, the characteristic-function bounds
+give |F_X'/F_X|<=u_X, |F_X''/F_X|<=v_X. For the weak amplitude the lower
+bound follows either from the absolute weights in (13), or the sharper
+F_W>=1-N(1-F_n)/Q. Consequently one may take
+  b1=2(u_W+u_M),
+  b2=2(v_W+u_W^2+v_M+u_M^2)+b1^2.                  (14)
+Indeed these bound the first log derivative of rho, then its second
+log derivative plus the square of the first log derivative.
+
+For each isotope, on q in [q_thr,i,q_thr,i+.01], the script proves:
+  E_thr=.51: R(q)<.254218, b1<.020678, b2<.004169;
+  E_thr=.30: R(q)<.433850, b1<.015772, b2<.003924.
+Units of b1,b2 are respectively MeV^(-1), MeV^(-2). All are strict positive
+curvature margins, and cover arbitrary shapes satisfying the stated density
+and radius hypotheses. They do not rely on a small remainder of a low-q
+expansion. The interval can be shortened as needed to stay inside J.
+
+The mixture upper bound also survives, not merely the single-isotope one.
+The maximum R_W,abs^2 in (13) is <27.489415 fm^2, and R_M^2 is smaller. Both
+are below the caps in Section 1.4. Apply (6)--(9) to H_DM for the halo signs
+and to H_W for target positivity, using the same uniform beta1,beta2. The
+proof of (9) needs only those derivative bounds, not identical form factors.
+This certifies the unchanged numerical upper-mass exclusions at .51 and .30.
+
+For reference, the sufficient moment-operator skin cap is explicitly
+  d_cap=min_i{sqrt[(Q_i Rcap^2-eps Z r_p,i^2)/N_i]-r_p,i}.
+It is >3.34095 fm for Rcap^2=69 and >1.68340 fm for Rcap^2=44. These large
+values describe slack in the conservative operator test, not plausible
+physical skins or a global convexity theorem at such large skins. The
+certified local convexity statement (14) here is for 0<=d<=.3 only.
+
+2.4 The requested J, and its actual margins.
+
+In q coordinates J corresponds to [q_thr,i,q_E,i(m)), where
+  q_thr,i=sqrt(M_i E_thr/2), q_E,i=1000 mu_i(m) a_E/c_light.
+For an experiment ending at the neutrino endpoint, only its intersection
+with q<U is measured. Some J are empty when m<=m_hi,i(E_thr).
+
+When q_thr<q_E<U, the exact infimum of -h' on J is
+  min{-h'(q_thr),-h'(q_E)}.                          (15)
+This follows because -h' increases to the spectrum mode then decreases.
+When q_E>=U the infimum on the measured portion is zero, and on the
+unclipped J the target is identically zero beyond U. Strict convexity on
+that entire J is therefore false.
+
+For m=40, q_E ranges from 22.98648 to 23.52127 MeV, exceeding U. The
+crossing masses q_E=U range from 25.37963 to 25.88245 GeV. For m=7.7 at
+.51, J is empty for 134Xe and 136Xe. The following numbers are rounded
+infima over the nonempty J and over the nine isotopes, in MeV^(-2):
+
+ m (GeV)      E_thr=.51               E_thr=.30
+ 7.7          .0120450224             .00730789546
+ 8            .0120450224             .00730789546
+ 10           .0120450224             .00730789546
+ 15           .00572956730            .00572956730
+ 20           .000464503848           .000464503848
+ 25           1.84621801e-8           1.84621801e-8
+ 30,40        0                       0
+
+The formula (15), not these sample masses, supplies the statement for the
+entire continuous mass range. Every isotope's q_thr, threshold margin and
+crossing mass is recorded in results.json.
+
+The correct uniform local margins, on [q_thr,i,q_thr,i+.01], are
+  .51: -h'>.01204 MeV^(-2), q_thr in [5.4244311,5.6811214];
+  .30: -h'>.00730 MeV^(-2), q_thr in [4.1603487,4.3572212].
+Whenever J is nonempty, shorten this local interval to lie below q_E and
+the detector cutoff. Its length may depend on m and may tend to zero as
+m decreases to the upper edge. The strictly positive local margins do not.
+Together with (14), they prove the skin-insensitive upper-bound necessity.
+For eta'' in speed units multiply the q-curvature bound by kappa^2 and the
+positive normalization and rho. No positive full-J margin is claimed.
+
+2.5 What actually happens near U.
+
+For q on the nonincreasing tail of phi, putting d=U-q gives
+  Psi'' >=2 phi(q)/U,
+  |Psi'| <=2 phi(q)d/U,
+  Psi <=phi(q)d^2/U.
+These follow from phi(t)<=phi(q), integration of 1/t^2, and
+int_q^U(1-q^2/t^2)dt=d^2/U. Thus
+  |Psi'|/Psi''<=d, Psi/Psi''<=d^2/2.
+Bounded b1,b2 imply R(q)<=2b1 d+b2 d^2/2, which tends to zero at U.
+This proves the last-segment assertion without dividing by a ball that
+contains zero. On the actual final linear segment phi(U-d)=K d,
+Psi~K d^3/(3U), Psi''~2K d/U, Psi''/Psi~6/d^2.
+Absolute curvature vanishes but relative robustness improves. If rho or
+its derivatives were singular at U, these conclusions would need separate
+hypotheses; no such singularity occurs in the tested form factors.
+
+
+3. TASK C(1): SUFFICIENCY, ENDPOINTS, AND ATOMS
+---------------------------------------------
+
+3.1 True endpoint.
+
+Since phi(U)=0,
+  h(U)=0, h'(U)=int_U^U phi/t^2-phi(U)/U=0.
+Therefore Psi'(U)=Psi''(U)=0. For a positive C^2 ratio rho with finite
+derivatives there, (rho Psi)'(U)=(rho Psi)''(U)=0 as well.
+
+Let eta_nu be nonnegative, decreasing and convex on [w1,w2], w1>=a_E,
+eta_nu(w2)=eta_nu'(w2)=0, w2<=S. Put q_nu=-2a_E eta_nu' and extend it by
+zero for w>w2. Define
+  R(v)=sum_{j>=0} q_nu(v+(2j+1)a_E), v>=w1-a_E,
+and extend R constantly to smaller nonnegative v. The sum is finite.
+It is nonnegative, nonincreasing, supported below w2-a_E<=V, and absolutely
+continuous when q_nu is absolutely continuous and joins zero continuously.
+Set dF(u)=-u dR(u). It is a finite nonnegative measure, absolutely continuous
+with density -u R'(u); there is no atom at w2-a_E or its shifted copies.
+Absolute continuity here refers to the measure/cumulative distribution;
+its density need not be a continuous function at the lower support boundary.
+
+For w>=w1, telescoping gives
+  R(w-a_E)-R(w+a_E)=q_nu(w)=-2a_E eta_nu'(w).
+Differentiating the shell integral gives exactly the same left-hand side.
+The support makes eta(w2)=0; equality of derivatives and this value gives
+eta=eta_nu throughout [w1,w2]. Normalize F and absorb its total mass in the
+cross section. Thus the supplied single-isotope full-endpoint sufficiency
+proof is valid under its stated decreasing/convex target assumptions.
+The alleged downward jump at the true endpoint has size zero; the clause
+about such a drop is vacuous there.
+
+3.2 A cutoff: the proposed atom statement is false as a statement about F.
+
+If instead w2 is a cutoff with eta_nu(w2)>0 and eta_nu'(w2)<0, artificially
+extending q_nu by zero creates a downward jump
+  J0=q_nu(w2^-)=-2a_E eta_nu'(w2^-)>0.
+The R-series has jumps of size J0 at all
+  u_j=w2-(2j+1)a_E
+lying strictly above w1-a_E. Accordingly its speed measure has atoms
+  F({u_j})=u_j J0=-2a_E u_j eta_nu'(w2^-).           (16)
+In particular F({w2-a_E})=-(w2-a_E)2a_E eta_nu'(w2^-).
+J0 alone is the mass of dF/u, equivalently the jump of R, not the mass of dF.
+A shifted point at the lower interval boundary can be omitted: its upper
+shell endpoint is w1 and it has no effect inside the measured interval.
+When w2-w1<2a_E, only j=0 occurs. Otherwise there can be additional atoms.
+
+This artificial construction matches the slope but has eta(w2)=0, hence
+misses the target by the positive constant eta_nu(w2) on the whole interval.
+It is NOT a sufficient cutoff construction. Nor is a cutoff atom required
+of a correct solution: restricting any atom-free full-endpoint solution to
+an earlier cutoff is an immediate counterexample to that assertion.
+
+3.3 The terminal value-and-slope condition.
+
+For w_c>V-a_E=312 km/s every contributing shell is on its decreasing branch,
+  eta(w_c)=int_(w_c-a_E)^V (u+a_E-w_c)/(2a_E u) dF(u),
+  -eta'(w_c)=int_(w_c-a_E)^V 1/(2a_E u) dF(u),
+with suitable one-sided derivatives at atoms. Therefore
+  eta(w_c) <= (S-w_c)(-eta'(w_c)).                   (17)
+A positive target value forces a negative slope and more than bare support.
+For eta_nu=constant*Psi(mu w) in consistent natural-speed units, this is
+  mu >= [q_c+Psi(q_c)/(2h(q_c))]/S.
+The positive value term disappears only at the true zero endpoint.
+
+For a single isotope with a decreasing convex target on [w1,w2], w1>=a_E,
+condition (17) is also a constructive sufficient terminal condition: extend
+eta linearly with its terminal slope until
+  w3=w2+eta(w2)/(-eta'(w2))<=S,
+then set it to zero. The resulting extension is nonnegative, decreasing and
+convex, and the R-series gives a realizing speed measure. When w2>312,
+(17) is necessary as well. If the slope is zero while the value is positive,
+no such tail exists in this high-speed regime.
+
+For a mixture the required terminal data are coupled. With x_c=sqrt(E_cut)
+and v_i=lambda_i x_c, a single eta must satisfy BOTH
+  nu(x_c)=sum_i W_i(x_c) eta(v_i),
+  nu_x(x_c)=sum_i W_i(x_c)[ell_i'(x_c)eta(v_i)+lambda_i eta'(v_i)].        (18)
+It must simultaneously satisfy the entire interior functional equation and
+the boosted-shell inversion constraints. There is no isotopewise division
+producing nine independent freely selectable eta_i. Matching support, or
+independently matching nine value/slope pairs, does not enforce (18) or the
+common halo. A positive isotope sum at a cutoff needs at least one isotope
+to contribute, not all nine. Thus even the claimed necessity of the maximum
+of the nine individual support masses was wrong; bare support takes a minimum.
+
+
+4. TASK C(2): A UNIFORM LOWER-MASS EXCLUSION AND THE 5 keV ANSWER
+-------------------------------------------------------------
+
+4.1 The finite functional and its two-variable certificate.
+
+Set E_j=.51+2.99 j/99 keV. Define A[G]=sum_j d_j G(E_j)/nu(E_j), with
+  j     d_j
+  0     -.001
+  86    -2.5091846054218256e-08
+  89    +4.232602196532087e-07
+  92    -3.12282552577074e-06
+  93    -5.49029821603542e-05
+  94    -0.0029039370021078214
+  97    +0.04322536788188634
+  98    -0.49420890705022336
+  99    +0.45960331182823005.
+All coefficients are exact decimals. Relative to the old isolated-mass
+certificate only the harmless negative threshold coefficient is enlarged.
+  A[nu]=sum d_j=.004658208018472682650444>0.
+
+Let t=1/m, c_ji=c_light sqrt(M_i E_j*10^-6/2), so w_ji=c_ji t+c_ji/M_i.
+For 400<=u<=544, in particular u>a_E,
+  2a_E u A[K_m(.,u)]
+    =sum_(j,i) d_j W_i(E_j)/nu(E_j)
+                      *clamp(u+a_E-w_ji,0,2a_E).     (19)
+This is continuous piecewise affine in (t,u). Its break lines are
+  u=w_ji(t)-a_E, u=w_ji(t)+a_E.
+On every cell of their arrangement in the rectangle
+  1/6.0233 <=t<=1/5.764, 400<=u<=544,
+(19) is affine; its maximum is attained at a vertex. Vertices consist of
+rectangle corners, line-boundary intersections, and line-line intersections.
+Their coordinates and the values of (19) use only radicals and Arb arithmetic.
+Parallel lines are handled explicitly; any uncertain boundary inclusion is
+retained conservatively. The 425 checked vertices all satisfy
+  (19) < -3.24093035225.
+This proves the sign on the whole mass-speed rectangle, not a grid of masses.
+
+For u<=400 every positive-coefficient observation has all w_ji>632=u+a_E's
+largest possible value, throughout the mass interval. Its kernel is zero;
+the remaining coefficients are negative, so the functional is nonpositive.
+The u=0 shell is included by this same argument. Integrating over any dF>=0
+contradicts A[nu]>0. Every m in [5.764,6.0233] is excluded.
+
+For m<5.764 the lightest isotope already has v_min(3.5)>S, since its exact
+support mass is 5.76410768911... GeV. In this small-mass range lambda_i
+increases with M_i, so all isotopes are kinematically absent there. This
+excludes all lower masses. At the upper side Section 1 gives 7.793213... .
+Thus M(.51,3.5) is contained in (6.0233,7.79321301728673).
+
+No nonempty-set conclusion follows. This certificate does not determine an
+infimum of a set whose nonemptiness has not been proved. Finite shell tests
+certify separating functionals; passing finitely many tests does not by
+itself establish continuous-spectrum membership. In general, finite point
+samples cannot suffice: a smooth bump supported between sample energies
+leaves all those observations unchanged while it can violate the local
+differential inequality. A finite iff for this particular one-parameter
+target family would require an additional theorem; none is asserted here.
+
+4.2 Five keV.
+
+The largest recoil endpoint is E_b=2U^2/M_124=4.63904269347... keV, below 5.
+Equality on [.51,5] includes equality through E_b. The stronger full-endpoint
+exclusion proved next applies already for thresholds <=4.45. Consequently
+  M(.51,5)=empty.
+There is no finite lower edge to bracket. This is a proved empty set, not
+an unresolved numerical failure to find a halo.
+
+
+5. TASK C(3): CRITICAL THRESHOLDS MUST BE INDEXED BY THE CUTOFF
+-----------------------------------------------------------
+
+Define, for fixed E_cut,
+  E_c(E_cut)=inf{e: 0<e<E_cut and M(e,E_cut) is nonempty}.
+Increasing e only removes constraints, so the set of thresholds admitting
+some member is upward closed. No assumption that the mass membership set
+is an interval is made. The existence or nonexistence of a member at the
+infimum itself is also not assumed.
+
+5.1 Full-endpoint exclusion for every threshold <=4.45.
+
+Let isotope 0 be 124Xe, y(E)=eta(lambda_0 sqrt(E)),
+z_i=(lambda_i/lambda_0)^2, T(E)=nu(E)/W_0(E), r_i(E)=W_i(E)/W_0(E).
+For m in [6.65,27], all z_i increase with i. At E_b the target is zero
+and all weights positive, so y(E_b)=0. Nonnegativity and monotonicity imply
+y(E)=0 for E>=E_b. On the observed interval
+  y(E)=T(E)-sum_(i=1)^8 r_i(E)y(z_i E).              (20)
+
+Choose Bcut>1 such that
+  max(z_3,z_1^2)<Bcut<min(z_4,z_1^3,z_1 z_2),
+and put E0=E_b/Bcut. The only dilation words with product<Bcut are
+empty, (1), (2), (3), (1,1). Substitution in (20) therefore terminates exactly:
+  y(E0)=T(E0)-r_1(E0)T(z_1 E0)
+       +r_1(E0)r_1(z_1 E0)T(z_1^2 E0)
+       -r_2(E0)T(z_2 E0)-r_3(E0)T(z_3 E0).          (21)
+Every omitted word is terminal zero; this is not a truncated Neumann series.
+
+The script partitions the rational mass interval [6.65,27] adaptively into
+1355 cells. On each cell, at its exact rational midpoint, set
+  B_low=max(z_3,z_1^2), B_high=min(z_4,z_1^3,z_1 z_2),
+  Bcut=(B_low+9B_high)/10.
+Use that SAME Bcut for every mass in the cell. Arb checks the ordering,
+the strict word bounds, E0>4.45, and negativity of (21) on the ENTIRE cell.
+Across all cells, E0 is between 4.45026031083 and 4.50552153059 keV and
+  (21) < -4.27537773256e-10.
+Thus every such mass would require a negative halo value in the measured
+interval [4.45,E_b], an impossibility.
+
+For m<6.65, the lightest-isotope endpoint support mass is
+6.68661931713...>6.65 and every heavier isotope is faster, so kinematics
+excludes equality near E_b. For m>27, apply (1)--(4) at E=4.45:
+  p=.47084119562208..., r=.13029928560243...,
+  G>98090.54, max_i m_hi,i(4.45)<27.
+Strict inequalities hold on the certified neighborhood of that energy.
+These three mass ranges cover all m>0. This proves emptiness at threshold
+4.45 and, by restriction, at every smaller threshold.
+
+5.2 An explicit member at threshold 4.58.
+
+Take m=7 GeV. Above E=4.58 all neutrino components except 124Xe vanish,
+since their largest endpoint (126Xe) is 4.56539251605... keV. The shell
+construction of Section 3.1 for the 124Xe target on [4.58,E_b] is valid:
+  w1=738.41800058155...>a_E,
+  w2=743.16238655402...<S.
+It produces an atom-free nonnegative halo supported in Galactic speeds
+u<=w2-a_E, hence eta(w)=0 for w>=w2. Every heavier isotope has
+  lambda_i sqrt(4.58)>w2,
+as certified by 4.58>E_b/z_i; the largest E_b/z_i is
+4.57369479730... for 126Xe. Therefore every heavier DM component is zero
+throughout the interval too. Scale eta by Q_124^2/A_124^2. Its 124Xe rate
+is exactly the surviving neutrino target. Both spectra are zero beyond E_b,
+so this also realizes equality up to any cutoff >=E_b, including 5 keV.
+
+Combining 5.1 and 5.2 gives 4.45<=E_c(full)<=4.58. The nine single-isotope
+full-endpoint critical thresholds are 2U^2/M_i*(a_E/S)^2, ranging from
+.3780255665 to .4146492619 keV. Hence the mixture's exact full-endpoint
+critical threshold cannot equal that of any one isotope.
+
+The obstruction is a pointwise endpoint effect. Binned or tolerance-based
+cone tests can suppress it and define a different critical threshold. They
+cannot place the exact full-endpoint threshold between .35 and .40 keV.
+
+5.3 A genuine, deliberately non-sharp bracket when E_cut=3.5.
+
+For E_thr<=.3128, the functional in Section 4 excludes m<=6.0233 using
+observations at E>=.51, which remain inside the measured interval. Formula
+(1) at E=.3128 gives a strict separator, and
+  max_i m_hi,i(.3128)<6.0233.
+Thus all larger masses are excluded too: M(.3128,3.5) is empty.
+
+For completeness, the following exact local construction proves nonemptiness
+at threshold 3.499, without claiming anything at threshold .51. Fix m=7,
+x0=sqrt(3.499), x1=sqrt(3.5), xc=sqrt(3.4995), t=.0831753 (km/s)^(-1).
+The nine speed bands [lambda_i x0,lambda_i x1] are disjoint and ordered.
+Define
+  h_i=A0 exp[-t(lambda_i-lambda_0)xc],
+  A0=nu(xc^2)/sum_i W_i(xc^2) exp[-t(lambda_i-lambda_0)xc].
+On eight bands, all except isotope p=132, prescribe
+  eta(lambda_i x)=h_i[1-t lambda_i(x-xc)].
+On the remaining band DEFINE the function exactly by
+  eta(lambda_p x)=[nu(x^2)-sum_(i!=p) W_i(x^2)
+                                h_i(1-t lambda_i(x-xc))]/W_p(x^2).      (22)
+Thus the mixture rate equals nu identically on the energy interval by
+construction. Equation (22) uses the exact table integrals, not a fit.
+
+The script certifies positivity, negative first derivative, and positive
+second derivative of (22) over 100 adjacent energy cells covering the
+whole interval. The minimum certified x-curvature is >.00327336 in the
+raw normalization. The affine bands are also positive and decreasing.
+For each gap, let s_left and s_right be the endpoint speed slopes, and let
+s_sec be the secant slope between the endpoint values. All eight satisfy
+  s_left < s_sec < s_right <0.
+Connect the values by that affine segment. The slope jumps upward at both
+ends, so the complete eta is continuous, decreasing and convex. Continue
+its final slope until zero at 684.61671303669... km/s<S, then keep it zero.
+Its lowest prescribed speed exceeds a_E. Section 3.1's inversion, interpreted
+as a Stieltjes measure and allowing the upward convex kinks, constructs a
+finite nonnegative isotropic speed measure realizing this entire eta on
+the prescribed bands. Its derivative is a nonincreasing nonnegative q_nu;
+the R-series and the terminal value again give exact equality.
+
+Therefore M(3.499,3.5) contains m=7, giving
+  .3128<=E_c(3.5)<=3.499.
+This bracket is not a proof of the reported narrow binned bracket and is
+not advertised as sharp. The full-endpoint threshold in 5.1--5.2 and this
+truncated threshold are different mathematical quantities. No equality
+with an individual isotope's critical threshold is proved for the latter.
+
+
+6. AUDIT NOTES, REPRODUCIBILITY, AND REFERENCES
+----------------------------------------------
+
+The numerical constants displayed in prose are rounded summaries; the
+inequalities asserted in the script and the balls in results.json are the
+certificate. The same script also reruns the original supplied fixed-p,r
+exclusions, original 6.0233 counterexample, and original .30 keV exclusion
+as a nested baseline section. Those are cross-checks, not imported results.
+The new proof above is self-contained and does not require trusting that
+older results.json or form_factor_variations.json.
+
+The program uses exact decimal inputs as balls, rational mass subdivisions,
+and segment-integral enclosures. The only float conversion inherited from
+the original integration routine proposes a table segment; rigorous ball
+comparisons verify it, and neighboring pieces are enclosed at a knot. No
+floating-point proposal is accepted as a sign certificate. All isotope
+and skin ranges, mass cells, q cells, and line-arrangement vertices are
+covered, including boundaries. The input checksum is mandatory.
+
+Finite precision of Arb is numerical enclosure error only. Physical input
+uncertainty is covered only when explicitly ranged (e.g. skin d in [0,.3]).
+The theorem under positive spherical densities is conditional on those
+density and radius hypotheses. It excludes anisotropic Galactic halos,
+different DM proton/neutron couplings, and changed nuclear response terms
+unless their own derivative/radius bounds are supplied.
+
+Source of the external radius-model conventions, not a substitute for the
+proof: D. Aristizabal Sierra, J. Liao, D. Marfatia, 'Impact of form factor
+uncertainties on interpretations of coherent elastic neutrino-nucleus
+scattering data', JHEP 06 (2019) 141, arXiv:1902.07398, especially Eqs.
+(7),(8),(16) and Table I. https://arxiv.org/pdf/1902.07398
+The paper uses .3 fm as a model envelope, not an experimental xenon-skin
+measurement. The signed weak amplitude in (12) is the standard combination
+of its neutron/proton amplitudes, with the weak-angle input retained from
+the supplied certificate rather than changed to the paper's convention.
+
+The Helm/Engel and low-q definitions evaluated in Section 1.3 are exactly
+those specified in the supplied form_factor_variations.json. The nominal
+Helm radius prescription is the Lewin--Smith one already encoded in the
+input script. No claim of independent calibration or model uncertainty
+coverage is attached to those named variations.
+
+Final limitation: the requested lower-edge existence bracket at
+[.51,3.5] remains an unsolved part of this response. Neither the strengthened
+exclusion nor the exact member on [3.499,3.5] establishes it. The files make
+that limitation explicit instead of turning a numerical fit into a theorem.

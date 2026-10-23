@@ -1,0 +1,3469 @@
+{
+  "halo_classes": {
+    "streams": "nonnegative lab-frame speed distributions on [0, v_esc+v_E]",
+    "isotropic": "isotropic Galactic-frame speed distributions on [0, v_esc], boosted by v_E"
+  },
+  "v_esc": 544.0,
+  "v_earth": 232.0,
+  "b8_per_tonne_year": 6.89860289124527,
+  "windows": {
+    "streams": {
+      "practical": [
+        4.258720746475328,
+        60.0
+      ],
+      "strict": null
+    },
+    "isotropic": {
+      "practical": [
+        4.680694638641432,
+        14.54400653163061
+      ],
+      "strict": null
+    },
+    "isotropic_vE220": {
+      "practical": [
+        4.680694638641432,
+        15.247534823258349
+      ],
+      "strict": null
+    },
+    "isotropic_vE250": {
+      "practical": [
+        4.464725228443302,
+        13.232835537228226
+      ],
+      "strict": null
+    },
+    "isotropic_vesc500": {
+      "practical": [
+        4.907111004420204,
+        14.54400653163061
+      ],
+      "strict": null
+    },
+    "isotropic_vesc600": {
+      "practical": [
+        4.258720746475328,
+        14.54400653163061
+      ],
+      "strict": null
+    }
+  },
+  "scan": {
+    "streams": [
+      {
+        "mass": 2.0,
+        "residual": 1.0,
+        "residual_ideal": 1.0,
+        "deviance_per_ty": 1e+300,
+        "exposure_ty_3sigma": 0.0
+      },
+      {
+        "mass": 2.0967447711327263,
+        "residual": 1.0,
+        "residual_ideal": 1.0,
+        "deviance_per_ty": 1e+300,
+        "exposure_ty_3sigma": 0.0
+      },
+      {
+        "mass": 2.1981693176362147,
+        "residual": 0.6799869979590516,
+        "residual_ideal": 0.5547648329617284,
+        "deviance_per_ty": 11.340311391965098,
+        "exposure_ty_3sigma": 0.793629000908805
+      },
+      {
+        "mass": 2.304500011409063,
+        "residual": 0.6593976192082687,
+        "residual_ideal": 0.5547648329617284,
+        "deviance_per_ty": 10.101595503302192,
+        "exposure_ty_3sigma": 0.8909483652417004
+      },
+      {
+        "mass": 2.4159741744986305,
+        "residual": 0.6340228386745991,
+        "residual_ideal": 0.5547648329617284,
+        "deviance_per_ty": 8.839800322892827,
+        "exposure_ty_3sigma": 1.0181225447697384
+      },
+      {
+        "mass": 2.5328406087858544,
+        "residual": 0.6017823775046205,
+        "residual_ideal": 0.5547648329617284,
+        "deviance_per_ty": 7.498129755446111,
+        "exposure_ty_3sigma": 1.2002993137672815
+      },
+      {
+        "mass": 2.655360151292186,
+        "residual": 0.5695324189200941,
+        "residual_ideal": 0.5547648329617284,
+        "deviance_per_ty": 6.396378613630889,
+        "exposure_ty_3sigma": 1.4070461652818222
+      },
+      {
+        "mass": 2.783806256348048,
+        "residual": 0.5340647997160332,
+        "residual_ideal": 0.48734283086843727,
+        "deviance_per_ty": 5.3653024594810095,
+        "exposure_ty_3sigma": 1.677445040231819
+      },
+      {
+        "mass": 2.9184656059221696,
+        "residual": 0.4901803064556636,
+        "residual_ideal": 0.31913640793716774,
+        "deviance_per_ty": 4.280122867797392,
+        "exposure_ty_3sigma": 2.102743373961019
+      },
+      {
+        "mass": 3.0596387494740065,
+        "residual": 0.4461534179751691,
+        "residual_ideal": 0.2887946332333505,
+        "deviance_per_ty": 3.355829669018295,
+        "exposure_ty_3sigma": 2.6819001223720735
+      },
+      {
+        "mass": 3.207640774757349,
+        "residual": 0.39055602409075735,
+        "residual_ideal": 0.27387139870723737,
+        "deviance_per_ty": 2.383595837813572,
+        "exposure_ty_3sigma": 3.7758079021716755
+      },
+      {
+        "mass": 3.3628020110722994,
+        "residual": 0.323145142069869,
+        "residual_ideal": 0.15457359223091252,
+        "deviance_per_ty": 1.496916450026876,
+        "exposure_ty_3sigma": 6.01235960753749
+      },
+      {
+        "mass": 3.52546876653523,
+        "residual": 0.26349641003776847,
+        "residual_ideal": 0.14328733754407938,
+        "deviance_per_ty": 0.9353045754908149,
+        "exposure_ty_3sigma": 9.62253391658767
+      },
+      {
+        "mass": 3.696004101012243,
+        "residual": 0.1947111628834264,
+        "residual_ideal": 0.09489884565451734,
+        "deviance_per_ty": 0.4681804565643977,
+        "exposure_ty_3sigma": 19.223356878336634
+      },
+      {
+        "mass": 3.8747886364412665,
+        "residual": 0.12702346059333283,
+        "residual_ideal": 0.06716094271465972,
+        "deviance_per_ty": 0.17956672420442416,
+        "exposure_ty_3sigma": 50.120644790257074
+      },
+      {
+        "mass": 4.062221406351366,
+        "residual": 0.06184435469662582,
+        "residual_ideal": 0.04054550031750867,
+        "deviance_per_ty": 0.03270762022822163,
+        "exposure_ty_3sigma": 275.1652348046523
+      },
+      {
+        "mass": 4.258720746475328,
+        "residual": 0.022516313274842232,
+        "residual_ideal": 0.025269356014021534,
+        "deviance_per_ty": 0.003477582812310103,
+        "exposure_ty_3sigma": 2588.004509379733
+      },
+      {
+        "mass": 4.464725228443302,
+        "residual": 0.01956004420583909,
+        "residual_ideal": 0.010229589547215768,
+        "deviance_per_ty": 0.0027017098855002314,
+        "exposure_ty_3sigma": 3331.223699591867
+      },
+      {
+        "mass": 4.680694638641432,
+        "residual": 0.018696978102504723,
+        "residual_ideal": 0.0064280390745785395,
+        "deviance_per_ty": 0.002616512466190877,
+        "exposure_ty_3sigma": 3439.6931473834
+      },
+      {
+        "mass": 4.907111004420204,
+        "residual": 0.01837428078461013,
+        "residual_ideal": 0.0029391330340445307,
+        "deviance_per_ty": 0.0026397358125406396,
+        "exposure_ty_3sigma": 3409.43209439503
+      },
+      {
+        "mass": 5.144479669942963,
+        "residual": 0.018252182897671002,
+        "residual_ideal": 0.0007668004443951242,
+        "deviance_per_ty": 0.002642788652966995,
+        "exposure_ty_3sigma": 3405.493659092231
+      },
+      {
+        "mass": 5.3,
+        "residual": 0.01822227522538619,
+        "residual_ideal": 0.00014066472984430414,
+        "deviance_per_ty": 0.0026342363903981746,
+        "exposure_ty_3sigma": 3416.549871076535
+      },
+      {
+        "mass": 5.39333042407576,
+        "residual": 0.018219068584576024,
+        "residual_ideal": 0.00014041392888821614,
+        "deviance_per_ty": 0.0026627638208553215,
+        "exposure_ty_3sigma": 3379.946779173625
+      },
+      {
+        "mass": 5.65421868283595,
+        "residual": 0.018220594699445775,
+        "residual_ideal": 1.9354550351346098e-05,
+        "deviance_per_ty": 0.0026444164205511435,
+        "exposure_ty_3sigma": 3403.39741126106
+      },
+      {
+        "mass": 5.927726729038624,
+        "residual": 0.01821904060572102,
+        "residual_ideal": 1.950198760784036e-06,
+        "deviance_per_ty": 0.0026403364058749847,
+        "exposure_ty_3sigma": 3408.6565560260406
+      },
+      {
+        "mass": 6.0,
+        "residual": 0.018220509475694233,
+        "residual_ideal": 6.885194024165583e-07,
+        "deviance_per_ty": 0.0026208429924581816,
+        "exposure_ty_3sigma": 3434.0096014521573
+      },
+      {
+        "mass": 6.214465011907717,
+        "residual": 0.018220820358288266,
+        "residual_ideal": 6.875846933117016e-08,
+        "deviance_per_ty": 0.0026581316745946195,
+        "exposure_ty_3sigma": 3385.836783790085
+      },
+      {
+        "mass": 6.515073509552391,
+        "residual": 0.01821973207008942,
+        "residual_ideal": 1.0392933559066718e-12,
+        "deviance_per_ty": 0.002713558846647519,
+        "exposure_ty_3sigma": 3316.6776578732015
+      },
+      {
+        "mass": 6.830223157349658,
+        "residual": 0.01822050947569421,
+        "residual_ideal": 7.374912939529266e-13,
+        "deviance_per_ty": 0.002653769232611381,
+        "exposure_ty_3sigma": 3391.4026469979667
+      },
+      {
+        "mass": 7.0,
+        "residual": 0.018219051862418005,
+        "residual_ideal": 3.3642431515644193e-16,
+        "deviance_per_ty": 0.0027130565659264617,
+        "exposure_ty_3sigma": 3317.291689761233
+      },
+      {
+        "mass": 7.160617345421278,
+        "residual": 0.01822042096043873,
+        "residual_ideal": 2.152768214422779e-16,
+        "deviance_per_ty": 0.002647150802751261,
+        "exposure_ty_3sigma": 3399.8818619045196
+      },
+      {
+        "mass": 7.5,
+        "residual": 0.018219671817048012,
+        "residual_ideal": 9.766572643027492e-14,
+        "deviance_per_ty": 0.0026428099491904522,
+        "exposure_ty_3sigma": 3405.4662170304327
+      },
+      {
+        "mass": 7.506993488547184,
+        "residual": 0.018219748047000082,
+        "residual_ideal": 3.190964574281771e-13,
+        "deviance_per_ty": 0.002632099704731353,
+        "exposure_ty_3sigma": 3419.3233576304024
+      },
+      {
+        "mass": 7.870124672019365,
+        "residual": 0.018220511433759263,
+        "residual_ideal": 2.023137717960607e-16,
+        "deviance_per_ty": 0.002618455001319915,
+        "exposure_ty_3sigma": 3437.141365982331
+      },
+      {
+        "mass": 8.0,
+        "residual": 0.018219904849227878,
+        "residual_ideal": 1.0589608629218184e-16,
+        "deviance_per_ty": 0.002653759480105874,
+        "exposure_ty_3sigma": 3391.4151103252725
+      },
+      {
+        "mass": 8.250821377109638,
+        "residual": 0.018219005756502777,
+        "residual_ideal": 4.604567619541649e-16,
+        "deviance_per_ty": 0.002645915851640063,
+        "exposure_ty_3sigma": 3401.4687180702954
+      },
+      {
+        "mass": 8.5,
+        "residual": 0.018219043865099236,
+        "residual_ideal": 2.1891372354181538e-16,
+        "deviance_per_ty": 0.002672357860967223,
+        "exposure_ty_3sigma": 3367.8124219271194
+      },
+      {
+        "mass": 8.649933290002377,
+        "residual": 0.01822098431101067,
+        "residual_ideal": 3.178827716106394e-16,
+        "deviance_per_ty": 0.002622670273399989,
+        "exposure_ty_3sigma": 3431.617039809026
+      },
+      {
+        "mass": 9.0,
+        "residual": 0.018220489939519392,
+        "residual_ideal": 2.1041858074241707e-16,
+        "deviance_per_ty": 0.0027566573274130698,
+        "exposure_ty_3sigma": 3264.8236364023783
+      },
+      {
+        "mass": 9.06835119822969,
+        "residual": 0.018219091810401336,
+        "residual_ideal": 3.9702483883019225e-16,
+        "deviance_per_ty": 0.0026416774785566963,
+        "exposure_ty_3sigma": 3406.926119125348
+      },
+      {
+        "mass": 9.507008978841649,
+        "residual": 0.01822029071367487,
+        "residual_ideal": 7.365857252071806e-13,
+        "deviance_per_ty": 0.002629785763007204,
+        "exposure_ty_3sigma": 3422.332011451895
+      },
+      {
+        "mass": 9.966885682749053,
+        "residual": 0.01821956911802978,
+        "residual_ideal": 2.140687375045045e-16,
+        "deviance_per_ty": 0.0026288709989405502,
+        "exposure_ty_3sigma": 3423.5228748869954
+      },
+      {
+        "mass": 10.0,
+        "residual": 0.018219037550465986,
+        "residual_ideal": 1.977864194072664e-16,
+        "deviance_per_ty": 0.002733452444052627,
+        "exposure_ty_3sigma": 3292.5394475334515
+      },
+      {
+        "mass": 10.449007719890854,
+        "residual": 0.018220025103528787,
+        "residual_ideal": 2.2653824620066964e-13,
+        "deviance_per_ty": 0.002618277125586876,
+        "exposure_ty_3sigma": 3437.374872219719
+      },
+      {
+        "mass": 10.95445115010332,
+        "residual": 0.018220492709831553,
+        "residual_ideal": 3.6208592839402117e-16,
+        "deviance_per_ty": 0.002669008479403932,
+        "exposure_ty_3sigma": 3372.038743769733
+      },
+      {
+        "mass": 11.484344084804007,
+        "residual": 0.018219012472507217,
+        "residual_ideal": 4.2916105271663586e-16,
+        "deviance_per_ty": 0.002659355490036962,
+        "exposure_ty_3sigma": 3384.278647107428
+      },
+      {
+        "mass": 12.039869204850929,
+        "residual": 0.018220510315013472,
+        "residual_ideal": 4.005418297451447e-12,
+        "deviance_per_ty": 0.0026167807948707517,
+        "exposure_ty_3sigma": 3439.3404360201785
+      },
+      {
+        "mass": 12.62226640019656,
+        "residual": 0.018219723138356122,
+        "residual_ideal": 2.8197076834198707e-16,
+        "deviance_per_ty": 0.0026203396548592156,
+        "exposure_ty_3sigma": 3434.669235841316
+      },
+      {
+        "mass": 13.232835537228226,
+        "residual": 0.018220025138583295,
+        "residual_ideal": 2.380273624025523e-13,
+        "deviance_per_ty": 0.0026527583158771914,
+        "exposure_ty_3sigma": 3392.695047314914
+      },
+      {
+        "mass": 13.872939359971301,
+        "residual": 0.01822057184072645,
+        "residual_ideal": 1.2025816842783953e-16,
+        "deviance_per_ty": 0.002619423348625074,
+        "exposure_ty_3sigma": 3435.8707250296397
+      },
+      {
+        "mass": 14.54400653163061,
+        "residual": 0.01821857993109886,
+        "residual_ideal": 6.423198173026413e-17,
+        "deviance_per_ty": 0.0026325994132662574,
+        "exposure_ty_3sigma": 3418.674316588763
+      },
+      {
+        "mass": 15.247534823258349,
+        "residual": 0.018220419680109224,
+        "residual_ideal": 3.678485928716769e-13,
+        "deviance_per_ty": 0.0026539365630583664,
+        "exposure_ty_3sigma": 3391.188819384779
+      },
+      {
+        "mass": 15.98509445666555,
+        "residual": 0.018220471410221817,
+        "residual_ideal": 5.364415406402592e-16,
+        "deviance_per_ty": 0.002753000715460984,
+        "exposure_ty_3sigma": 3269.1600657622675
+      },
+      {
+        "mass": 16.75833160903811,
+        "residual": 0.01821901853439012,
+        "residual_ideal": 2.0961724904104147e-16,
+        "deviance_per_ty": 0.0026742220694522586,
+        "exposure_ty_3sigma": 3365.4647094597512
+      },
+      {
+        "mass": 17.568972087079473,
+        "residual": 0.018220511741697632,
+        "residual_ideal": 4.567266418751912e-13,
+        "deviance_per_ty": 0.00265787531770905,
+        "exposure_ty_3sigma": 3386.163353876784
+      },
+      {
+        "mass": 18.41882517888035,
+        "residual": 0.01821997620782438,
+        "residual_ideal": 2.0106046895629824e-16,
+        "deviance_per_ty": 0.0026372365493706126,
+        "exposure_ty_3sigma": 3412.663153841049
+      },
+      {
+        "mass": 19.30978769211259,
+        "residual": 0.018218979337287392,
+        "residual_ideal": 2.436488537573239e-16,
+        "deviance_per_ty": 0.002654363403367728,
+        "exposure_ty_3sigma": 3390.643492364774
+      },
+      {
+        "mass": 20.243848187560083,
+        "residual": 0.018220422627811594,
+        "residual_ideal": 1.5559048871557518e-13,
+        "deviance_per_ty": 0.0026628577600284085,
+        "exposure_ty_3sigma": 3379.827542836529
+      },
+      {
+        "mass": 21.22309141743566,
+        "residual": 0.01822016512851482,
+        "residual_ideal": 1.7695523085385727e-16,
+        "deviance_per_ty": 0.0026380981149860773,
+        "exposure_ty_3sigma": 3411.5486262145705
+      },
+      {
+        "mass": 22.249702978390033,
+        "residual": 0.01821896334065003,
+        "residual_ideal": 1.9741074958920497e-16,
+        "deviance_per_ty": 0.002639704582869799,
+        "exposure_ty_3sigma": 3409.472430515501
+      },
+      {
+        "mass": 23.325974189597773,
+        "residual": 0.018219957034294496,
+        "residual_ideal": 2.326413202714115e-16,
+        "deviance_per_ty": 0.002769782855153449,
+        "exposure_ty_3sigma": 3249.3521949760893
+      },
+      {
+        "mass": 24.454307206808032,
+        "residual": 0.01822046811096455,
+        "residual_ideal": 1.7694334373096354e-16,
+        "deviance_per_ty": 0.002710750303604765,
+        "exposure_ty_3sigma": 3320.113987640901
+      },
+      {
+        "mass": 25.637220383774043,
+        "residual": 0.01821951723733712,
+        "residual_ideal": 2.0577756620370686e-16,
+        "deviance_per_ty": 0.002653392864121054,
+        "exposure_ty_3sigma": 3391.8836979239722
+      },
+      {
+        "mass": 26.877353893027784,
+        "residual": 0.01821972779859422,
+        "residual_ideal": 3.440322864775561e-16,
+        "deviance_per_ty": 0.0026634637790799937,
+        "exposure_ty_3sigma": 3379.058529231719
+      },
+      {
+        "mass": 28.177475618544914,
+        "residual": 0.018220434346113125,
+        "residual_ideal": 3.301733735645297e-16,
+        "deviance_per_ty": 0.0026417687391430467,
+        "exposure_ty_3sigma": 3406.8084259788293
+      },
+      {
+        "mass": 29.540487333451967,
+        "residual": 0.018220481531345204,
+        "residual_ideal": 1.7686646378448902e-16,
+        "deviance_per_ty": 0.00263781936282454,
+        "exposure_ty_3sigma": 3411.909142392118
+      },
+      {
+        "mass": 30.969431176563972,
+        "residual": 0.0182195295598626,
+        "residual_ideal": 3.5457355648016615e-16,
+        "deviance_per_ty": 0.0026307647362830157,
+        "exposure_ty_3sigma": 3421.05847621936
+      },
+      {
+        "mass": 32.46749644220769,
+        "residual": 0.018219014957556998,
+        "residual_ideal": 9.32704301695632e-17,
+        "deviance_per_ty": 0.0026480968856635386,
+        "exposure_ty_3sigma": 3398.66718952953
+      },
+      {
+        "mass": 34.03802669848468,
+        "residual": 0.01821970217631925,
+        "residual_ideal": 1.7686059116996648e-16,
+        "deviance_per_ty": 0.0026327832357841484,
+        "exposure_ty_3sigma": 3418.4356226802847
+      },
+      {
+        "mass": 35.684527249861944,
+        "residual": 0.01822004161331485,
+        "residual_ideal": 3.630676965549974e-16,
+        "deviance_per_ty": 0.002625312557766705,
+        "exposure_ty_3sigma": 3428.163238458776
+      },
+      {
+        "mass": 37.41067296074566,
+        "residual": 0.01822013044897338,
+        "residual_ideal": 3.6511964845685783e-16,
+        "deviance_per_ty": 0.0026265327284302003,
+        "exposure_ty_3sigma": 3426.5706657990245
+      },
+      {
+        "mass": 39.22031645749996,
+        "residual": 0.018219521924856152,
+        "residual_ideal": 2.6345314704989357e-16,
+        "deviance_per_ty": 0.002653729757114135,
+        "exposure_ty_3sigma": 3391.4530957316756
+      },
+      {
+        "mass": 41.11749672721693,
+        "residual": 0.01821895690736504,
+        "residual_ideal": 1.017546505105357e-16,
+        "deviance_per_ty": 0.002635962856487275,
+        "exposure_ty_3sigma": 3414.3121470207434
+      },
+      {
+        "mass": 43.10644813242954,
+        "residual": 0.018219244857422327,
+        "residual_ideal": 2.0873904080126524e-16,
+        "deviance_per_ty": 0.002660498878180046,
+        "exposure_ty_3sigma": 3382.8242040667897
+      },
+      {
+        "mass": 45.191609861887855,
+        "residual": 0.018219716306042202,
+        "residual_ideal": 1.7693614757072582e-16,
+        "deviance_per_ty": 0.0026352452865073006,
+        "exposure_ty_3sigma": 3415.241854745299
+      },
+      {
+        "mass": 47.377635838491756,
+        "residual": 0.018219861263446175,
+        "residual_ideal": 2.765744073606388e-16,
+        "deviance_per_ty": 0.0026165170628016437,
+        "exposure_ty_3sigma": 3439.687104644073
+      },
+      {
+        "mass": 49.669405106494025,
+        "residual": 0.018220058108138835,
+        "residual_ideal": 3.5237072128406677e-16,
+        "deviance_per_ty": 0.0026557351796013453,
+        "exposure_ty_3sigma": 3388.8921113553943
+      },
+      {
+        "mass": 52.072032721157235,
+        "residual": 0.01822018616009693,
+        "residual_ideal": 1.521193809459627e-16,
+        "deviance_per_ty": 0.0026419693752136007,
+        "exposure_ty_3sigma": 3406.549706607541
+      },
+      {
+        "mass": 54.590881165169364,
+        "residual": 0.01822007859381648,
+        "residual_ideal": 1.0086928646214444e-16,
+        "deviance_per_ty": 0.002629491419519154,
+        "exposure_ty_3sigma": 3422.715104978665
+      },
+      {
+        "mass": 57.23157231729844,
+        "residual": 0.018219908668560797,
+        "residual_ideal": 2.293870957117892e-16,
+        "deviance_per_ty": 0.002634672920807016,
+        "exposure_ty_3sigma": 3415.983794012369
+      },
+      {
+        "mass": 60.0,
+        "residual": 0.01821958032915984,
+        "residual_ideal": 3.670422939816908e-16,
+        "deviance_per_ty": 0.0026285914640950475,
+        "exposure_ty_3sigma": 3423.886945892695
+      }
+    ],
+    "isotropic": [
+      {
+        "mass": 2.0,
+        "residual": 1.0,
+        "residual_ideal": 1.0,
+        "deviance_per_ty": 1e+300,
+        "exposure_ty_3sigma": 0.0
+      },
+      {
+        "mass": 2.0967447711327263,
+        "residual": 1.0,
+        "residual_ideal": 1.0,
+        "deviance_per_ty": 1e+300,
+        "exposure_ty_3sigma": 0.0
+      },
+      {
+        "mass": 2.1981693176362147,
+        "residual": 0.6799836820582918,
+        "residual_ideal": 0.5547648329617284,
+        "deviance_per_ty": 11.340078111309492,
+        "exposure_ty_3sigma": 0.7936453269245364
+      },
+      {
+        "mass": 2.304500011409063,
+        "residual": 0.6679025082482912,
+        "residual_ideal": 0.5547648329617284,
+        "deviance_per_ty": 10.577904941567846,
+        "exposure_ty_3sigma": 0.8508301076362319
+      },
+      {
+        "mass": 2.4159741744986305,
+        "residual": 0.6503227689644858,
+        "residual_ideal": 0.5547648329617284,
+        "deviance_per_ty": 9.610899017829844,
+        "exposure_ty_3sigma": 0.9364368497997406
+      },
+      {
+        "mass": 2.5328406087858544,
+        "residual": 0.6274525049790186,
+        "residual_ideal": 0.5547648329617284,
+        "deviance_per_ty": 8.505063902154273,
+        "exposure_ty_3sigma": 1.0581931074874538
+      },
+      {
+        "mass": 2.655360151292186,
+        "residual": 0.6023002664374615,
+        "residual_ideal": 0.5547648329617284,
+        "deviance_per_ty": 7.479533499608039,
+        "exposure_ty_3sigma": 1.2032836005710303
+      },
+      {
+        "mass": 2.783806256348048,
+        "residual": 0.5740493470019962,
+        "residual_ideal": 0.5479245059665854,
+        "deviance_per_ty": 6.4833843357282035,
+        "exposure_ty_3sigma": 1.3881638869384
+      },
+      {
+        "mass": 2.9184656059221696,
+        "residual": 0.5428192822896208,
+        "residual_ideal": 0.4993355068699762,
+        "deviance_per_ty": 5.534016398147807,
+        "exposure_ty_3sigma": 1.6263052641138234
+      },
+      {
+        "mass": 3.0596387494740065,
+        "residual": 0.5077373411364641,
+        "residual_ideal": 0.4268971010954262,
+        "deviance_per_ty": 4.6063363887256035,
+        "exposure_ty_3sigma": 1.9538303850383698
+      },
+      {
+        "mass": 3.207640774757349,
+        "residual": 0.46730554605468894,
+        "residual_ideal": 0.3517516574009974,
+        "deviance_per_ty": 3.68059310892675,
+        "exposure_ty_3sigma": 2.4452580694594555
+      },
+      {
+        "mass": 3.3628020110722994,
+        "residual": 0.4187567817624435,
+        "residual_ideal": 0.28270758739527774,
+        "deviance_per_ty": 2.7457403033603804,
+        "exposure_ty_3sigma": 3.2778045283398907
+      },
+      {
+        "mass": 3.52546876653523,
+        "residual": 0.36613960385550004,
+        "residual_ideal": 0.21077472421763477,
+        "deviance_per_ty": 1.958219815964838,
+        "exposure_ty_3sigma": 4.5960110946817245
+      },
+      {
+        "mass": 3.696004101012243,
+        "residual": 0.310289347317472,
+        "residual_ideal": 0.14953391999147364,
+        "deviance_per_ty": 1.3134267383498035,
+        "exposure_ty_3sigma": 6.852304538361728
+      },
+      {
+        "mass": 3.8747886364412665,
+        "residual": 0.24995665009374596,
+        "residual_ideal": 0.10238260865966756,
+        "deviance_per_ty": 0.7936164234253426,
+        "exposure_ty_3sigma": 11.340491116797876
+      },
+      {
+        "mass": 4.062221406351366,
+        "residual": 0.18542003322740497,
+        "residual_ideal": 0.06736242635947111,
+        "deviance_per_ty": 0.4046723755299608,
+        "exposure_ty_3sigma": 22.2402134275006
+      },
+      {
+        "mass": 4.258720746475328,
+        "residual": 0.11676346367951793,
+        "residual_ideal": 0.03930272360351815,
+        "deviance_per_ty": 0.14635273165865287,
+        "exposure_ty_3sigma": 61.49526488505341
+      },
+      {
+        "mass": 4.464725228443302,
+        "residual": 0.049479500669151584,
+        "residual_ideal": 0.021082118267450795,
+        "deviance_per_ty": 0.021432442451335604,
+        "exposure_ty_3sigma": 419.9241416574595
+      },
+      {
+        "mass": 4.680694638641432,
+        "residual": 0.020287003449802186,
+        "residual_ideal": 0.010193175460655622,
+        "deviance_per_ty": 0.0028547426202592194,
+        "exposure_ty_3sigma": 3152.648486112129
+      },
+      {
+        "mass": 4.907111004420204,
+        "residual": 0.019058104663207186,
+        "residual_ideal": 0.003945134343356986,
+        "deviance_per_ty": 0.0026470003722946886,
+        "exposure_ty_3sigma": 3400.0750790215743
+      },
+      {
+        "mass": 5.144479669942963,
+        "residual": 0.018777447188532567,
+        "residual_ideal": 0.0012336463601897694,
+        "deviance_per_ty": 0.0026328888657845308,
+        "exposure_ty_3sigma": 3418.2984769918266
+      },
+      {
+        "mass": 5.3,
+        "residual": 0.01867716038411937,
+        "residual_ideal": 0.0005799639758885983,
+        "deviance_per_ty": 0.0026365849463889893,
+        "exposure_ty_3sigma": 3413.5065560190687
+      },
+      {
+        "mass": 5.39333042407576,
+        "residual": 0.01863597730314377,
+        "residual_ideal": 0.00025679853413626867,
+        "deviance_per_ty": 0.0026342118491035097,
+        "exposure_ty_3sigma": 3416.581700922396
+      },
+      {
+        "mass": 5.65421868283595,
+        "residual": 0.018548593494646198,
+        "residual_ideal": 2.112751386882938e-05,
+        "deviance_per_ty": 0.0026582684777365587,
+        "exposure_ty_3sigma": 3385.6625376166853
+      },
+      {
+        "mass": 5.927726729038624,
+        "residual": 0.018496629290761773,
+        "residual_ideal": 1.9574971205988057e-06,
+        "deviance_per_ty": 0.0026536618081617084,
+        "exposure_ty_3sigma": 3391.539936369902
+      },
+      {
+        "mass": 6.0,
+        "residual": 0.018488216177510567,
+        "residual_ideal": 1.7355440295385276e-06,
+        "deviance_per_ty": 0.0026553374334557477,
+        "exposure_ty_3sigma": 3389.399737526801
+      },
+      {
+        "mass": 6.214465011907717,
+        "residual": 0.01846958275742289,
+        "residual_ideal": 1.1049105336042493e-07,
+        "deviance_per_ty": 0.0026610941363179917,
+        "exposure_ty_3sigma": 3382.0675026749714
+      },
+      {
+        "mass": 6.515073509552391,
+        "residual": 0.018466607676980586,
+        "residual_ideal": 1.0392933500788142e-12,
+        "deviance_per_ty": 0.0026511259995859048,
+        "exposure_ty_3sigma": 3394.783952707553
+      },
+      {
+        "mass": 6.830223157349658,
+        "residual": 0.018466069726456345,
+        "residual_ideal": 2.1629727046984073e-16,
+        "deviance_per_ty": 0.002706001938082186,
+        "exposure_ty_3sigma": 3325.9399682390967
+      },
+      {
+        "mass": 7.0,
+        "residual": 0.018465146329051083,
+        "residual_ideal": 1.1041623840953791e-16,
+        "deviance_per_ty": 0.0026504623338548692,
+        "exposure_ty_3sigma": 3395.633993753186
+      },
+      {
+        "mass": 7.160617345421278,
+        "residual": 0.01846533199893158,
+        "residual_ideal": 1.0234221808681334e-16,
+        "deviance_per_ty": 0.0026691672433876434,
+        "exposure_ty_3sigma": 3371.838172484619
+      },
+      {
+        "mass": 7.5,
+        "residual": 0.01846659568881159,
+        "residual_ideal": 1.0059498647867342e-16,
+        "deviance_per_ty": 0.0026578601299624438,
+        "exposure_ty_3sigma": 3386.182703349093
+      },
+      {
+        "mass": 7.506993488547184,
+        "residual": 0.018466754559487073,
+        "residual_ideal": 1.0143326634894556e-16,
+        "deviance_per_ty": 0.0026511352260115244,
+        "exposure_ty_3sigma": 3394.7721382511168
+      },
+      {
+        "mass": 7.870124672019365,
+        "residual": 0.018466761055070294,
+        "residual_ideal": 1.053999628063739e-16,
+        "deviance_per_ty": 0.002655132612262926,
+        "exposure_ty_3sigma": 3389.6612012646133
+      },
+      {
+        "mass": 8.0,
+        "residual": 0.01846647962314849,
+        "residual_ideal": 9.899428797452497e-17,
+        "deviance_per_ty": 0.002659180035708456,
+        "exposure_ty_3sigma": 3384.5019438867103
+      },
+      {
+        "mass": 8.250821377109638,
+        "residual": 0.018465332756466047,
+        "residual_ideal": 2.0344385355034202e-16,
+        "deviance_per_ty": 0.0026493958090880675,
+        "exposure_ty_3sigma": 3397.000919654144
+      },
+      {
+        "mass": 8.5,
+        "residual": 0.018466342449257336,
+        "residual_ideal": 2.178678454619973e-16,
+        "deviance_per_ty": 0.0026506515726116243,
+        "exposure_ty_3sigma": 3395.391568244676
+      },
+      {
+        "mass": 8.649933290002377,
+        "residual": 0.018466076689155345,
+        "residual_ideal": 1.0386752649265143e-16,
+        "deviance_per_ty": 0.002641654364480911,
+        "exposure_ty_3sigma": 3406.9559292131366
+      },
+      {
+        "mass": 9.0,
+        "residual": 0.01846523054112187,
+        "residual_ideal": 2.6324974176377523e-16,
+        "deviance_per_ty": 0.0027253681011572646,
+        "exposure_ty_3sigma": 3302.3062081699563
+      },
+      {
+        "mass": 9.06835119822969,
+        "residual": 0.018466032555938386,
+        "residual_ideal": 1.9854151548949334e-16,
+        "deviance_per_ty": 0.0026576611613550695,
+        "exposure_ty_3sigma": 3386.43621349049
+      },
+      {
+        "mass": 9.507008978841649,
+        "residual": 0.018465813352369236,
+        "residual_ideal": 1.036832425846929e-16,
+        "deviance_per_ty": 0.002657234376052437,
+        "exposure_ty_3sigma": 3386.980117790858
+      },
+      {
+        "mass": 9.966885682749053,
+        "residual": 0.018465766262563438,
+        "residual_ideal": 9.945325351435053e-17,
+        "deviance_per_ty": 0.0026499293161193318,
+        "exposure_ty_3sigma": 3396.317005609787
+      },
+      {
+        "mass": 10.0,
+        "residual": 0.01846558775733011,
+        "residual_ideal": 4.0290989337881826e-16,
+        "deviance_per_ty": 0.0026523452011504014,
+        "exposure_ty_3sigma": 3393.22347486912
+      },
+      {
+        "mass": 10.449007719890854,
+        "residual": 0.018465158565568077,
+        "residual_ideal": 0.030960296831244228,
+        "deviance_per_ty": 0.0026503944228902345,
+        "exposure_ty_3sigma": 3395.720999965571
+      },
+      {
+        "mass": 10.95445115010332,
+        "residual": 0.018465397498401755,
+        "residual_ideal": 0.07014622724111229,
+        "deviance_per_ty": 0.002644080301881436,
+        "exposure_ty_3sigma": 3403.8300552354294
+      },
+      {
+        "mass": 11.484344084804007,
+        "residual": 0.01846529367868259,
+        "residual_ideal": 0.11439241402098003,
+        "deviance_per_ty": 0.0026392947245228986,
+        "exposure_ty_3sigma": 3410.001890420524
+      },
+      {
+        "mass": 12.039869204850929,
+        "residual": 0.01845877161022221,
+        "residual_ideal": 0.1686594219113461,
+        "deviance_per_ty": 0.0026278851887518205,
+        "exposure_ty_3sigma": 3424.807156158437
+      },
+      {
+        "mass": 12.62226640019656,
+        "residual": 0.01841750108242491,
+        "residual_ideal": 0.23570051111721055,
+        "deviance_per_ty": 0.002705723957170781,
+        "exposure_ty_3sigma": 3326.2816689588612
+      },
+      {
+        "mass": 13.232835537228226,
+        "residual": 0.018315251638862842,
+        "residual_ideal": 0.3077483596568881,
+        "deviance_per_ty": 0.0027239039568156703,
+        "exposure_ty_3sigma": 3304.0812534819634
+      },
+      {
+        "mass": 13.872939359971301,
+        "residual": 0.01835593086222127,
+        "residual_ideal": 0.37545159157611785,
+        "deviance_per_ty": 0.00299960161643703,
+        "exposure_ty_3sigma": 3000.3984364731505
+      },
+      {
+        "mass": 14.54400653163061,
+        "residual": 0.02958940086046682,
+        "residual_ideal": 0.43655602594910636,
+        "deviance_per_ty": 0.007687473909254656,
+        "exposure_ty_3sigma": 1170.7356806980827
+      },
+      {
+        "mass": 15.247534823258349,
+        "residual": 0.06275025812668834,
+        "residual_ideal": 0.4912030517321575,
+        "deviance_per_ty": 0.03456364011917416,
+        "exposure_ty_3sigma": 260.3892405131037
+      },
+      {
+        "mass": 15.98509445666555,
+        "residual": 0.12630118575267918,
+        "residual_ideal": 0.5398239430167283,
+        "deviance_per_ty": 0.1591904387748978,
+        "exposure_ty_3sigma": 56.5360587561819
+      },
+      {
+        "mass": 16.75833160903811,
+        "residual": 0.21383712376523475,
+        "residual_ideal": 0.5827088930149352,
+        "deviance_per_ty": 0.44694047826283057,
+        "exposure_ty_3sigma": 20.13690958353386
+      },
+      {
+        "mass": 17.568972087079473,
+        "residual": 0.3060772148338434,
+        "residual_ideal": 0.6204660054687874,
+        "deviance_per_ty": 0.8906937197725528,
+        "exposure_ty_3sigma": 10.104483505618784
+      },
+      {
+        "mass": 18.41882517888035,
+        "residual": 0.39689829983923136,
+        "residual_ideal": 0.6536984091185052,
+        "deviance_per_ty": 1.4939631785490937,
+        "exposure_ty_3sigma": 6.02424486039918
+      },
+      {
+        "mass": 19.30978769211259,
+        "residual": 0.47814336215502334,
+        "residual_ideal": 0.6828766348804969,
+        "deviance_per_ty": 2.2010834329634497,
+        "exposure_ty_3sigma": 4.088895434500983
+      },
+      {
+        "mass": 20.243848187560083,
+        "residual": 0.5506596698934045,
+        "residual_ideal": 0.7076039052501497,
+        "deviance_per_ty": 3.0213913362206077,
+        "exposure_ty_3sigma": 2.9787601136296047
+      },
+      {
+        "mass": 21.22309141743566,
+        "residual": 0.6136836698630458,
+        "residual_ideal": 0.7278627905236165,
+        "deviance_per_ty": 3.94511416974888,
+        "exposure_ty_3sigma": 2.2813027995519026
+      },
+      {
+        "mass": 22.249702978390033,
+        "residual": 0.6637604559755811,
+        "residual_ideal": 0.7443792988723225,
+        "deviance_per_ty": 4.887693077088132,
+        "exposure_ty_3sigma": 1.8413594835135998
+      },
+      {
+        "mass": 23.325974189597773,
+        "residual": 0.7048328613893117,
+        "residual_ideal": 0.7581501829797396,
+        "deviance_per_ty": 5.863331420841051,
+        "exposure_ty_3sigma": 1.5349635478577495
+      },
+      {
+        "mass": 24.454307206808032,
+        "residual": 0.7376630924715288,
+        "residual_ideal": 0.7697022829530483,
+        "deviance_per_ty": 6.8213436525229865,
+        "exposure_ty_3sigma": 1.319388152607031
+      },
+      {
+        "mass": 25.637220383774043,
+        "residual": 0.750716975786752,
+        "residual_ideal": 0.7794728068860617,
+        "deviance_per_ty": 7.156116713383367,
+        "exposure_ty_3sigma": 1.257665345671096
+      },
+      {
+        "mass": 26.877353893027784,
+        "residual": 0.7571104331909507,
+        "residual_ideal": 0.7878341562758162,
+        "deviance_per_ty": 7.391756571275009,
+        "exposure_ty_3sigma": 1.2175725638713213
+      },
+      {
+        "mass": 28.177475618544914,
+        "residual": 0.7617005457737764,
+        "residual_ideal": 0.7951044246210497,
+        "deviance_per_ty": 7.572520018598578,
+        "exposure_ty_3sigma": 1.1885079178259605
+      },
+      {
+        "mass": 29.540487333451967,
+        "residual": 0.7652209872734694,
+        "residual_ideal": 0.8015573960519481,
+        "deviance_per_ty": 7.717727452192197,
+        "exposure_ty_3sigma": 1.1661463890440413
+      },
+      {
+        "mass": 30.969431176563972,
+        "residual": 0.768010379643789,
+        "residual_ideal": 0.8069778007040216,
+        "deviance_per_ty": 7.862557573050374,
+        "exposure_ty_3sigma": 1.1446657040513526
+      },
+      {
+        "mass": 32.46749644220769,
+        "residual": 0.7703110191769368,
+        "residual_ideal": 0.8119477804121782,
+        "deviance_per_ty": 7.938706925041965,
+        "exposure_ty_3sigma": 1.1336858867544635
+      },
+      {
+        "mass": 34.03802669848468,
+        "residual": 0.7722022194081432,
+        "residual_ideal": 0.8162645480040698,
+        "deviance_per_ty": 8.025379076304162,
+        "exposure_ty_3sigma": 1.121442353617104
+      },
+      {
+        "mass": 35.684527249861944,
+        "residual": 0.7738134498769939,
+        "residual_ideal": 0.8202285484627199,
+        "deviance_per_ty": 8.10015094578611,
+        "exposure_ty_3sigma": 1.1110904056278128
+      },
+      {
+        "mass": 37.41067296074566,
+        "residual": 0.7752000414326703,
+        "residual_ideal": 0.8236519903085618,
+        "deviance_per_ty": 8.165920814033893,
+        "exposure_ty_3sigma": 1.1021414736881436
+      },
+      {
+        "mass": 39.22031645749996,
+        "residual": 0.7764074135795722,
+        "residual_ideal": 0.8269611478794123,
+        "deviance_per_ty": 8.223418526318438,
+        "exposure_ty_3sigma": 1.09443535814165
+      },
+      {
+        "mass": 41.11749672721693,
+        "residual": 0.77747379894027,
+        "residual_ideal": 0.8296865187429827,
+        "deviance_per_ty": 8.277005001388796,
+        "exposure_ty_3sigma": 1.0873498322750672
+      },
+      {
+        "mass": 43.10644813242954,
+        "residual": 0.7783917284987498,
+        "residual_ideal": 0.8322906816894937,
+        "deviance_per_ty": 8.32051790410781,
+        "exposure_ty_3sigma": 1.0816634377478753
+      },
+      {
+        "mass": 45.191609861887855,
+        "residual": 0.7792169068829263,
+        "residual_ideal": 0.8348217375743812,
+        "deviance_per_ty": 8.362346593723606,
+        "exposure_ty_3sigma": 1.0762529272291808
+      },
+      {
+        "mass": 47.377635838491756,
+        "residual": 0.7799746120108771,
+        "residual_ideal": 0.8368339198706847,
+        "deviance_per_ty": 8.39906038385119,
+        "exposure_ty_3sigma": 1.0715484338348409
+      },
+      {
+        "mass": 49.669405106494025,
+        "residual": 0.780622324931822,
+        "residual_ideal": 0.8387912947437901,
+        "deviance_per_ty": 8.433992561530138,
+        "exposure_ty_3sigma": 1.067110260572387
+      },
+      {
+        "mass": 52.072032721157235,
+        "residual": 0.781241032355803,
+        "residual_ideal": 0.8407030640579912,
+        "deviance_per_ty": 8.463858949346431,
+        "exposure_ty_3sigma": 1.063344752536899
+      },
+      {
+        "mass": 54.590881165169364,
+        "residual": 0.7817694281487334,
+        "residual_ideal": 0.8424462499876613,
+        "deviance_per_ty": 8.492814339488039,
+        "exposure_ty_3sigma": 1.0597193863233016
+      },
+      {
+        "mass": 57.23157231729844,
+        "residual": 0.7822806154859403,
+        "residual_ideal": 0.8438816819119354,
+        "deviance_per_ty": 8.518111454082135,
+        "exposure_ty_3sigma": 1.0565722283061851
+      },
+      {
+        "mass": 60.0,
+        "residual": 0.782722652312814,
+        "residual_ideal": 0.845283219794886,
+        "deviance_per_ty": 8.541913957852799,
+        "exposure_ty_3sigma": 1.053628032828178
+      }
+    ],
+    "isotropic_vE220": [
+      {
+        "mass": 2.0,
+        "residual": 1.0,
+        "residual_ideal": 1.0,
+        "deviance_per_ty": 1e+300,
+        "exposure_ty_3sigma": 0.0
+      },
+      {
+        "mass": 2.0967447711327263,
+        "residual": 1.0,
+        "residual_ideal": 1.0,
+        "deviance_per_ty": 1e+300,
+        "exposure_ty_3sigma": 0.0
+      },
+      {
+        "mass": 2.1981693176362147,
+        "residual": 0.6800507078726097,
+        "residual_ideal": 0.5547648329617284,
+        "deviance_per_ty": 11.344806338487283,
+        "exposure_ty_3sigma": 0.7933145557070885
+      },
+      {
+        "mass": 2.304500011409063,
+        "residual": 0.6731325659152152,
+        "residual_ideal": 0.5547648329617284,
+        "deviance_per_ty": 10.895175031595468,
+        "exposure_ty_3sigma": 0.8260537323999335
+      },
+      {
+        "mass": 2.4159741744986305,
+        "residual": 0.6565425798132895,
+        "residual_ideal": 0.5547648329617284,
+        "deviance_per_ty": 9.937662187484168,
+        "exposure_ty_3sigma": 0.9056455965402918
+      },
+      {
+        "mass": 2.5328406087858544,
+        "residual": 0.6357329888273159,
+        "residual_ideal": 0.5547648329617284,
+        "deviance_per_ty": 8.885461907163503,
+        "exposure_ty_3sigma": 1.0128905051907493
+      },
+      {
+        "mass": 2.655360151292186,
+        "residual": 0.6109723054476285,
+        "residual_ideal": 0.5547648329617284,
+        "deviance_per_ty": 7.815934334561613,
+        "exposure_ty_3sigma": 1.1514938092817024
+      },
+      {
+        "mass": 2.783806256348048,
+        "residual": 0.5837973772850241,
+        "residual_ideal": 0.553899180147609,
+        "deviance_per_ty": 6.809243536488275,
+        "exposure_ty_3sigma": 1.321732722845387
+      },
+      {
+        "mass": 2.9184656059221696,
+        "residual": 0.5537721915714797,
+        "residual_ideal": 0.519577674187607,
+        "deviance_per_ty": 5.852178360300987,
+        "exposure_ty_3sigma": 1.5378888758846911
+      },
+      {
+        "mass": 3.0596387494740065,
+        "residual": 0.5201302427173708,
+        "residual_ideal": 0.4527232430085328,
+        "deviance_per_ty": 4.919899188934513,
+        "exposure_ty_3sigma": 1.8293057752569724
+      },
+      {
+        "mass": 3.207640774757349,
+        "residual": 0.48180455728702853,
+        "residual_ideal": 0.3761292160558475,
+        "deviance_per_ty": 3.9980310608423326,
+        "exposure_ty_3sigma": 2.2511080737086164
+      },
+      {
+        "mass": 3.3628020110722994,
+        "residual": 0.43595026954201516,
+        "residual_ideal": 0.3063240492838824,
+        "deviance_per_ty": 3.0526849316324034,
+        "exposure_ty_3sigma": 2.94822433417238
+      },
+      {
+        "mass": 3.52546876653523,
+        "residual": 0.3841545900312766,
+        "residual_ideal": 0.2352035834938169,
+        "deviance_per_ty": 2.204433477411362,
+        "exposure_ty_3sigma": 4.082681601519037
+      },
+      {
+        "mass": 3.696004101012243,
+        "residual": 0.3299068521382524,
+        "residual_ideal": 0.16793422229096117,
+        "deviance_per_ty": 1.5209557857607305,
+        "exposure_ty_3sigma": 5.917331775360258
+      },
+      {
+        "mass": 3.8747886364412665,
+        "residual": 0.27085276609267006,
+        "residual_ideal": 0.11812193055624914,
+        "deviance_per_ty": 0.954650448547474,
+        "exposure_ty_3sigma": 9.427534459019778
+      },
+      {
+        "mass": 4.062221406351366,
+        "residual": 0.20802331434546123,
+        "residual_ideal": 0.0773322711485881,
+        "deviance_per_ty": 0.5233992945767971,
+        "exposure_ty_3sigma": 17.19528492539734
+      },
+      {
+        "mass": 4.258720746475328,
+        "residual": 0.14054287214094385,
+        "residual_ideal": 0.04838612498841489,
+        "deviance_per_ty": 0.21956535454808734,
+        "exposure_ty_3sigma": 40.990073404449134
+      },
+      {
+        "mass": 4.464725228443302,
+        "residual": 0.07094767260168466,
+        "residual_ideal": 0.02603827907302047,
+        "deviance_per_ty": 0.04886609594871331,
+        "exposure_ty_3sigma": 184.1767758456869
+      },
+      {
+        "mass": 4.680694638641432,
+        "residual": 0.023599734844523997,
+        "residual_ideal": 0.013263053377690513,
+        "deviance_per_ty": 0.004007415936714706,
+        "exposure_ty_3sigma": 2245.8362551151185
+      },
+      {
+        "mass": 4.907111004420204,
+        "residual": 0.01925264941173714,
+        "residual_ideal": 0.00597383594230018,
+        "deviance_per_ty": 0.002667590131709819,
+        "exposure_ty_3sigma": 3373.831644155678
+      },
+      {
+        "mass": 5.144479669942963,
+        "residual": 0.018848839808999516,
+        "residual_ideal": 0.0021568239394202356,
+        "deviance_per_ty": 0.0026333699008111063,
+        "exposure_ty_3sigma": 3417.6740598530814
+      },
+      {
+        "mass": 5.3,
+        "residual": 0.018729092972142432,
+        "residual_ideal": 0.0007499084434741881,
+        "deviance_per_ty": 0.002633063830134506,
+        "exposure_ty_3sigma": 3418.0713346171515
+      },
+      {
+        "mass": 5.39333042407576,
+        "residual": 0.018673841669594515,
+        "residual_ideal": 0.0005604116939472054,
+        "deviance_per_ty": 0.002636817585334672,
+        "exposure_ty_3sigma": 3413.2053920057942
+      },
+      {
+        "mass": 5.65421868283595,
+        "residual": 0.01857124222677739,
+        "residual_ideal": 9.677877216085374e-05,
+        "deviance_per_ty": 0.00265156163012751,
+        "exposure_ty_3sigma": 3394.226216634159
+      },
+      {
+        "mass": 5.927726729038624,
+        "residual": 0.0185123683677675,
+        "residual_ideal": 9.418132493185147e-06,
+        "deviance_per_ty": 0.002649091652991313,
+        "exposure_ty_3sigma": 3397.3909471336488
+      },
+      {
+        "mass": 6.0,
+        "residual": 0.018499119327023122,
+        "residual_ideal": 1.9594080308943833e-06,
+        "deviance_per_ty": 0.002682007999127206,
+        "exposure_ty_3sigma": 3355.694689549334
+      },
+      {
+        "mass": 6.214465011907717,
+        "residual": 0.01847536594888589,
+        "residual_ideal": 1.1765886409275108e-07,
+        "deviance_per_ty": 0.0026683196572510545,
+        "exposure_ty_3sigma": 3372.9092298004293
+      },
+      {
+        "mass": 6.515073509552391,
+        "residual": 0.018466423205799297,
+        "residual_ideal": 2.405671959887273e-09,
+        "deviance_per_ty": 0.0026622015399723354,
+        "exposure_ty_3sigma": 3380.6606542994955
+      },
+      {
+        "mass": 6.830223157349658,
+        "residual": 0.018466725395122414,
+        "residual_ideal": 2.1607258970665424e-16,
+        "deviance_per_ty": 0.0026545891368023556,
+        "exposure_ty_3sigma": 3390.3551684239733
+      },
+      {
+        "mass": 7.0,
+        "residual": 0.018466447460854907,
+        "residual_ideal": 1.8223611202005164e-16,
+        "deviance_per_ty": 0.002653580466929305,
+        "exposure_ty_3sigma": 3391.6438985604623
+      },
+      {
+        "mass": 7.160617345421278,
+        "residual": 0.01846641275362942,
+        "residual_ideal": 1.1877425783929031e-13,
+        "deviance_per_ty": 0.0026611469711220427,
+        "exposure_ty_3sigma": 3382.0003546084686
+      },
+      {
+        "mass": 7.5,
+        "residual": 0.018465409141047145,
+        "residual_ideal": 2.1623735284078956e-16,
+        "deviance_per_ty": 0.002737351319814147,
+        "exposure_ty_3sigma": 3287.849803879415
+      },
+      {
+        "mass": 7.506993488547184,
+        "residual": 0.018465132123191657,
+        "residual_ideal": 3.756525458754349e-16,
+        "deviance_per_ty": 0.002738320205440379,
+        "exposure_ty_3sigma": 3286.6864810474613
+      },
+      {
+        "mass": 7.870124672019365,
+        "residual": 0.018466373575115224,
+        "residual_ideal": 3.737448121072021e-16,
+        "deviance_per_ty": 0.0026455735726983827,
+        "exposure_ty_3sigma": 3401.908793192377
+      },
+      {
+        "mass": 8.0,
+        "residual": 0.018465321311127648,
+        "residual_ideal": 4.713921850135989e-17,
+        "deviance_per_ty": 0.0026466781954468475,
+        "exposure_ty_3sigma": 3400.4889659358455
+      },
+      {
+        "mass": 8.250821377109638,
+        "residual": 0.01846688721677189,
+        "residual_ideal": 8.806793459196195e-17,
+        "deviance_per_ty": 0.0026514684497057285,
+        "exposure_ty_3sigma": 3394.3454997546205
+      },
+      {
+        "mass": 8.5,
+        "residual": 0.018465273618981624,
+        "residual_ideal": 3.356849212413683e-17,
+        "deviance_per_ty": 0.0026869990388866706,
+        "exposure_ty_3sigma": 3349.461562788297
+      },
+      {
+        "mass": 8.649933290002377,
+        "residual": 0.018465510317601953,
+        "residual_ideal": 1.1081302039451308e-16,
+        "deviance_per_ty": 0.002641450942863896,
+        "exposure_ty_3sigma": 3407.218303377643
+      },
+      {
+        "mass": 9.0,
+        "residual": 0.0184654232280056,
+        "residual_ideal": 2.881769233045015e-16,
+        "deviance_per_ty": 0.002668560210688682,
+        "exposure_ty_3sigma": 3372.605183855809
+      },
+      {
+        "mass": 9.06835119822969,
+        "residual": 0.018466214000163798,
+        "residual_ideal": 1.7672630981783076e-16,
+        "deviance_per_ty": 0.002639886775006672,
+        "exposure_ty_3sigma": 3409.237125322261
+      },
+      {
+        "mass": 9.507008978841649,
+        "residual": 0.018465605158482647,
+        "residual_ideal": 9.128836491185219e-17,
+        "deviance_per_ty": 0.0026571937126629473,
+        "exposure_ty_3sigma": 3387.0319491989585
+      },
+      {
+        "mass": 9.966885682749053,
+        "residual": 0.018465142124813257,
+        "residual_ideal": 1.7645938126770968e-16,
+        "deviance_per_ty": 0.0026530404765947885,
+        "exposure_ty_3sigma": 3392.3342215839903
+      },
+      {
+        "mass": 10.0,
+        "residual": 0.018465602225042833,
+        "residual_ideal": 3.6451474813754566e-16,
+        "deviance_per_ty": 0.0026519476233634403,
+        "exposure_ty_3sigma": 3393.7321841165867
+      },
+      {
+        "mass": 10.449007719890854,
+        "residual": 0.01846534734619701,
+        "residual_ideal": 1.2486804453921634e-16,
+        "deviance_per_ty": 0.0026567038206249454,
+        "exposure_ty_3sigma": 3387.6565126039904
+      },
+      {
+        "mass": 10.95445115010332,
+        "residual": 0.018465652512487385,
+        "residual_ideal": 0.016396483083293226,
+        "deviance_per_ty": 0.0026477653553054637,
+        "exposure_ty_3sigma": 3399.092741343653
+      },
+      {
+        "mass": 11.484344084804007,
+        "residual": 0.018464980866103254,
+        "residual_ideal": 0.06064974538586933,
+        "deviance_per_ty": 0.002660489614567579,
+        "exposure_ty_3sigma": 3382.8359827906374
+      },
+      {
+        "mass": 12.039869204850929,
+        "residual": 0.018464947568747683,
+        "residual_ideal": 0.10399004559724635,
+        "deviance_per_ty": 0.0026539209552387828,
+        "exposure_ty_3sigma": 3391.208763107354
+      },
+      {
+        "mass": 12.62226640019656,
+        "residual": 0.018462293177174818,
+        "residual_ideal": 0.15504135477116746,
+        "deviance_per_ty": 0.0026480361540364324,
+        "exposure_ty_3sigma": 3398.7451365726993
+      },
+      {
+        "mass": 13.232835537228226,
+        "residual": 0.018432559984950924,
+        "residual_ideal": 0.21816878572182985,
+        "deviance_per_ty": 0.002663320538481372,
+        "exposure_ty_3sigma": 3379.240264159795
+      },
+      {
+        "mass": 13.872939359971301,
+        "residual": 0.018346141793018654,
+        "residual_ideal": 0.2901247608698796,
+        "deviance_per_ty": 0.0027009832471458,
+        "exposure_ty_3sigma": 3332.1198898625294
+      },
+      {
+        "mass": 14.54400653163061,
+        "residual": 0.01824223465815942,
+        "residual_ideal": 0.35883722629147763,
+        "deviance_per_ty": 0.0028208430429677803,
+        "exposure_ty_3sigma": 3190.535546611339
+      },
+      {
+        "mass": 15.247534823258349,
+        "residual": 0.022808142038324593,
+        "residual_ideal": 0.4213159122160769,
+        "deviance_per_ty": 0.004879050897449185,
+        "exposure_ty_3sigma": 1844.6210521610437
+      },
+      {
+        "mass": 15.98509445666555,
+        "residual": 0.05329955459813504,
+        "residual_ideal": 0.47725430260030144,
+        "deviance_per_ty": 0.023824875923863145,
+        "exposure_ty_3sigma": 377.7564268859652
+      },
+      {
+        "mass": 16.75833160903811,
+        "residual": 0.10765458465047434,
+        "residual_ideal": 0.5270959094980867,
+        "deviance_per_ty": 0.11510043812603318,
+        "exposure_ty_3sigma": 78.19257812159795
+      },
+      {
+        "mass": 17.568972087079473,
+        "residual": 0.19054703422225722,
+        "residual_ideal": 0.5712155178062857,
+        "deviance_per_ty": 0.3577740539838027,
+        "exposure_ty_3sigma": 25.15554132499349
+      },
+      {
+        "mass": 18.41882517888035,
+        "residual": 0.27834183294706943,
+        "residual_ideal": 0.6100625944915707,
+        "deviance_per_ty": 0.741405522906998,
+        "exposure_ty_3sigma": 12.139105687683097
+      },
+      {
+        "mass": 19.30978769211259,
+        "residual": 0.3713719413960244,
+        "residual_ideal": 0.6442873864603516,
+        "deviance_per_ty": 1.3032622692836529,
+        "exposure_ty_3sigma": 6.9057473788042
+      },
+      {
+        "mass": 20.243848187560083,
+        "residual": 0.4537519326104454,
+        "residual_ideal": 0.674428822273233,
+        "deviance_per_ty": 1.9690281522761923,
+        "exposure_ty_3sigma": 4.570782794342488
+      },
+      {
+        "mass": 21.22309141743566,
+        "residual": 0.5285648270337325,
+        "residual_ideal": 0.7003651031488962,
+        "deviance_per_ty": 2.7481572040329736,
+        "exposure_ty_3sigma": 3.274921822809964
+      },
+      {
+        "mass": 22.249702978390033,
+        "residual": 0.5934776512988528,
+        "residual_ideal": 0.7217816542974353,
+        "deviance_per_ty": 3.6236521286426266,
+        "exposure_ty_3sigma": 2.483682119721377
+      },
+      {
+        "mass": 23.325974189597773,
+        "residual": 0.6476052888424098,
+        "residual_ideal": 0.7392579289183924,
+        "deviance_per_ty": 4.562090160027204,
+        "exposure_ty_3sigma": 1.972779950483559
+      },
+      {
+        "mass": 24.454307206808032,
+        "residual": 0.692181456042183,
+        "residual_ideal": 0.7537758324188953,
+        "deviance_per_ty": 5.538293513289615,
+        "exposure_ty_3sigma": 1.625049300547853
+      },
+      {
+        "mass": 25.637220383774043,
+        "residual": 0.7269847080371495,
+        "residual_ideal": 0.7658633966861136,
+        "deviance_per_ty": 6.4962993725789895,
+        "exposure_ty_3sigma": 1.3854041330036577
+      },
+      {
+        "mass": 26.877353893027784,
+        "residual": 0.7476507194456795,
+        "residual_ideal": 0.7761444164379274,
+        "deviance_per_ty": 7.05016867966344,
+        "exposure_ty_3sigma": 1.2765652013349615
+      },
+      {
+        "mass": 28.177475618544914,
+        "residual": 0.7549753177374303,
+        "residual_ideal": 0.7849353182733404,
+        "deviance_per_ty": 7.311175259893405,
+        "exposure_ty_3sigma": 1.2309922386036767
+      },
+      {
+        "mass": 29.540487333451967,
+        "residual": 0.7600771578029227,
+        "residual_ideal": 0.7924244126808019,
+        "deviance_per_ty": 7.507206201014889,
+        "exposure_ty_3sigma": 1.198848114599983
+      },
+      {
+        "mass": 30.969431176563972,
+        "residual": 0.763914190547869,
+        "residual_ideal": 0.7989954116201832,
+        "deviance_per_ty": 7.663049424924431,
+        "exposure_ty_3sigma": 1.17446717369812
+      },
+      {
+        "mass": 32.46749644220769,
+        "residual": 0.7669283283714492,
+        "residual_ideal": 0.8048976065979556,
+        "deviance_per_ty": 7.7903703711214565,
+        "exposure_ty_3sigma": 1.155272415976856
+      },
+      {
+        "mass": 34.03802669848468,
+        "residual": 0.7693860879396924,
+        "residual_ideal": 0.8098635240487381,
+        "deviance_per_ty": 7.897846310501633,
+        "exposure_ty_3sigma": 1.1395511695426197
+      },
+      {
+        "mass": 35.684527249861944,
+        "residual": 0.7713997628827199,
+        "residual_ideal": 0.8144758192594075,
+        "deviance_per_ty": 7.993826835334705,
+        "exposure_ty_3sigma": 1.1258687716648752
+      },
+      {
+        "mass": 37.41067296074566,
+        "residual": 0.7731076472891624,
+        "residual_ideal": 0.8184245364433129,
+        "deviance_per_ty": 8.087235231574624,
+        "exposure_ty_3sigma": 1.1128648718985827
+      },
+      {
+        "mass": 39.22031645749996,
+        "residual": 0.7745694573526312,
+        "residual_ideal": 0.8221872963410912,
+        "deviance_per_ty": 8.135442095146214,
+        "exposure_ty_3sigma": 1.1062705498659502
+      },
+      {
+        "mass": 41.11749672721693,
+        "residual": 0.7758341432881609,
+        "residual_ideal": 0.8253068931016604,
+        "deviance_per_ty": 8.196094989466419,
+        "exposure_ty_3sigma": 1.098083906002402
+      },
+      {
+        "mass": 43.10644813242954,
+        "residual": 0.7769430720421526,
+        "residual_ideal": 0.8283208216802533,
+        "deviance_per_ty": 8.249633367728569,
+        "exposure_ty_3sigma": 1.090957573364019
+      },
+      {
+        "mass": 45.191609861887855,
+        "residual": 0.7779305574508788,
+        "residual_ideal": 0.8310176833736539,
+        "deviance_per_ty": 8.29686251919341,
+        "exposure_ty_3sigma": 1.0847473944735133
+      },
+      {
+        "mass": 47.377635838491756,
+        "residual": 0.7787798366115092,
+        "residual_ideal": 0.8333743033007224,
+        "deviance_per_ty": 8.340029980157606,
+        "exposure_ty_3sigma": 1.0791328114422345
+      },
+      {
+        "mass": 49.669405106494025,
+        "residual": 0.7795519259833668,
+        "residual_ideal": 0.8356647682005801,
+        "deviance_per_ty": 8.378825109253903,
+        "exposure_ty_3sigma": 1.0741362759869575
+      },
+      {
+        "mass": 52.072032721157235,
+        "residual": 0.780251529814464,
+        "residual_ideal": 0.8377932828022846,
+        "deviance_per_ty": 8.413630790561367,
+        "exposure_ty_3sigma": 1.0696927668963603
+      },
+      {
+        "mass": 54.590881165169364,
+        "residual": 0.7808671989642478,
+        "residual_ideal": 0.8395472662428572,
+        "deviance_per_ty": 8.445911170998485,
+        "exposure_ty_3sigma": 1.065604387470252
+      },
+      {
+        "mass": 57.23157231729844,
+        "residual": 0.7814417907131873,
+        "residual_ideal": 0.841255559450072,
+        "deviance_per_ty": 8.474787249280944,
+        "exposure_ty_3sigma": 1.061973561727301
+      },
+      {
+        "mass": 60.0,
+        "residual": 0.7819499098875738,
+        "residual_ideal": 0.8429247732821037,
+        "deviance_per_ty": 8.501458910982208,
+        "exposure_ty_3sigma": 1.0586418277425036
+      }
+    ],
+    "isotropic_vE250": [
+      {
+        "mass": 2.0,
+        "residual": 1.0,
+        "residual_ideal": 1.0,
+        "deviance_per_ty": 1e+300,
+        "exposure_ty_3sigma": 0.0
+      },
+      {
+        "mass": 2.0967447711327263,
+        "residual": 0.6800507078726097,
+        "residual_ideal": 0.5547648329617284,
+        "deviance_per_ty": 11.344806338487283,
+        "exposure_ty_3sigma": 0.7933145557070885
+      },
+      {
+        "mass": 2.1981693176362147,
+        "residual": 0.675603848079732,
+        "residual_ideal": 0.5547648329617284,
+        "deviance_per_ty": 11.05116165729178,
+        "exposure_ty_3sigma": 0.81439402291809
+      },
+      {
+        "mass": 2.304500011409063,
+        "residual": 0.6596004618937467,
+        "residual_ideal": 0.5547648329617284,
+        "deviance_per_ty": 10.103776796672332,
+        "exposure_ty_3sigma": 0.8907560193693254
+      },
+      {
+        "mass": 2.4159741744986305,
+        "residual": 0.6398665305154605,
+        "residual_ideal": 0.5547648329617284,
+        "deviance_per_ty": 9.084684861182822,
+        "exposure_ty_3sigma": 0.9906782830140135
+      },
+      {
+        "mass": 2.5328406087858544,
+        "residual": 0.615114477811804,
+        "residual_ideal": 0.5547648329617284,
+        "deviance_per_ty": 7.9818381369432725,
+        "exposure_ty_3sigma": 1.1275598233875792
+      },
+      {
+        "mass": 2.655360151292186,
+        "residual": 0.5886225450234077,
+        "residual_ideal": 0.554732846875649,
+        "deviance_per_ty": 6.977566255204818,
+        "exposure_ty_3sigma": 1.289848017320735
+      },
+      {
+        "mass": 2.783806256348048,
+        "residual": 0.5590359014652315,
+        "residual_ideal": 0.5283338692114555,
+        "deviance_per_ty": 6.010763322591817,
+        "exposure_ty_3sigma": 1.4973139877547592
+      },
+      {
+        "mass": 2.9184656059221696,
+        "residual": 0.5259145944727818,
+        "residual_ideal": 0.4648998870026057,
+        "deviance_per_ty": 5.071289560076039,
+        "exposure_ty_3sigma": 1.7746965329790898
+      },
+      {
+        "mass": 3.0596387494740065,
+        "residual": 0.48842889229297215,
+        "residual_ideal": 0.3884292549172149,
+        "deviance_per_ty": 4.147979867766648,
+        "exposure_ty_3sigma": 2.1697308778997937
+      },
+      {
+        "mass": 3.207640774757349,
+        "residual": 0.4439697257477302,
+        "residual_ideal": 0.3174947084129675,
+        "deviance_per_ty": 3.2049551372866514,
+        "exposure_ty_3sigma": 2.8081516322314246
+      },
+      {
+        "mass": 3.3628020110722994,
+        "residual": 0.3926802981377304,
+        "residual_ideal": 0.2469402106933451,
+        "deviance_per_ty": 2.328884177170285,
+        "exposure_ty_3sigma": 3.8645116353254916
+      },
+      {
+        "mass": 3.52546876653523,
+        "residual": 0.3389295306344527,
+        "residual_ideal": 0.1774557417780878,
+        "deviance_per_ty": 1.6231562983916967,
+        "exposure_ty_3sigma": 5.544752534871499
+      },
+      {
+        "mass": 3.696004101012243,
+        "residual": 0.2805397214717344,
+        "residual_ideal": 0.1256293533998045,
+        "deviance_per_ty": 1.0358727515361916,
+        "exposure_ty_3sigma": 8.688325845672711
+      },
+      {
+        "mass": 3.8747886364412665,
+        "residual": 0.21825835329716578,
+        "residual_ideal": 0.0822618561643579,
+        "deviance_per_ty": 0.5831812467932658,
+        "exposure_ty_3sigma": 15.43259501139351
+      },
+      {
+        "mass": 4.062221406351366,
+        "residual": 0.15137896834754552,
+        "residual_ideal": 0.05289135617213686,
+        "deviance_per_ty": 0.2584458643494144,
+        "exposure_ty_3sigma": 34.82354040624985
+      },
+      {
+        "mass": 4.258720746475328,
+        "residual": 0.08158784772551948,
+        "residual_ideal": 0.02863383728058317,
+        "deviance_per_ty": 0.06665592050648658,
+        "exposure_ty_3sigma": 135.02176448263393
+      },
+      {
+        "mass": 4.464725228443302,
+        "residual": 0.02813192435999718,
+        "residual_ideal": 0.014980873786628117,
+        "deviance_per_ty": 0.005965305417362225,
+        "exposure_ty_3sigma": 1508.724092115249
+      },
+      {
+        "mass": 4.680694638641432,
+        "residual": 0.01937919731736371,
+        "residual_ideal": 0.006946006616304761,
+        "deviance_per_ty": 0.002682505933952247,
+        "exposure_ty_3sigma": 3355.071795401372
+      },
+      {
+        "mass": 4.907111004420204,
+        "residual": 0.018884244346056945,
+        "residual_ideal": 0.002518711861868877,
+        "deviance_per_ty": 0.00263425643525433,
+        "exposure_ty_3sigma": 3416.5238735123658
+      },
+      {
+        "mass": 5.144479669942963,
+        "residual": 0.01869539506359912,
+        "residual_ideal": 0.0006621332083061656,
+        "deviance_per_ty": 0.0026354237665586894,
+        "exposure_ty_3sigma": 3415.010562704347
+      },
+      {
+        "mass": 5.3,
+        "residual": 0.018619111740192894,
+        "residual_ideal": 0.0001539091000069735,
+        "deviance_per_ty": 0.002642759232710244,
+        "exposure_ty_3sigma": 3405.5315704148265
+      },
+      {
+        "mass": 5.39333042407576,
+        "residual": 0.018586204940096,
+        "residual_ideal": 0.00012108926621992555,
+        "deviance_per_ty": 0.0026492611611401993,
+        "exposure_ty_3sigma": 3397.1735712633727
+      },
+      {
+        "mass": 5.65421868283595,
+        "residual": 0.018517824961778624,
+        "residual_ideal": 1.4616380541363871e-05,
+        "deviance_per_ty": 0.0026708012850892916,
+        "exposure_ty_3sigma": 3369.775224478787
+      },
+      {
+        "mass": 5.927726729038624,
+        "residual": 0.018481164691817233,
+        "residual_ideal": 6.814492015836272e-07,
+        "deviance_per_ty": 0.00264932942724614,
+        "exposure_ty_3sigma": 3397.086035221788
+      },
+      {
+        "mass": 6.0,
+        "residual": 0.018473210051494417,
+        "residual_ideal": 1.174202233489674e-07,
+        "deviance_per_ty": 0.002646312123573664,
+        "exposure_ty_3sigma": 3400.959365233952
+      },
+      {
+        "mass": 6.214465011907717,
+        "residual": 0.018467037198583062,
+        "residual_ideal": 2.4279362487109873e-09,
+        "deviance_per_ty": 0.0026681576314903045,
+        "exposure_ty_3sigma": 3373.1140521008247
+      },
+      {
+        "mass": 6.515073509552391,
+        "residual": 0.018467306040163237,
+        "residual_ideal": 1.2478054251056389e-16,
+        "deviance_per_ty": 0.0026441287878002945,
+        "exposure_ty_3sigma": 3403.7676385223604
+      },
+      {
+        "mass": 6.830223157349658,
+        "residual": 0.018466776995569326,
+        "residual_ideal": 1.1165696366485388e-16,
+        "deviance_per_ty": 0.002670359569344558,
+        "exposure_ty_3sigma": 3370.3326335970023
+      },
+      {
+        "mass": 7.0,
+        "residual": 0.018466000228339614,
+        "residual_ideal": 3.6746094499855115e-16,
+        "deviance_per_ty": 0.0026671465728676643,
+        "exposure_ty_3sigma": 3374.3927280019616
+      },
+      {
+        "mass": 7.160617345421278,
+        "residual": 0.01846515200008656,
+        "residual_ideal": 1.2607676102175817e-16,
+        "deviance_per_ty": 0.0026787354566969257,
+        "exposure_ty_3sigma": 3359.7942557185734
+      },
+      {
+        "mass": 7.5,
+        "residual": 0.018466596025642865,
+        "residual_ideal": 9.835157624096498e-17,
+        "deviance_per_ty": 0.0026573393062865724,
+        "exposure_ty_3sigma": 3386.8463762637857
+      },
+      {
+        "mass": 7.506993488547184,
+        "residual": 0.018466636788014076,
+        "residual_ideal": 2.295385806186677e-16,
+        "deviance_per_ty": 0.0027213223602941413,
+        "exposure_ty_3sigma": 3307.2156872393507
+      },
+      {
+        "mass": 7.870124672019365,
+        "residual": 0.01846538672374027,
+        "residual_ideal": 9.198871906205549e-17,
+        "deviance_per_ty": 0.002652161074465788,
+        "exposure_ty_3sigma": 3393.459049923213
+      },
+      {
+        "mass": 8.0,
+        "residual": 0.018465721576755197,
+        "residual_ideal": 1.8185004207097295e-16,
+        "deviance_per_ty": 0.0026487968833811926,
+        "exposure_ty_3sigma": 3397.769023539279
+      },
+      {
+        "mass": 8.250821377109638,
+        "residual": 0.018466296998111878,
+        "residual_ideal": 4.0468243889576567e-16,
+        "deviance_per_ty": 0.002644256038294209,
+        "exposure_ty_3sigma": 3403.6038377757986
+      },
+      {
+        "mass": 8.5,
+        "residual": 0.01846625339827571,
+        "residual_ideal": 2.0356993312729786e-16,
+        "deviance_per_ty": 0.002657801407323078,
+        "exposure_ty_3sigma": 3386.2575191668466
+      },
+      {
+        "mass": 8.649933290002377,
+        "residual": 0.01846615912255999,
+        "residual_ideal": 1.2766318874050449e-16,
+        "deviance_per_ty": 0.0026551024845833235,
+        "exposure_ty_3sigma": 3389.6996640460784
+      },
+      {
+        "mass": 9.0,
+        "residual": 0.01846518838258408,
+        "residual_ideal": 2.952984234763715e-16,
+        "deviance_per_ty": 0.0026498396398999813,
+        "exposure_ty_3sigma": 3396.4319442136907
+      },
+      {
+        "mass": 9.06835119822969,
+        "residual": 0.018465953984200457,
+        "residual_ideal": 2.6383839948626376e-16,
+        "deviance_per_ty": 0.00265150389262207,
+        "exposure_ty_3sigma": 3394.300127200608
+      },
+      {
+        "mass": 9.507008978841649,
+        "residual": 0.018465238822584912,
+        "residual_ideal": 0.011570145663108634,
+        "deviance_per_ty": 0.00265657710979195,
+        "exposure_ty_3sigma": 3387.8180937517886
+      },
+      {
+        "mass": 9.966885682749053,
+        "residual": 0.01846566817046373,
+        "residual_ideal": 0.058499888375969464,
+        "deviance_per_ty": 0.0026868991943603685,
+        "exposure_ty_3sigma": 3349.586027972479
+      },
+      {
+        "mass": 10.0,
+        "residual": 0.018465200072024863,
+        "residual_ideal": 0.06117592355103339,
+        "deviance_per_ty": 0.00266173654960014,
+        "exposure_ty_3sigma": 3381.251236660528
+      },
+      {
+        "mass": 10.449007719890854,
+        "residual": 0.01846538363712181,
+        "residual_ideal": 0.10204695143804282,
+        "deviance_per_ty": 0.0026515517361989315,
+        "exposure_ty_3sigma": 3394.2388817582473
+      },
+      {
+        "mass": 10.95445115010332,
+        "residual": 0.01846253615244952,
+        "residual_ideal": 0.15315953392884735,
+        "deviance_per_ty": 0.002658101683397641,
+        "exposure_ty_3sigma": 3385.874985977215
+      },
+      {
+        "mass": 11.484344084804007,
+        "residual": 0.018433798343514572,
+        "residual_ideal": 0.21670912198044323,
+        "deviance_per_ty": 0.002706688217099986,
+        "exposure_ty_3sigma": 3325.096678346953
+      },
+      {
+        "mass": 12.039869204850929,
+        "residual": 0.01834705902002738,
+        "residual_ideal": 0.2895871438815596,
+        "deviance_per_ty": 0.0026881613846067376,
+        "exposure_ty_3sigma": 3348.0132746258637
+      },
+      {
+        "mass": 12.62226640019656,
+        "residual": 0.018242215884864302,
+        "residual_ideal": 0.3591844379195907,
+        "deviance_per_ty": 0.002820995415065682,
+        "exposure_ty_3sigma": 3190.3632143232144
+      },
+      {
+        "mass": 13.232835537228226,
+        "residual": 0.02431159449373262,
+        "residual_ideal": 0.4225244786722002,
+        "deviance_per_ty": 0.005420047385913521,
+        "exposure_ty_3sigma": 1660.5020877475404
+      },
+      {
+        "mass": 13.872939359971301,
+        "residual": 0.05432311563826656,
+        "residual_ideal": 0.4791381429712931,
+        "deviance_per_ty": 0.024726493630004467,
+        "exposure_ty_3sigma": 363.9820564400167
+      },
+      {
+        "mass": 14.54400653163061,
+        "residual": 0.11061458381333912,
+        "residual_ideal": 0.529529860883697,
+        "deviance_per_ty": 0.1216841863332377,
+        "exposure_ty_3sigma": 73.96195242127098
+      },
+      {
+        "mass": 15.247534823258349,
+        "residual": 0.1971343714005927,
+        "residual_ideal": 0.5740593026095394,
+        "deviance_per_ty": 0.3816940082671105,
+        "exposure_ty_3sigma": 23.579096881452163
+      },
+      {
+        "mass": 15.98509445666555,
+        "residual": 0.28689872835748303,
+        "residual_ideal": 0.6132020499005147,
+        "deviance_per_ty": 0.7859036063022135,
+        "exposure_ty_3sigma": 11.45178610688181
+      },
+      {
+        "mass": 16.75833160903811,
+        "residual": 0.38116286858779125,
+        "residual_ideal": 0.6476068103273158,
+        "deviance_per_ty": 1.373398341391638,
+        "exposure_ty_3sigma": 6.553087861516182
+      },
+      {
+        "mass": 17.568972087079473,
+        "residual": 0.4647979058883802,
+        "residual_ideal": 0.677897167497729,
+        "deviance_per_ty": 2.0714266115293545,
+        "exposure_ty_3sigma": 4.34483169710522
+      },
+      {
+        "mass": 18.41882517888035,
+        "residual": 0.5382999398673,
+        "residual_ideal": 0.703711550551701,
+        "deviance_per_ty": 2.868193434800487,
+        "exposure_ty_3sigma": 3.137863677812248
+      },
+      {
+        "mass": 19.30978769211259,
+        "residual": 0.6044209907773382,
+        "residual_ideal": 0.7248989444083122,
+        "deviance_per_ty": 3.7991005587207263,
+        "exposure_ty_3sigma": 2.368981778947851
+      },
+      {
+        "mass": 20.243848187560083,
+        "residual": 0.6573339058090664,
+        "residual_ideal": 0.7421801490095482,
+        "deviance_per_ty": 4.75382717330255,
+        "exposure_ty_3sigma": 1.8932114424655395
+      },
+      {
+        "mass": 21.22309141743566,
+        "residual": 0.7001966692467123,
+        "residual_ideal": 0.7564351667989488,
+        "deviance_per_ty": 5.741364229095264,
+        "exposure_ty_3sigma": 1.567571685208733
+      },
+      {
+        "mass": 22.249702978390033,
+        "residual": 0.7340871310337098,
+        "residual_ideal": 0.7683908936068395,
+        "deviance_per_ty": 6.721318964049556,
+        "exposure_ty_3sigma": 1.3390228983535029
+      },
+      {
+        "mass": 23.325974189597773,
+        "residual": 0.7498949884127888,
+        "residual_ideal": 0.7785005372423196,
+        "deviance_per_ty": 7.127338031765743,
+        "exposure_ty_3sigma": 1.2627435320014309
+      },
+      {
+        "mass": 24.454307206808032,
+        "residual": 0.7566272592948374,
+        "residual_ideal": 0.7871476521275924,
+        "deviance_per_ty": 7.37372829188431,
+        "exposure_ty_3sigma": 1.2205494484934576
+      },
+      {
+        "mass": 25.637220383774043,
+        "residual": 0.761412403975511,
+        "residual_ideal": 0.7946613507800677,
+        "deviance_per_ty": 7.56058630003363,
+        "exposure_ty_3sigma": 1.1903838727374842
+      },
+      {
+        "mass": 26.877353893027784,
+        "residual": 0.7650449104073762,
+        "residual_ideal": 0.8011677932265063,
+        "deviance_per_ty": 7.710235696097458,
+        "exposure_ty_3sigma": 1.1672794911516593
+      },
+      {
+        "mass": 28.177475618544914,
+        "residual": 0.7679186545942182,
+        "residual_ideal": 0.8067784473769748,
+        "deviance_per_ty": 7.833309358587031,
+        "exposure_ty_3sigma": 1.1489396866643622
+      },
+      {
+        "mass": 29.540487333451967,
+        "residual": 0.7702661261865127,
+        "residual_ideal": 0.8119170332298751,
+        "deviance_per_ty": 7.936763377963724,
+        "exposure_ty_3sigma": 1.1339635026777204
+      },
+      {
+        "mass": 30.969431176563972,
+        "residual": 0.7722086912820075,
+        "residual_ideal": 0.8162544707768321,
+        "deviance_per_ty": 8.025521406777706,
+        "exposure_ty_3sigma": 1.121422465137197
+      },
+      {
+        "mass": 32.46749644220769,
+        "residual": 0.773848150654058,
+        "residual_ideal": 0.8203573846470815,
+        "deviance_per_ty": 8.101934649529197,
+        "exposure_ty_3sigma": 1.1108457904585778
+      },
+      {
+        "mass": 34.03802669848468,
+        "residual": 0.7752575728645735,
+        "residual_ideal": 0.8237925942754474,
+        "deviance_per_ty": 8.168558798340493,
+        "exposure_ty_3sigma": 1.1017855440825646
+      },
+      {
+        "mass": 35.684527249861944,
+        "residual": 0.7764835554944839,
+        "residual_ideal": 0.8271114725004796,
+        "deviance_per_ty": 8.226872053959521,
+        "exposure_ty_3sigma": 1.0939759292437736
+      },
+      {
+        "mass": 37.41067296074566,
+        "residual": 0.7775626808079367,
+        "residual_ideal": 0.8299494851623891,
+        "deviance_per_ty": 8.278699714659354,
+        "exposure_ty_3sigma": 1.087127243432132
+      },
+      {
+        "mass": 39.22031645749996,
+        "residual": 0.7784906843985168,
+        "residual_ideal": 0.8325585904713156,
+        "deviance_per_ty": 8.325535274442272,
+        "exposure_ty_3sigma": 1.081011575030881
+      },
+      {
+        "mass": 41.11749672721693,
+        "residual": 0.7793264728658237,
+        "residual_ideal": 0.8350983019446019,
+        "deviance_per_ty": 8.367767393369466,
+        "exposure_ty_3sigma": 1.0755557100131046
+      },
+      {
+        "mass": 43.10644813242954,
+        "residual": 0.780090831374601,
+        "residual_ideal": 0.8372006574821149,
+        "deviance_per_ty": 8.404994197010382,
+        "exposure_ty_3sigma": 1.0707919350142157
+      },
+      {
+        "mass": 45.191609861887855,
+        "residual": 0.7807455644792592,
+        "residual_ideal": 0.8391598311091952,
+        "deviance_per_ty": 8.440271722125999,
+        "exposure_ty_3sigma": 1.066316381308754
+      },
+      {
+        "mass": 47.377635838491756,
+        "residual": 0.781369242955156,
+        "residual_ideal": 0.8410731529363356,
+        "deviance_per_ty": 8.47049082862172,
+        "exposure_ty_3sigma": 1.0625122182517537
+      },
+      {
+        "mass": 49.669405106494025,
+        "residual": 0.7819024184222466,
+        "residual_ideal": 0.8428944702817994,
+        "deviance_per_ty": 8.499750108886904,
+        "exposure_ty_3sigma": 1.0588546586316767
+      },
+      {
+        "mass": 52.072032721157235,
+        "residual": 0.7824185847263427,
+        "residual_ideal": 0.8443283700932762,
+        "deviance_per_ty": 8.525252394187051,
+        "exposure_ty_3sigma": 1.0556872200213867
+      },
+      {
+        "mass": 54.590881165169364,
+        "residual": 0.7828620362269973,
+        "residual_ideal": 0.8457296674659034,
+        "deviance_per_ty": 8.549308016809483,
+        "exposure_ty_3sigma": 1.0527167792181982
+      },
+      {
+        "mass": 57.23157231729844,
+        "residual": 0.7832816630293405,
+        "residual_ideal": 0.8471033104176957,
+        "deviance_per_ty": 8.572017855818535,
+        "exposure_ty_3sigma": 1.0499278176247566
+      },
+      {
+        "mass": 60.0,
+        "residual": 0.7836774314049451,
+        "residual_ideal": 0.8484536909725352,
+        "deviance_per_ty": 8.591690231415132,
+        "exposure_ty_3sigma": 1.0475238000424993
+      }
+    ],
+    "isotropic_vesc500": [
+      {
+        "mass": 2.0,
+        "residual": 1.0,
+        "residual_ideal": 1.0,
+        "deviance_per_ty": 1e+300,
+        "exposure_ty_3sigma": 0.0
+      },
+      {
+        "mass": 2.0967447711327263,
+        "residual": 1.0,
+        "residual_ideal": 1.0,
+        "deviance_per_ty": 1e+300,
+        "exposure_ty_3sigma": 0.0
+      },
+      {
+        "mass": 2.1981693176362147,
+        "residual": 1.0,
+        "residual_ideal": 1.0,
+        "deviance_per_ty": 1e+300,
+        "exposure_ty_3sigma": 0.0
+      },
+      {
+        "mass": 2.304500011409063,
+        "residual": 0.6800507078726097,
+        "residual_ideal": 0.5547648329617284,
+        "deviance_per_ty": 11.344806338487281,
+        "exposure_ty_3sigma": 0.7933145557070886
+      },
+      {
+        "mass": 2.4159741744986305,
+        "residual": 0.6720760105286911,
+        "residual_ideal": 0.5547648329617284,
+        "deviance_per_ty": 10.829777605569443,
+        "exposure_ty_3sigma": 0.831041996224517
+      },
+      {
+        "mass": 2.5328406087858544,
+        "residual": 0.6551674383235067,
+        "residual_ideal": 0.5547648329617284,
+        "deviance_per_ty": 9.864240741613555,
+        "exposure_ty_3sigma": 0.9123864913426488
+      },
+      {
+        "mass": 2.655360151292186,
+        "residual": 0.6339806982862659,
+        "residual_ideal": 0.5547648329617284,
+        "deviance_per_ty": 8.803072743942499,
+        "exposure_ty_3sigma": 1.0223702861245818
+      },
+      {
+        "mass": 2.783806256348048,
+        "residual": 0.6091304811040165,
+        "residual_ideal": 0.5547648329617284,
+        "deviance_per_ty": 7.743390740228986,
+        "exposure_ty_3sigma": 1.162281525229328
+      },
+      {
+        "mass": 2.9184656059221696,
+        "residual": 0.5817380598887096,
+        "residual_ideal": 0.5532342044187124,
+        "deviance_per_ty": 6.7390032540161755,
+        "exposure_ty_3sigma": 1.3355090746745613
+      },
+      {
+        "mass": 3.0596387494740065,
+        "residual": 0.5515187209649881,
+        "residual_ideal": 0.5155859908474719,
+        "deviance_per_ty": 5.785589616619173,
+        "exposure_ty_3sigma": 1.5555890749920105
+      },
+      {
+        "mass": 3.207640774757349,
+        "residual": 0.5175347574017033,
+        "residual_ideal": 0.4473281993715534,
+        "deviance_per_ty": 4.852846879557278,
+        "exposure_ty_3sigma": 1.854581490694193
+      },
+      {
+        "mass": 3.3628020110722994,
+        "residual": 0.4788229794773991,
+        "residual_ideal": 0.3709158660123127,
+        "deviance_per_ty": 3.9313021027192754,
+        "exposure_ty_3sigma": 2.289317830286997
+      },
+      {
+        "mass": 3.52546876653523,
+        "residual": 0.43259967042427355,
+        "residual_ideal": 0.30164487613986757,
+        "deviance_per_ty": 2.9909222012246377,
+        "exposure_ty_3sigma": 3.0091053509566166
+      },
+      {
+        "mass": 3.696004101012243,
+        "residual": 0.3806071713006302,
+        "residual_ideal": 0.23031664483316902,
+        "deviance_per_ty": 2.154261288492656,
+        "exposure_ty_3sigma": 4.177766201377239
+      },
+      {
+        "mass": 3.8747886364412665,
+        "residual": 0.3261294128008129,
+        "residual_ideal": 0.16417138802549297,
+        "deviance_per_ty": 1.4794250922153127,
+        "exposure_ty_3sigma": 6.083444202317313
+      },
+      {
+        "mass": 4.062221406351366,
+        "residual": 0.2668922910120244,
+        "residual_ideal": 0.11507650856310525,
+        "deviance_per_ty": 0.9226710500815196,
+        "exposure_ty_3sigma": 9.754288919333531
+      },
+      {
+        "mass": 4.258720746475328,
+        "residual": 0.20382974677648216,
+        "residual_ideal": 0.07541164652768702,
+        "deviance_per_ty": 0.49999526016935947,
+        "exposure_ty_3sigma": 18.000170635520625
+      },
+      {
+        "mass": 4.464725228443302,
+        "residual": 0.1362855837636583,
+        "residual_ideal": 0.046654579213811165,
+        "deviance_per_ty": 0.20525538484507705,
+        "exposure_ty_3sigma": 43.847814306031644
+      },
+      {
+        "mass": 4.680694638641432,
+        "residual": 0.06692772756307896,
+        "residual_ideal": 0.02510346604358752,
+        "deviance_per_ty": 0.042876627548853505,
+        "exposure_ty_3sigma": 209.90456839790923
+      },
+      {
+        "mass": 4.907111004420204,
+        "residual": 0.022344029750651452,
+        "residual_ideal": 0.012660188565070318,
+        "deviance_per_ty": 0.003532117804974838,
+        "exposure_ty_3sigma": 2548.046383765536
+      },
+      {
+        "mass": 5.144479669942963,
+        "residual": 0.019213759864218867,
+        "residual_ideal": 0.00561350848566016,
+        "deviance_per_ty": 0.0026621746516001217,
+        "exposure_ty_3sigma": 3380.694799490513
+      },
+      {
+        "mass": 5.3,
+        "residual": 0.01893089758048325,
+        "residual_ideal": 0.002833168976835451,
+        "deviance_per_ty": 0.002638520057421339,
+        "exposure_ty_3sigma": 3411.003063890225
+      },
+      {
+        "mass": 5.39333042407576,
+        "residual": 0.018833017631782068,
+        "residual_ideal": 0.0020157307558628817,
+        "deviance_per_ty": 0.002633496628149807,
+        "exposure_ty_3sigma": 3417.509596859842
+      },
+      {
+        "mass": 5.65421868283595,
+        "residual": 0.018669500298154253,
+        "residual_ideal": 0.0005186005379495993,
+        "deviance_per_ty": 0.002636969119844552,
+        "exposure_ty_3sigma": 3413.009250760792
+      },
+      {
+        "mass": 5.927726729038624,
+        "residual": 0.018568378224471244,
+        "residual_ideal": 8.596756748715213e-05,
+        "deviance_per_ty": 0.002640530063522241,
+        "exposure_ty_3sigma": 3408.4065636407754
+      },
+      {
+        "mass": 6.0,
+        "residual": 0.01855035699003185,
+        "residual_ideal": 2.7477678866269505e-05,
+        "deviance_per_ty": 0.002655231720889241,
+        "exposure_ty_3sigma": 3389.5346794764437
+      },
+      {
+        "mass": 6.214465011907717,
+        "residual": 0.01850944049458308,
+        "residual_ideal": 7.170647385682774e-06,
+        "deviance_per_ty": 0.0026750292552679524,
+        "exposure_ty_3sigma": 3364.4491858458155
+      },
+      {
+        "mass": 6.515073509552391,
+        "residual": 0.018475071730456864,
+        "residual_ideal": 1.1757891007945607e-07,
+        "deviance_per_ty": 0.0026527182379758414,
+        "exposure_ty_3sigma": 3392.746304962813
+      },
+      {
+        "mass": 6.830223157349658,
+        "residual": 0.018465193991256377,
+        "residual_ideal": 2.3728837128484154e-09,
+        "deviance_per_ty": 0.0026696723830522302,
+        "exposure_ty_3sigma": 3371.2001731502055
+      },
+      {
+        "mass": 7.0,
+        "residual": 0.018466024494510784,
+        "residual_ideal": 5.832858838608916e-13,
+        "deviance_per_ty": 0.002666055044784177,
+        "exposure_ty_3sigma": 3375.7742615282614
+      },
+      {
+        "mass": 7.160617345421278,
+        "residual": 0.018466478006800197,
+        "residual_ideal": 1.9750468530598036e-16,
+        "deviance_per_ty": 0.0026456571318797585,
+        "exposure_ty_3sigma": 3401.8013489168325
+      },
+      {
+        "mass": 7.5,
+        "residual": 0.01846701066284798,
+        "residual_ideal": 1.7759411432182352e-16,
+        "deviance_per_ty": 0.002643360740191286,
+        "exposure_ty_3sigma": 3404.756627863331
+      },
+      {
+        "mass": 7.506993488547184,
+        "residual": 0.018467016150402457,
+        "residual_ideal": 1.9700375187649761e-16,
+        "deviance_per_ty": 0.0026880369350525883,
+        "exposure_ty_3sigma": 3348.168279474897
+      },
+      {
+        "mass": 7.870124672019365,
+        "residual": 0.018465766339904856,
+        "residual_ideal": 3.464182771081396e-16,
+        "deviance_per_ty": 0.002651059793271962,
+        "exposure_ty_3sigma": 3394.868732437045
+      },
+      {
+        "mass": 8.0,
+        "residual": 0.018466066134015326,
+        "residual_ideal": 3.071900903406165e-16,
+        "deviance_per_ty": 0.0026614587282664747,
+        "exposure_ty_3sigma": 3381.604194877783
+      },
+      {
+        "mass": 8.250821377109638,
+        "residual": 0.018466318552413336,
+        "residual_ideal": 2.6587538965785543e-16,
+        "deviance_per_ty": 0.0026714660588310025,
+        "exposure_ty_3sigma": 3368.936681882561
+      },
+      {
+        "mass": 8.5,
+        "residual": 0.01846523693571538,
+        "residual_ideal": 2.1729799726039823e-16,
+        "deviance_per_ty": 0.0027261461477107,
+        "exposure_ty_3sigma": 3301.363724596281
+      },
+      {
+        "mass": 8.649933290002377,
+        "residual": 0.018464994397563134,
+        "residual_ideal": 8.813244207365527e-17,
+        "deviance_per_ty": 0.0026672006086893496,
+        "exposure_ty_3sigma": 3374.3243649087794
+      },
+      {
+        "mass": 9.0,
+        "residual": 0.018466184657119446,
+        "residual_ideal": 3.9645722616851554e-16,
+        "deviance_per_ty": 0.0026447289914162124,
+        "exposure_ty_3sigma": 3402.995176144924
+      },
+      {
+        "mass": 9.06835119822969,
+        "residual": 0.0184655579554787,
+        "residual_ideal": 9.258350338125513e-17,
+        "deviance_per_ty": 0.002648629672604758,
+        "exposure_ty_3sigma": 3397.983528270706
+      },
+      {
+        "mass": 9.507008978841649,
+        "residual": 0.018465524912524685,
+        "residual_ideal": 2.1751155610812514e-16,
+        "deviance_per_ty": 0.0026489398038749175,
+        "exposure_ty_3sigma": 3397.5857008281714
+      },
+      {
+        "mass": 9.966885682749053,
+        "residual": 0.018464916540855057,
+        "residual_ideal": 9.117395754188462e-17,
+        "deviance_per_ty": 0.0026499602826975826,
+        "exposure_ty_3sigma": 3396.2773173484175
+      },
+      {
+        "mass": 10.0,
+        "residual": 0.018465375079412896,
+        "residual_ideal": 2.0303058409677385e-16,
+        "deviance_per_ty": 0.002648860936103976,
+        "exposure_ty_3sigma": 3397.686861295735
+      },
+      {
+        "mass": 10.449007719890854,
+        "residual": 0.018465513200396855,
+        "residual_ideal": 0.030955100159147583,
+        "deviance_per_ty": 0.0026480386837246855,
+        "exposure_ty_3sigma": 3398.741889729781
+      },
+      {
+        "mass": 10.95445115010332,
+        "residual": 0.01846530712958052,
+        "residual_ideal": 0.07014690342925194,
+        "deviance_per_ty": 0.0026406373879638532,
+        "exposure_ty_3sigma": 3408.268034461079
+      },
+      {
+        "mass": 11.484344084804007,
+        "residual": 0.018465422460286367,
+        "residual_ideal": 0.11439276050958613,
+        "deviance_per_ty": 0.0026605337341964966,
+        "exposure_ty_3sigma": 3382.7798852240735
+      },
+      {
+        "mass": 12.039869204850929,
+        "residual": 0.018458748456801982,
+        "residual_ideal": 0.1686680746623043,
+        "deviance_per_ty": 0.0026441796642536256,
+        "exposure_ty_3sigma": 3403.70214689645
+      },
+      {
+        "mass": 12.62226640019656,
+        "residual": 0.01841740364456496,
+        "residual_ideal": 0.23568123214830822,
+        "deviance_per_ty": 0.002674957347824499,
+        "exposure_ty_3sigma": 3364.5396280129694
+      },
+      {
+        "mass": 13.232835537228226,
+        "residual": 0.018315292815807033,
+        "residual_ideal": 0.3077563354826255,
+        "deviance_per_ty": 0.0026793048284528224,
+        "exposure_ty_3sigma": 3359.0802750118933
+      },
+      {
+        "mass": 13.872939359971301,
+        "residual": 0.018355739003187346,
+        "residual_ideal": 0.37545905383701783,
+        "deviance_per_ty": 0.003000177760265393,
+        "exposure_ty_3sigma": 2999.822250266887
+      },
+      {
+        "mass": 14.54400653163061,
+        "residual": 0.029744691153436465,
+        "residual_ideal": 0.4365565708269133,
+        "deviance_per_ty": 0.007750203437619045,
+        "exposure_ty_3sigma": 1161.2598394920208
+      },
+      {
+        "mass": 15.247534823258349,
+        "residual": 0.06275025812668834,
+        "residual_ideal": 0.49120344430598617,
+        "deviance_per_ty": 0.03456364011917423,
+        "exposure_ty_3sigma": 260.3892405131031
+      },
+      {
+        "mass": 15.98509445666555,
+        "residual": 0.12630118575267918,
+        "residual_ideal": 0.5398208491435439,
+        "deviance_per_ty": 0.15919043877489752,
+        "exposure_ty_3sigma": 56.536058756182
+      },
+      {
+        "mass": 16.75833160903811,
+        "residual": 0.21383712376523475,
+        "residual_ideal": 0.5827114734081145,
+        "deviance_per_ty": 0.44694047826283057,
+        "exposure_ty_3sigma": 20.13690958353386
+      },
+      {
+        "mass": 17.568972087079473,
+        "residual": 0.3060772148338434,
+        "residual_ideal": 0.6204543237354727,
+        "deviance_per_ty": 0.8906937197725532,
+        "exposure_ty_3sigma": 10.10448350561878
+      },
+      {
+        "mass": 18.41882517888035,
+        "residual": 0.39689829983923136,
+        "residual_ideal": 0.6536741703803771,
+        "deviance_per_ty": 1.491043455795755,
+        "exposure_ty_3sigma": 6.036041380964842
+      },
+      {
+        "mass": 19.30978769211259,
+        "residual": 0.47814336215502334,
+        "residual_ideal": 0.6828920043476957,
+        "deviance_per_ty": 2.2010834329634497,
+        "exposure_ty_3sigma": 4.088895434500983
+      },
+      {
+        "mass": 20.243848187560083,
+        "residual": 0.5506596698934045,
+        "residual_ideal": 0.7075796581821157,
+        "deviance_per_ty": 3.0213913362206073,
+        "exposure_ty_3sigma": 2.978760113629605
+      },
+      {
+        "mass": 21.22309141743566,
+        "residual": 0.6136836698630458,
+        "residual_ideal": 0.7278226261968755,
+        "deviance_per_ty": 3.9451141697488796,
+        "exposure_ty_3sigma": 2.281302799551903
+      },
+      {
+        "mass": 22.249702978390033,
+        "residual": 0.6637604559755811,
+        "residual_ideal": 0.7444416163843098,
+        "deviance_per_ty": 4.892412909749404,
+        "exposure_ty_3sigma": 1.8395830781300493
+      },
+      {
+        "mass": 23.325974189597773,
+        "residual": 0.7048328613893117,
+        "residual_ideal": 0.7581219183694725,
+        "deviance_per_ty": 5.863331420841051,
+        "exposure_ty_3sigma": 1.5349635478577495
+      },
+      {
+        "mass": 24.454307206808032,
+        "residual": 0.7376630924715288,
+        "residual_ideal": 0.7696516818644883,
+        "deviance_per_ty": 6.827350017587958,
+        "exposure_ty_3sigma": 1.3182274201286108
+      },
+      {
+        "mass": 25.637220383774043,
+        "residual": 0.7507107007178124,
+        "residual_ideal": 0.779455884345523,
+        "deviance_per_ty": 7.1561120657267985,
+        "exposure_ty_3sigma": 1.257666162482872
+      },
+      {
+        "mass": 26.877353893027784,
+        "residual": 0.7571039351304362,
+        "residual_ideal": 0.7878961360416621,
+        "deviance_per_ty": 7.391337180730322,
+        "exposure_ty_3sigma": 1.2176416499390073
+      },
+      {
+        "mass": 28.177475618544914,
+        "residual": 0.7617110472551479,
+        "residual_ideal": 0.7951766944889754,
+        "deviance_per_ty": 7.572275681567254,
+        "exposure_ty_3sigma": 1.1885462677895064
+      },
+      {
+        "mass": 29.540487333451967,
+        "residual": 0.7652205986824725,
+        "residual_ideal": 0.8014195513261209,
+        "deviance_per_ty": 7.719182990418719,
+        "exposure_ty_3sigma": 1.1659264991089173
+      },
+      {
+        "mass": 30.969431176563972,
+        "residual": 0.7680246883043078,
+        "residual_ideal": 0.8070200384208638,
+        "deviance_per_ty": 7.8378212250069925,
+        "exposure_ty_3sigma": 1.148278295922981
+      },
+      {
+        "mass": 32.46749644220769,
+        "residual": 0.7702941971227218,
+        "residual_ideal": 0.8119242017550419,
+        "deviance_per_ty": 7.95605864590288,
+        "exposure_ty_3sigma": 1.1312133809665565
+      },
+      {
+        "mass": 34.03802669848468,
+        "residual": 0.7722024613607392,
+        "residual_ideal": 0.8162716212535899,
+        "deviance_per_ty": 8.024703578399357,
+        "exposure_ty_3sigma": 1.1215367536099294
+      },
+      {
+        "mass": 35.684527249861944,
+        "residual": 0.7738222051725991,
+        "residual_ideal": 0.8201906786001114,
+        "deviance_per_ty": 8.099620014530124,
+        "exposure_ty_3sigma": 1.1111632377635814
+      },
+      {
+        "mass": 37.41067296074566,
+        "residual": 0.7752084034988783,
+        "residual_ideal": 0.8237049467372395,
+        "deviance_per_ty": 8.165116700002981,
+        "exposure_ty_3sigma": 1.1022500143808984
+      },
+      {
+        "mass": 39.22031645749996,
+        "residual": 0.7764068759949572,
+        "residual_ideal": 0.8268157489806217,
+        "deviance_per_ty": 8.222977432524484,
+        "exposure_ty_3sigma": 1.094494065422355
+      },
+      {
+        "mass": 41.11749672721693,
+        "residual": 0.7774567168278579,
+        "residual_ideal": 0.8298288708000793,
+        "deviance_per_ty": 8.274768100698008,
+        "exposure_ty_3sigma": 1.0876437732727295
+      },
+      {
+        "mass": 43.10644813242954,
+        "residual": 0.7783910120853319,
+        "residual_ideal": 0.8322862119979783,
+        "deviance_per_ty": 8.322565015012444,
+        "exposure_ty_3sigma": 1.0813973797459777
+      },
+      {
+        "mass": 45.191609861887855,
+        "residual": 0.7792315167501088,
+        "residual_ideal": 0.8346531684806064,
+        "deviance_per_ty": 8.361689438785412,
+        "exposure_ty_3sigma": 1.076337511203634
+      },
+      {
+        "mass": 47.377635838491756,
+        "residual": 0.7799566280448623,
+        "residual_ideal": 0.8369599833779217,
+        "deviance_per_ty": 8.401122378183462,
+        "exposure_ty_3sigma": 1.071285430072027
+      },
+      {
+        "mass": 49.669405106494025,
+        "residual": 0.7806333311565791,
+        "residual_ideal": 0.8388391522244691,
+        "deviance_per_ty": 8.432995107263952,
+        "exposure_ty_3sigma": 1.0672364783240116
+      },
+      {
+        "mass": 52.072032721157235,
+        "residual": 0.7812249606273229,
+        "residual_ideal": 0.8406127299004812,
+        "deviance_per_ty": 8.464557785419778,
+        "exposure_ty_3sigma": 1.0632569625199466
+      },
+      {
+        "mass": 54.590881165169364,
+        "residual": 0.7817813912541378,
+        "residual_ideal": 0.8423454334567857,
+        "deviance_per_ty": 8.492083078415725,
+        "exposure_ty_3sigma": 1.059810639732817
+      },
+      {
+        "mass": 57.23157231729844,
+        "residual": 0.7822661719610091,
+        "residual_ideal": 0.8440434104126513,
+        "deviance_per_ty": 8.518814931768325,
+        "exposure_ty_3sigma": 1.05648497732205
+      },
+      {
+        "mass": 60.0,
+        "residual": 0.7827357524530117,
+        "residual_ideal": 0.845361458247309,
+        "deviance_per_ty": 8.541878591991697,
+        "exposure_ty_3sigma": 1.0536323951545983
+      }
+    ],
+    "isotropic_vesc600": [
+      {
+        "mass": 2.0,
+        "residual": 0.6800507078726097,
+        "residual_ideal": 0.5547648329617284,
+        "deviance_per_ty": 11.344806338487283,
+        "exposure_ty_3sigma": 0.7933145557070885
+      },
+      {
+        "mass": 2.0967447711327263,
+        "residual": 0.6755183744593524,
+        "residual_ideal": 0.5547648329617284,
+        "deviance_per_ty": 11.045744891110928,
+        "exposure_ty_3sigma": 0.8147933967986856
+      },
+      {
+        "mass": 2.1981693176362147,
+        "residual": 0.65947206855252,
+        "residual_ideal": 0.5547648329617284,
+        "deviance_per_ty": 10.096736640319108,
+        "exposure_ty_3sigma": 0.8913771172420671
+      },
+      {
+        "mass": 2.304500011409063,
+        "residual": 0.6396639183563865,
+        "residual_ideal": 0.5547648329617284,
+        "deviance_per_ty": 9.074804065192314,
+        "exposure_ty_3sigma": 0.9917569498299985
+      },
+      {
+        "mass": 2.4159741744986305,
+        "residual": 0.6148596084489726,
+        "residual_ideal": 0.5547648329617284,
+        "deviance_per_ty": 7.971467835733247,
+        "exposure_ty_3sigma": 1.1290266968971776
+      },
+      {
+        "mass": 2.5328406087858544,
+        "residual": 0.5883416145848688,
+        "residual_ideal": 0.5547277200974134,
+        "deviance_per_ty": 6.967684915111534,
+        "exposure_ty_3sigma": 1.2916772370806802
+      },
+      {
+        "mass": 2.655360151292186,
+        "residual": 0.5586955244893236,
+        "residual_ideal": 0.5277871314995118,
+        "deviance_per_ty": 6.000462830391591,
+        "exposure_ty_3sigma": 1.4998843013269127
+      },
+      {
+        "mass": 2.783806256348048,
+        "residual": 0.5254699016304171,
+        "residual_ideal": 0.4639706345359709,
+        "deviance_per_ty": 5.059519724434302,
+        "exposure_ty_3sigma": 1.7788249656455837
+      },
+      {
+        "mass": 2.9184656059221696,
+        "residual": 0.48785507645590404,
+        "residual_ideal": 0.38736365064243666,
+        "deviance_per_ty": 4.134803517276673,
+        "exposure_ty_3sigma": 2.1766451446591875
+      },
+      {
+        "mass": 3.0596387494740065,
+        "residual": 0.44325202156142957,
+        "residual_ideal": 0.3164792641426781,
+        "deviance_per_ty": 3.1911143646264515,
+        "exposure_ty_3sigma": 2.8203313863536605
+      },
+      {
+        "mass": 3.207640774757349,
+        "residual": 0.3918053785321928,
+        "residual_ideal": 0.24574712282519726,
+        "deviance_per_ty": 2.3158419137560227,
+        "exposure_ty_3sigma": 3.8862756332978967
+      },
+      {
+        "mass": 3.3628020110722994,
+        "residual": 0.3379527553273249,
+        "residual_ideal": 0.1763897018395677,
+        "deviance_per_ty": 1.6118816549018558,
+        "exposure_ty_3sigma": 5.583536466607402
+      },
+      {
+        "mass": 3.52546876653523,
+        "residual": 0.2793805404468129,
+        "residual_ideal": 0.12472962706218131,
+        "deviance_per_ty": 1.0259162833478808,
+        "exposure_ty_3sigma": 8.772645630138776
+      },
+      {
+        "mass": 3.696004101012243,
+        "residual": 0.21697332176198159,
+        "residual_ideal": 0.08160697344633322,
+        "deviance_per_ty": 0.575467989590074,
+        "exposure_ty_3sigma": 15.6394450478662
+      },
+      {
+        "mass": 3.8747886364412665,
+        "residual": 0.14986953740512132,
+        "residual_ideal": 0.05225963573215911,
+        "deviance_per_ty": 0.2528148776236082,
+        "exposure_ty_3sigma": 35.59917076319866
+      },
+      {
+        "mass": 4.062221406351366,
+        "residual": 0.07996920879180679,
+        "residual_ideal": 0.02822350673798743,
+        "deviance_per_ty": 0.0637664274014739,
+        "exposure_ty_3sigma": 141.14010093957333
+      },
+      {
+        "mass": 4.258720746475328,
+        "residual": 0.027304169305571873,
+        "residual_ideal": 0.014692463610117201,
+        "deviance_per_ty": 0.005579155672914234,
+        "exposure_ty_3sigma": 1613.1473161240745
+      },
+      {
+        "mass": 4.464725228443302,
+        "residual": 0.01935556477374563,
+        "residual_ideal": 0.0067801442457053225,
+        "deviance_per_ty": 0.00268158902291196,
+        "exposure_ty_3sigma": 3356.218989227076
+      },
+      {
+        "mass": 4.680694638641432,
+        "residual": 0.018877682593532476,
+        "residual_ideal": 0.002457335953562818,
+        "deviance_per_ty": 0.00263577224625235,
+        "exposure_ty_3sigma": 3414.5590586578837
+      },
+      {
+        "mass": 4.907111004420204,
+        "residual": 0.018693276013815183,
+        "residual_ideal": 0.0006448493902933264,
+        "deviance_per_ty": 0.0026359066521099658,
+        "exposure_ty_3sigma": 3414.3849490253247
+      },
+      {
+        "mass": 5.144479669942963,
+        "residual": 0.018584455980790317,
+        "residual_ideal": 0.00011642794634235393,
+        "deviance_per_ty": 0.0026492660290799728,
+        "exposure_ty_3sigma": 3397.1673290679255
+      },
+      {
+        "mass": 5.3,
+        "residual": 0.018538315387059214,
+        "residual_ideal": 1.9346766107055115e-05,
+        "deviance_per_ty": 0.0026612243194725094,
+        "exposure_ty_3sigma": 3381.902056938936
+      },
+      {
+        "mass": 5.39333042407576,
+        "residual": 0.018515227671568883,
+        "residual_ideal": 1.344105842330709e-05,
+        "deviance_per_ty": 0.002643336580533743,
+        "exposure_ty_3sigma": 3404.7877467737076
+      },
+      {
+        "mass": 5.65421868283595,
+        "residual": 0.01848050691558148,
+        "residual_ideal": 4.4252838997261353e-07,
+        "deviance_per_ty": 0.0026538169240246734,
+        "exposure_ty_3sigma": 3391.341700523545
+      },
+      {
+        "mass": 5.927726729038624,
+        "residual": 0.018465253557268944,
+        "residual_ideal": 2.4206174622445613e-09,
+        "deviance_per_ty": 0.002644967662792948,
+        "exposure_ty_3sigma": 3402.68810337608
+      },
+      {
+        "mass": 6.0,
+        "residual": 0.018467513825738035,
+        "residual_ideal": 1.6434165204405917e-09,
+        "deviance_per_ty": 0.002649722539605264,
+        "exposure_ty_3sigma": 3396.5820441489523
+      },
+      {
+        "mass": 6.214465011907717,
+        "residual": 0.018465577858067548,
+        "residual_ideal": 1.7604507745150872e-16,
+        "deviance_per_ty": 0.0026464406091637692,
+        "exposure_ty_3sigma": 3400.7942475020623
+      },
+      {
+        "mass": 6.515073509552391,
+        "residual": 0.018465627071268774,
+        "residual_ideal": 4.610467084193965e-16,
+        "deviance_per_ty": 0.0026752239772051332,
+        "exposure_ty_3sigma": 3364.2042971678593
+      },
+      {
+        "mass": 6.830223157349658,
+        "residual": 0.018465373340982347,
+        "residual_ideal": 9.074169089598453e-17,
+        "deviance_per_ty": 0.002646312685104565,
+        "exposure_ty_3sigma": 3400.958643571774
+      },
+      {
+        "mass": 7.0,
+        "residual": 0.01846565537715572,
+        "residual_ideal": 8.892808943744415e-17,
+        "deviance_per_ty": 0.0026740268319499234,
+        "exposure_ty_3sigma": 3365.710430600699
+      },
+      {
+        "mass": 7.160617345421278,
+        "residual": 0.01846555868677697,
+        "residual_ideal": 8.639971538238472e-14,
+        "deviance_per_ty": 0.0026541713348295125,
+        "exposure_ty_3sigma": 3390.888855552388
+      },
+      {
+        "mass": 7.5,
+        "residual": 0.01846626979307467,
+        "residual_ideal": 5.559345781793281e-17,
+        "deviance_per_ty": 0.002672626495104943,
+        "exposure_ty_3sigma": 3367.4739124542753
+      },
+      {
+        "mass": 7.506993488547184,
+        "residual": 0.018466420131123762,
+        "residual_ideal": 1.8600885461140746e-16,
+        "deviance_per_ty": 0.002670051955867077,
+        "exposure_ty_3sigma": 3370.7209255699017
+      },
+      {
+        "mass": 7.870124672019365,
+        "residual": 0.018466891735646727,
+        "residual_ideal": 1.0313162207891319e-16,
+        "deviance_per_ty": 0.0027120174830438,
+        "exposure_ty_3sigma": 3318.5626775159867
+      },
+      {
+        "mass": 8.0,
+        "residual": 0.01846662838505415,
+        "residual_ideal": 2.0748306535902986e-16,
+        "deviance_per_ty": 0.0026481604732218906,
+        "exposure_ty_3sigma": 3398.5855808240085
+      },
+      {
+        "mass": 8.250821377109638,
+        "residual": 0.018465400376829533,
+        "residual_ideal": 1.0105616928225076e-16,
+        "deviance_per_ty": 0.0026663860547068213,
+        "exposure_ty_3sigma": 3375.3551868878126
+      },
+      {
+        "mass": 8.5,
+        "residual": 0.018466644659518174,
+        "residual_ideal": 1.982183179861392e-16,
+        "deviance_per_ty": 0.0026519707658031644,
+        "exposure_ty_3sigma": 3393.7025686911365
+      },
+      {
+        "mass": 8.649933290002377,
+        "residual": 0.018466402131825082,
+        "residual_ideal": 6.939796079205536e-17,
+        "deviance_per_ty": 0.002646425329792429,
+        "exposure_ty_3sigma": 3400.81388228925
+      },
+      {
+        "mass": 9.0,
+        "residual": 0.01846592142212055,
+        "residual_ideal": 2.0244398937603409e-16,
+        "deviance_per_ty": 0.0026774106738922817,
+        "exposure_ty_3sigma": 3361.456681920321
+      },
+      {
+        "mass": 9.06835119822969,
+        "residual": 0.018465531385544087,
+        "residual_ideal": 9.067687803469415e-17,
+        "deviance_per_ty": 0.0026464491880928013,
+        "exposure_ty_3sigma": 3400.783223231265
+      },
+      {
+        "mass": 9.507008978841649,
+        "residual": 0.01846499207335956,
+        "residual_ideal": 3.6429390267626686e-16,
+        "deviance_per_ty": 0.002653992899519092,
+        "exposure_ty_3sigma": 3391.11683442364
+      },
+      {
+        "mass": 9.966885682749053,
+        "residual": 0.01846521295693528,
+        "residual_ideal": 2.5391435758625813e-17,
+        "deviance_per_ty": 0.0026538841160020014,
+        "exposure_ty_3sigma": 3391.2558373340867
+      },
+      {
+        "mass": 10.0,
+        "residual": 0.018465617030025045,
+        "residual_ideal": 2.1558808705263653e-16,
+        "deviance_per_ty": 0.002648088467985478,
+        "exposure_ty_3sigma": 3398.677993128648
+      },
+      {
+        "mass": 10.449007719890854,
+        "residual": 0.0184655703568495,
+        "residual_ideal": 0.030965027334601936,
+        "deviance_per_ty": 0.0026463432485629226,
+        "exposure_ty_3sigma": 3400.9193648206387
+      },
+      {
+        "mass": 10.95445115010332,
+        "residual": 0.01846501852848048,
+        "residual_ideal": 0.07014674095994447,
+        "deviance_per_ty": 0.0026388183291848584,
+        "exposure_ty_3sigma": 3410.6175102930015
+      },
+      {
+        "mass": 11.484344084804007,
+        "residual": 0.01846513537411993,
+        "residual_ideal": 0.1143782686228789,
+        "deviance_per_ty": 0.0026608291381386064,
+        "exposure_ty_3sigma": 3382.4043306651347
+      },
+      {
+        "mass": 12.039869204850929,
+        "residual": 0.018458629391847312,
+        "residual_ideal": 0.16864433774184587,
+        "deviance_per_ty": 0.0026596182984574947,
+        "exposure_ty_3sigma": 3383.9442318545302
+      },
+      {
+        "mass": 12.62226640019656,
+        "residual": 0.018417524705990666,
+        "residual_ideal": 0.23571873919901934,
+        "deviance_per_ty": 0.0026458932895194257,
+        "exposure_ty_3sigma": 3401.497723150684
+      },
+      {
+        "mass": 13.232835537228226,
+        "residual": 0.018315301938107337,
+        "residual_ideal": 0.30776297970227523,
+        "deviance_per_ty": 0.002678611966808542,
+        "exposure_ty_3sigma": 3359.9491496049486
+      },
+      {
+        "mass": 13.872939359971301,
+        "residual": 0.018356013047353854,
+        "residual_ideal": 0.3754440302169493,
+        "deviance_per_ty": 0.0029997265107872023,
+        "exposure_ty_3sigma": 3000.273514147187
+      },
+      {
+        "mass": 14.54400653163061,
+        "residual": 0.029395654982929342,
+        "residual_ideal": 0.4365537723012393,
+        "deviance_per_ty": 0.007609607324634498,
+        "exposure_ty_3sigma": 1182.7154301200799
+      },
+      {
+        "mass": 15.247534823258349,
+        "residual": 0.06275025812668834,
+        "residual_ideal": 0.4912121950925481,
+        "deviance_per_ty": 0.03457284420619146,
+        "exposure_ty_3sigma": 260.31991890294756
+      },
+      {
+        "mass": 15.98509445666555,
+        "residual": 0.12630118575267918,
+        "residual_ideal": 0.5398338243751438,
+        "deviance_per_ty": 0.15919043877489758,
+        "exposure_ty_3sigma": 56.53605875618198
+      },
+      {
+        "mass": 16.75833160903811,
+        "residual": 0.21383712376523475,
+        "residual_ideal": 0.5827285172669947,
+        "deviance_per_ty": 0.44694047826283045,
+        "exposure_ty_3sigma": 20.136909583533864
+      },
+      {
+        "mass": 17.568972087079473,
+        "residual": 0.3060772148338434,
+        "residual_ideal": 0.620469042013483,
+        "deviance_per_ty": 0.8906937197725531,
+        "exposure_ty_3sigma": 10.104483505618783
+      },
+      {
+        "mass": 18.41882517888035,
+        "residual": 0.39689829983923136,
+        "residual_ideal": 0.6536687796074072,
+        "deviance_per_ty": 1.4910434557957548,
+        "exposure_ty_3sigma": 6.036041380964843
+      },
+      {
+        "mass": 19.30978769211259,
+        "residual": 0.47814336215502334,
+        "residual_ideal": 0.6828829881808176,
+        "deviance_per_ty": 2.2010834329634497,
+        "exposure_ty_3sigma": 4.088895434500983
+      },
+      {
+        "mass": 20.243848187560083,
+        "residual": 0.5506596698934045,
+        "residual_ideal": 0.7075804161295737,
+        "deviance_per_ty": 3.0213913362206077,
+        "exposure_ty_3sigma": 2.9787601136296047
+      },
+      {
+        "mass": 21.22309141743566,
+        "residual": 0.6136836698630458,
+        "residual_ideal": 0.7278267553891088,
+        "deviance_per_ty": 3.9451141697488796,
+        "exposure_ty_3sigma": 2.281302799551903
+      },
+      {
+        "mass": 22.249702978390033,
+        "residual": 0.6637604559755811,
+        "residual_ideal": 0.7444434448984503,
+        "deviance_per_ty": 4.900216672270252,
+        "exposure_ty_3sigma": 1.836653479208366
+      },
+      {
+        "mass": 23.325974189597773,
+        "residual": 0.7048328613893117,
+        "residual_ideal": 0.7581810767541192,
+        "deviance_per_ty": 5.8633314208410505,
+        "exposure_ty_3sigma": 1.53496354785775
+      },
+      {
+        "mass": 24.454307206808032,
+        "residual": 0.7376630924715288,
+        "residual_ideal": 0.769715809776408,
+        "deviance_per_ty": 6.840972525999141,
+        "exposure_ty_3sigma": 1.3156024184858903
+      },
+      {
+        "mass": 25.637220383774043,
+        "residual": 0.7507078496830595,
+        "residual_ideal": 0.7795545885124552,
+        "deviance_per_ty": 7.1607996989126566,
+        "exposure_ty_3sigma": 1.2568428637051
+      },
+      {
+        "mass": 26.877353893027784,
+        "residual": 0.7571003898502527,
+        "residual_ideal": 0.7878984163011001,
+        "deviance_per_ty": 7.391591850988288,
+        "exposure_ty_3sigma": 1.2175996972555596
+      },
+      {
+        "mass": 28.177475618544914,
+        "residual": 0.7617059752500682,
+        "residual_ideal": 0.7950913797552099,
+        "deviance_per_ty": 7.572197903372234,
+        "exposure_ty_3sigma": 1.1885584759996701
+      },
+      {
+        "mass": 29.540487333451967,
+        "residual": 0.7652195851693651,
+        "residual_ideal": 0.801459131408926,
+        "deviance_per_ty": 7.717516185029664,
+        "exposure_ty_3sigma": 1.16617831232516
+      },
+      {
+        "mass": 30.969431176563972,
+        "residual": 0.7680241302679213,
+        "residual_ideal": 0.8070373425330285,
+        "deviance_per_ty": 7.8376962554649445,
+        "exposure_ty_3sigma": 1.1482966048505163
+      },
+      {
+        "mass": 32.46749644220769,
+        "residual": 0.7702951002041117,
+        "residual_ideal": 0.8118906007047217,
+        "deviance_per_ty": 7.9385330606962965,
+        "exposure_ty_3sigma": 1.133710715970817
+      },
+      {
+        "mass": 34.03802669848468,
+        "residual": 0.7721992588390942,
+        "residual_ideal": 0.8163359893979208,
+        "deviance_per_ty": 8.024748133754589,
+        "exposure_ty_3sigma": 1.1215305265648399
+      },
+      {
+        "mass": 35.684527249861944,
+        "residual": 0.7738153577147321,
+        "residual_ideal": 0.8201662058840398,
+        "deviance_per_ty": 8.12871596919031,
+        "exposure_ty_3sigma": 1.1071859361444114
+      },
+      {
+        "mass": 37.41067296074566,
+        "residual": 0.7752004020540253,
+        "residual_ideal": 0.8236920011228682,
+        "deviance_per_ty": 8.165238496615144,
+        "exposure_ty_3sigma": 1.1022335726912205
+      },
+      {
+        "mass": 39.22031645749996,
+        "residual": 0.7764019344899116,
+        "residual_ideal": 0.8269003016056796,
+        "deviance_per_ty": 8.26047087744833,
+        "exposure_ty_3sigma": 1.0895262671490842
+      },
+      {
+        "mass": 41.11749672721693,
+        "residual": 0.777460072354529,
+        "residual_ideal": 0.8296683004552105,
+        "deviance_per_ty": 8.310707620744456,
+        "exposure_ty_3sigma": 1.0829402754507924
+      },
+      {
+        "mass": 43.10644813242954,
+        "residual": 0.7784072192419375,
+        "residual_ideal": 0.832352286966949,
+        "deviance_per_ty": 8.320337114360903,
+        "exposure_ty_3sigma": 1.0816869408411347
+      },
+      {
+        "mass": 45.191609861887855,
+        "residual": 0.7792169265048248,
+        "residual_ideal": 0.8347321886908351,
+        "deviance_per_ty": 8.362236372565661,
+        "exposure_ty_3sigma": 1.0762671131285737
+      },
+      {
+        "mass": 47.377635838491756,
+        "residual": 0.779963425567365,
+        "residual_ideal": 0.8368046471734538,
+        "deviance_per_ty": 8.411910952302993,
+        "exposure_ty_3sigma": 1.0699114685154865
+      },
+      {
+        "mass": 49.669405106494025,
+        "residual": 0.7806269914196717,
+        "residual_ideal": 0.8388237103755452,
+        "deviance_per_ty": 8.433359749236292,
+        "exposure_ty_3sigma": 1.0671903331071608
+      },
+      {
+        "mass": 52.072032721157235,
+        "residual": 0.7812297458186352,
+        "residual_ideal": 0.8407970902148169,
+        "deviance_per_ty": 8.463969034877081,
+        "exposure_ty_3sigma": 1.0633309222793847
+      },
+      {
+        "mass": 54.590881165169364,
+        "residual": 0.7817722246240177,
+        "residual_ideal": 0.8423732421434145,
+        "deviance_per_ty": 8.492777631576057,
+        "exposure_ty_3sigma": 1.059723966695901
+      },
+      {
+        "mass": 57.23157231729844,
+        "residual": 0.7822785347352285,
+        "residual_ideal": 0.843852127507251,
+        "deviance_per_ty": 8.517960367662905,
+        "exposure_ty_3sigma": 1.056590969144102
+      },
+      {
+        "mass": 60.0,
+        "residual": 0.7827198161785381,
+        "residual_ideal": 0.845298013902035,
+        "deviance_per_ty": 8.542398556468541,
+        "exposure_ty_3sigma": 1.0535682619473368
+      }
+    ]
+  }
+}

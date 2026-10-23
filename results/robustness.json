@@ -1,0 +1,187 @@
+{
+  "yield tly=+0 tqy=+0 | isotropic": [
+    4.96,
+    12.6
+  ],
+  "yield tly=+0 tqy=+0 | streams": [
+    4.61,
+    40.0
+  ],
+  "yield tly=+1 tqy=+0 | isotropic": [
+    4.96,
+    12.37
+  ],
+  "yield tly=+1 tqy=+0 | streams": [
+    4.61,
+    40.0
+  ],
+  "yield tly=-1 tqy=+0 | isotropic": [
+    4.96,
+    12.37
+  ],
+  "yield tly=-1 tqy=+0 | streams": [
+    4.61,
+    40.0
+  ],
+  "yield tly=+0 tqy=+1 | isotropic": [
+    4.96,
+    12.37
+  ],
+  "yield tly=+0 tqy=+1 | streams": [
+    4.61,
+    40.0
+  ],
+  "yield tly=+0 tqy=-1 | isotropic": [
+    4.96,
+    12.37
+  ],
+  "yield tly=+0 tqy=-1 | streams": [
+    4.61,
+    40.0
+  ],
+  "yield tly=+1 tqy=+1 | isotropic": [
+    4.96,
+    12.37
+  ],
+  "yield tly=+1 tqy=+1 | streams": [
+    4.61,
+    40.0
+  ],
+  "yield tly=-1 tqy=-1 | isotropic": [
+    4.96,
+    12.37
+  ],
+  "yield tly=-1 tqy=-1 | streams": [
+    4.61,
+    40.0
+  ],
+  "vE=218 vesc=500 | isotropic": [
+    5.35,
+    13.32
+  ],
+  "vE=218 vesc=500 | streams": [
+    5.06,
+    40.0
+  ],
+  "vE=218 vesc=500 | analytic m_hi(0.51 keV)": 8.19,
+  "vE=218 vesc=544 | isotropic": [
+    5.06,
+    13.32
+  ],
+  "vE=218 vesc=544 | streams": [
+    4.69,
+    40.0
+  ],
+  "vE=218 vesc=544 | analytic m_hi(0.51 keV)": 8.19,
+  "vE=218 vesc=600 | isotropic": [
+    4.69,
+    13.32
+  ],
+  "vE=218 vesc=600 | streams": [
+    4.35,
+    40.0
+  ],
+  "vE=218 vesc=600 | analytic m_hi(0.51 keV)": 8.19,
+  "vE=232 vesc=500 | isotropic": [
+    5.25,
+    12.6
+  ],
+  "vE=232 vesc=500 | streams": [
+    4.96,
+    40.0
+  ],
+  "vE=232 vesc=500 | analytic m_hi(0.51 keV)": 7.67,
+  "vE=232 vesc=544 | isotropic": [
+    4.96,
+    12.6
+  ],
+  "vE=232 vesc=544 | streams": [
+    4.61,
+    40.0
+  ],
+  "vE=232 vesc=544 | analytic m_hi(0.51 keV)": 7.67,
+  "vE=232 vesc=600 | isotropic": [
+    4.61,
+    12.6
+  ],
+  "vE=232 vesc=600 | streams": [
+    4.35,
+    40.0
+  ],
+  "vE=232 vesc=600 | analytic m_hi(0.51 keV)": 7.67,
+  "vE=248 vesc=500 | isotropic": [
+    5.15,
+    11.69
+  ],
+  "vE=248 vesc=500 | streams": [
+    4.78,
+    40.0
+  ],
+  "vE=248 vesc=500 | analytic m_hi(0.51 keV)": 7.14,
+  "vE=248 vesc=544 | isotropic": [
+    4.87,
+    11.69
+  ],
+  "vE=248 vesc=544 | streams": [
+    4.52,
+    40.0
+  ],
+  "vE=248 vesc=544 | analytic m_hi(0.51 keV)": 7.14,
+  "vE=248 vesc=600 | isotropic": [
+    4.52,
+    11.69
+  ],
+  "vE=248 vesc=600 | streams": [
+    4.2,
+    40.0
+  ],
+  "vE=248 vesc=600 | analytic m_hi(0.51 keV)": 7.14,
+  "own 8B spectrum | isotropic": [
+    4.96,
+    12.6
+  ],
+  "own 8B spectrum | streams": [
+    4.61,
+    40.0
+  ],
+  "tolerance 0.0001 | isotropic": [
+    5.15,
+    11.48
+  ],
+  "tolerance 0.0001 | streams": [
+    4.87,
+    40.0
+  ],
+  "tolerance 0.0003 | isotropic": [
+    5.06,
+    12.14
+  ],
+  "tolerance 0.0003 | streams": [
+    4.69,
+    40.0
+  ],
+  "tolerance 0.001 | isotropic": [
+    4.96,
+    12.6
+  ],
+  "tolerance 0.001 | streams": [
+    4.61,
+    40.0
+  ],
+  "tolerance 0.003 | isotropic": [
+    4.78,
+    13.08
+  ],
+  "tolerance 0.003 | streams": [
+    4.52,
+    40.0
+  ],
+  "tolerance 0.01 | isotropic": [
+    4.69,
+    14.09
+  ],
+  "tolerance 0.01 | streams": [
+    4.35,
+    40.0
+  ]
+}

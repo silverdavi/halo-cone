@@ -1,0 +1,97 @@
+{
+  "source": "XENONnT light-WIMP data release (XENON:2024hup), templates ac, er, rg at median yield, SR0 and SR1",
+  "model": "fixed background in both hypotheses: truth 8B+bkg, hypothesis DM cone+bkg; isotropic class, Asimov deviance 9",
+  "background_per_ty": 7.505040117370965,
+  "b8_per_ty": 3.379974215529619,
+  "livetime_ty": 3.516991,
+  "expected_counts": {
+    "ac": 25.24874258670514,
+    "er": 0.6794807798488712,
+    "rg": 0.4669351808786084
+  },
+  "expected_counts_total": 26.39515854743262,
+  "per_run": {
+    "sr0": {
+      "ac": {
+        "per_ty_of_run": 6.370635775179835,
+        "expected_counts": 7.481661913099648
+      },
+      "er": {
+        "per_ty_of_run": 0.1071580390612013,
+        "expected_counts": 0.1258461867573967
+      },
+      "rg": {
+        "per_ty_of_run": 0.11306945678559932,
+        "expected_counts": 0.1327885439100943
+      }
+    },
+    "sr1": {
+      "ac": {
+        "per_ty_of_run": 7.584365134534892,
+        "expected_counts": 17.767080673605495
+      },
+      "er": {
+        "per_ty_of_run": 0.23633409349873177,
+        "expected_counts": 0.5536345930914746
+      },
+      "rg": {
+        "per_ty_of_run": 0.14263964631009918,
+        "expected_counts": 0.33414663696851415
+      }
+    }
+  },
+  "rows": [
+    {
+      "mass": 13.0,
+      "deviance_per_ty_8b_only": 2.0312170258287542e-05,
+      "deviance_per_ty_with_bkg": 7.428709858435722e-06,
+      "exposure_ty_8b_only": 443084.11585551384,
+      "exposure_ty_with_bkg": 1211515.885195057,
+      "ratio": 2.7342796589668823
+    },
+    {
+      "mass": 15.0,
+      "deviance_per_ty_8b_only": 0.00833214484764606,
+      "deviance_per_ty_with_bkg": 0.003588960396127719,
+      "exposure_ty_8b_only": 1080.1540497153765,
+      "exposure_ty_with_bkg": 2507.6899733166406,
+      "ratio": 2.32160401007377
+    },
+    {
+      "mass": 16.0,
+      "deviance_per_ty_8b_only": 0.06469597109629655,
+      "deviance_per_ty_with_bkg": 0.024969241115934633,
+      "exposure_ty_8b_only": 139.11221746102203,
+      "exposure_ty_with_bkg": 360.4434735606148,
+      "ratio": 2.5910267274806955
+    },
+    {
+      "mass": 18.0,
+      "deviance_per_ty_8b_only": 0.5348914603339956,
+      "deviance_per_ty_with_bkg": 0.2096634231912549,
+      "exposure_ty_8b_only": 16.825843498006574,
+      "exposure_ty_with_bkg": 42.925942269816915,
+      "ratio": 2.551191105212795
+    },
+    {
+      "mass": 20.0,
+      "deviance_per_ty_8b_only": 1.3014267736186904,
+      "deviance_per_ty_with_bkg": 0.4994868616428011,
+      "exposure_ty_8b_only": 6.915487050396999,
+      "exposure_ty_with_bkg": 18.018491958725804,
+      "ratio": 2.605527539479871
+    },
+    {
+      "mass": 25.0,
+      "deviance_per_ty_8b_only": 3.3146497388863927,
+      "deviance_per_ty_with_bkg": 1.1286456996071021,
+      "exposure_ty_8b_only": 2.715219015274805,
+      "exposure_ty_with_bkg": 7.974158766682077,
+      "ratio": 2.9368381415357097
+    }
+  ],
+  "ratio_range": [
+    2.32160401007377,
+    2.9368381415357097
+  ]
+}

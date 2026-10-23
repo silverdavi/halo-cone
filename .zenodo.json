@@ -1,0 +1,32 @@
+{
+  "title": "Code and certificates for \"Isotropy, not the Maxwellian, decides where solar 8B neutrinos can exactly mimic dark matter in xenon\"",
+  "upload_type": "software",
+  "access_right": "open",
+  "license": "MIT",
+  "description": "Analysis code and interval-arithmetic certificates for the paper \"Isotropy, not the Maxwellian, decides where solar 8B neutrinos can exactly mimic dark matter in xenon\". The pipeline computes the convex cone of dark-matter recoil spectra for arbitrary and for isotropic halos on the released XENONnT light-WIMP response and on an ideal xenon detector, the exact degeneracy window with solar 8B coherent neutrino scattering, the halo-independent discovery limit and neutrino-fog index, background-corrected and profiled separation exposures, annual modulation, and the CaWO4 complementarity forecast. Two standalone certificates (exact rational interval arithmetic; Arb ball arithmetic via python-flint) prove the convexity lemma and the natural-xenon upper edge. fetch_data.sh downloads the public inputs (XENONnT release v0.0.1, CRESST-III Detector A, solar fluxes) and checks their SHA-256 hashes; run_all.sh rebuilds every number, table and figure with one command.",
+  "creators": [
+    {
+      "name": "Silver, David H.",
+      "orcid": "0000-0002-3071-304X",
+      "affiliation": "Remiza"
+    }
+  ],
+  "keywords": [
+    "neutrino fog",
+    "neutrino floor",
+    "halo-independent methods",
+    "isotropic velocity distribution",
+    "solar 8B neutrinos",
+    "coherent elastic neutrino-nucleus scattering",
+    "light dark matter",
+    "xenon detectors",
+    "interval arithmetic"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.14522707",
+      "relation": "requires",
+      "scheme": "doi"
+    }
+  ]
+}

@@ -1,0 +1,301 @@
+{
+  "status": "ALL RATIONAL INTERVAL ASSERTIONS PASSED",
+  "input_sha256": "b07b3ba052c08cf675c8fcc5c5f674e0946390b721a0ea4da719077bdf5bc892",
+  "arithmetic": "fractions.Fraction; outward rational intervals",
+  "interval_lattice_denominator": "1000000000000000000000000000000000000000000000",
+  "per_log_series_remainder_max": "1/10000000000000000000000000000000000000000000000000000000",
+  "mass_MeV": "122300",
+  "results": [
+    {
+      "column": 2,
+      "endpoint_convention": "continuous interpolant",
+      "raw_normalization": "62499159/62500000",
+      "last_positive_node_MeV": "817/50",
+      "U_MeV": "409/25",
+      "mode_MeV": "161/25",
+      "q_star_MeV": [
+        "3.181534858300",
+        "3.181534858301"
+      ],
+      "hprime_at_bracket_endpoints": [
+        [
+          "0.000000000000006937625476530727",
+          "0.000000000000006937625476530728"
+        ],
+        [
+          "-0.000000000000002504485190685442",
+          "-0.000000000000002504485190685441"
+        ]
+      ],
+      "E_star_keV": [
+        "0.165530074482",
+        "0.165530074483"
+      ],
+      "delta_MeV": "0.1",
+      "minus_hprime_uniform_certified_lower": "0.000000006116291014",
+      "hprime_3_18": [
+        "0.00001449579879756662",
+        "0.00001449579879756663"
+      ],
+      "q_full_primary_MeV": [
+        "3.181491880852",
+        "3.181491880853"
+      ],
+      "full_curvature_zero_count": 2,
+      "full_primary_shift_MeV": [
+        "-0.000042977449",
+        "-0.000042977447"
+      ],
+      "minus_h_full_prime_uniform_lower": "0.000000005454782930",
+      "psi_full_second_derivative_U_minus": [
+        "-0.00000000133771219486",
+        "-0.00000000133771219485"
+      ],
+      "q_full_endpoint_zero_MeV": [
+        "16.357812848766",
+        "16.357812848767"
+      ],
+      "endpoint_phi_linear_coefficient": "625/124998318"
+    },
+    {
+      "column": 3,
+      "endpoint_convention": "continuous interpolant",
+      "raw_normalization": "62498411/62500000",
+      "last_positive_node_MeV": "807/50",
+      "U_MeV": "404/25",
+      "mode_MeV": "317/50",
+      "q_star_MeV": [
+        "3.124360162459",
+        "3.124360162460"
+      ],
+      "hprime_at_bracket_endpoints": [
+        [
+          "0.000000000000006851902625094659",
+          "0.000000000000006851902625094660"
+        ],
+        [
+          "-0.000000000000003019169368032073",
+          "-0.000000000000003019169368032072"
+        ]
+      ],
+      "E_star_keV": [
+        "0.159634119783",
+        "0.159634119784"
+      ],
+      "delta_MeV": "0.1",
+      "minus_hprime_uniform_certified_lower": "0.000000006192108683",
+      "hprime_3_18": [
+        "-0.00054242862850630048",
+        "-0.00054242862850630047"
+      ],
+      "q_full_primary_MeV": [
+        "3.124319254018",
+        "3.124319254019"
+      ],
+      "full_curvature_zero_count": 2,
+      "full_primary_shift_MeV": [
+        "-0.000040908442",
+        "-0.000040908440"
+      ],
+      "minus_h_full_prime_uniform_lower": "0.000000005538769367",
+      "psi_full_second_derivative_U_minus": [
+        "-0.00000000132137455947",
+        "-0.00000000132137455946"
+      ],
+      "q_full_endpoint_zero_MeV": [
+        "16.157865981786",
+        "16.157865981787"
+      ],
+      "endpoint_phi_linear_coefficient": "625/124996822"
+    },
+    {
+      "column": 4,
+      "endpoint_convention": "continuous interpolant",
+      "raw_normalization": "99998663/100000000",
+      "last_positive_node_MeV": "827/50",
+      "U_MeV": "414/25",
+      "mode_MeV": "164/25",
+      "q_star_MeV": [
+        "3.238706106718",
+        "3.238706106719"
+      ],
+      "hprime_at_bracket_endpoints": [
+        [
+          "0.000000000000000153018200922522",
+          "0.000000000000000153018200922523"
+        ],
+        [
+          "-0.000000000000008884662397638930",
+          "-0.000000000000008884662397638929"
+        ]
+      ],
+      "E_star_keV": [
+        "0.171532579651",
+        "0.171532579652"
+      ],
+      "delta_MeV": "0.1",
+      "minus_hprime_uniform_certified_lower": "0.000000006042377594",
+      "hprime_3_18": [
+        "0.00053696695406379462",
+        "0.00053696695406379463"
+      ],
+      "q_full_primary_MeV": [
+        "3.238661019038",
+        "3.238661019039"
+      ],
+      "full_curvature_zero_count": 2,
+      "full_primary_shift_MeV": [
+        "-0.000045087681",
+        "-0.000045087679"
+      ],
+      "minus_h_full_prime_uniform_lower": "0.000000005372692976",
+      "psi_full_second_derivative_U_minus": [
+        "-0.00000000135406552823",
+        "-0.00000000135406552822"
+      ],
+      "q_full_endpoint_zero_MeV": [
+        "16.557759062796",
+        "16.557759062797"
+      ],
+      "endpoint_phi_linear_coefficient": "500/99998663"
+    },
+    {
+      "column": 2,
+      "endpoint_convention": "last-positive cutoff",
+      "raw_normalization": "999986543/1000000000",
+      "last_positive_node_MeV": "817/50",
+      "U_MeV": "817/50",
+      "mode_MeV": "161/25",
+      "q_star_MeV": [
+        "3.181534857904",
+        "3.181534857905"
+      ],
+      "hprime_at_bracket_endpoints": [
+        [
+          "0.000000000000003636421687141607",
+          "0.000000000000003636421687141608"
+        ],
+        [
+          "-0.000000000000005805688990692043",
+          "-0.000000000000005805688990692042"
+        ]
+      ],
+      "E_star_keV": [
+        "0.165530074440",
+        "0.165530074441"
+      ],
+      "delta_MeV": "0.1",
+      "minus_hprime_uniform_certified_lower": "0.000000006120033397",
+      "hprime_3_18": [
+        "0.00001449579506968558",
+        "0.00001449579506968559"
+      ],
+      "q_full_primary_MeV": [
+        "3.181491880456",
+        "3.181491880457"
+      ],
+      "full_curvature_zero_count": 1,
+      "full_primary_shift_MeV": [
+        "-0.000042977449",
+        "-0.000042977447"
+      ],
+      "minus_h_full_prime_uniform_lower": "0.000000005458526313",
+      "psi_full_second_derivative_U_minus": [
+        "0.00000001224497283031",
+        "0.00000001224497283032"
+      ]
+    },
+    {
+      "column": 3,
+      "endpoint_convention": "last-positive cutoff",
+      "raw_normalization": "39998983/40000000",
+      "last_positive_node_MeV": "807/50",
+      "U_MeV": "807/50",
+      "mode_MeV": "317/50",
+      "q_star_MeV": [
+        "3.124360162071",
+        "3.124360162072"
+      ],
+      "hprime_at_bracket_endpoints": [
+        [
+          "0.000000000000001121118251476549",
+          "0.000000000000001121118251476550"
+        ],
+        [
+          "-0.000000000000008749953752747350",
+          "-0.000000000000008749953752747349"
+        ]
+      ],
+      "E_star_keV": [
+        "0.159634119743",
+        "0.159634119744"
+      ],
+      "delta_MeV": "0.1",
+      "minus_hprime_uniform_certified_lower": "0.000000006195944396",
+      "hprime_3_18": [
+        "-0.00054242863288444962",
+        "-0.00054242863288444961"
+      ],
+      "q_full_primary_MeV": [
+        "3.124319253630",
+        "3.124319253631"
+      ],
+      "full_curvature_zero_count": 1,
+      "full_primary_shift_MeV": [
+        "-0.000040908442",
+        "-0.000040908440"
+      ],
+      "minus_h_full_prime_uniform_lower": "0.000000005542606093",
+      "psi_full_second_derivative_U_minus": [
+        "0.00000001239679488730",
+        "0.00000001239679488731"
+      ]
+    },
+    {
+      "column": 4,
+      "endpoint_convention": "last-positive cutoff",
+      "raw_normalization": "999986629/1000000000",
+      "last_positive_node_MeV": "827/50",
+      "U_MeV": "827/50",
+      "mode_MeV": "164/25",
+      "q_star_MeV": [
+        "3.238706106313",
+        "3.238706106314"
+      ],
+      "hprime_at_bracket_endpoints": [
+        [
+          "0.000000000000007958642819661449",
+          "0.000000000000007958642819661450"
+        ],
+        [
+          "-0.000000000000001079037789067966",
+          "-0.000000000000001079037789067965"
+        ]
+      ],
+      "E_star_keV": [
+        "0.171532579608",
+        "0.171532579609"
+      ],
+      "delta_MeV": "0.1",
+      "minus_hprime_uniform_certified_lower": "0.000000006046030055",
+      "hprime_3_18": [
+        "0.00053696695094831374",
+        "0.00053696695094831375"
+      ],
+      "q_full_primary_MeV": [
+        "3.238661018633",
+        "3.238661018634"
+      ],
+      "full_curvature_zero_count": 1,
+      "full_primary_shift_MeV": [
+        "-0.000045087681",
+        "-0.000045087679"
+      ],
+      "minus_h_full_prime_uniform_lower": "0.000000005376346425",
+      "psi_full_second_derivative_U_minus": [
+        "0.00000001209696614551",
+        "0.00000001209696614552"
+      ]
+    }
+  ]
+}

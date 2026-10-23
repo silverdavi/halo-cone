@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use this software or its results, please cite it as below."
+title: "Code and certificates for \"Isotropy, not the Maxwellian, decides where solar 8B neutrinos can exactly mimic dark matter in xenon\""
+authors:
+  - family-names: Silver
+    given-names: David H.
+    orcid: "https://orcid.org/0000-0002-3071-304X"
+    affiliation: Remiza
+version: 1.0.0
+date-released: 2026-10-23
+license: MIT
+repository-code: "https://github.com/silverdavi/halo-cone"
+references:
+  - type: software
+    title: "XENONnT light WIMP data release"
+    version: v0.0.1
+    doi: "10.5281/zenodo.14522707"
+    authors:
+      - family-names: Yuan
+        given-names: Lanqing
+      - family-names: Shi
+        given-names: Shenyang
+keywords:
+  - neutrino fog
+  - halo-independent methods
+  - solar 8B neutrinos
+  - light dark matter
+  - xenon detectors
+  - interval arithmetic

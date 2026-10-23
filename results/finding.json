@@ -1,0 +1,36 @@
+{
+  "halo_class": "Nonnegative lab-frame speed distributions on [0, 776 km/s] (Galactic escape 544 km/s plus Earth speed 232 km/s). Cross section free. Elastic isospin-conserving SI.",
+  "xenon": {
+    "kinematic_wall_GeV": 2.2,
+    "exact_degeneracy_above_GeV": 5.3,
+    "ideal_energy_residual_above_5p3": 0.0,
+    "folded_template_residual_at_6_GeV": 5.5e-9,
+    "official_template_vs_fold_relative_L2": 0.025,
+    "yield_morph_shape_radius_1sigma": 0.039,
+    "expected_b8_counts_sr0_sr1": [4.25, 7.67]
+  },
+  "smallest_breaking_observable": {
+    "detector": "CaWO4, CRESST-III acceptance and cut survival",
+    "bin_keV": [7.30, 9.48],
+    "nucleus": "oxygen (tungsten is kinematically closed to 8B above ~4 keV)",
+    "equal_exposure_shape_residual": {"xenon_only": 0.018, "plus_this_bin": 0.220},
+    "neutrino_events_per_tonne_year": 0.354,
+    "best_halo_events_per_tonne_year": 0.156
+  },
+  "exposure_for_profiled_gaussian_statistic_9": {
+    "definition": "sum (data-model)^2/variance after refitting the halo, xenon fixed at the released SR0+SR1 livetimes",
+    "untagged_CaWO4_tonne_year": 3.66,
+    "oxygen_tagged_tonne_year": 5.07,
+    "oxygen_tail_above_5p6_keV_tonne_year": 9.0,
+    "single_7p3_9p5_keV_bin": "saturates near 7.3 against the current XENONnT exposure and does not reach 9",
+    "cresst_iii_detA_tonne_year": 1.56e-5,
+    "detA_shortfall_vs_untagged": 2.4e5
+  },
+  "validation": {
+    "b8_histogram_cosine": 0.9997,
+    "wimp6_histogram_cosine": 0.9999,
+    "b8_recoil_spectrum_cosine": 1.0,
+    "cone_self_test_residual": 1.2e-16,
+    "released_wimp_spectra_in_cone_residual": "<1e-6"
+  }
+}

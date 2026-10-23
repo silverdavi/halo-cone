@@ -1,0 +1,249 @@
+NATURAL XENON: CERTIFIED EXCLUSIONS AND THE REMAINING EXISTENCE PROBLEM
+===================================================================
+
+Scope. This document proves (A), proves the upper bound requested in (B1),
+disproves the proposed sufficiency assertion (B2), and proves an explicit
+non-sharp threshold exclusion for (B3). It does NOT determine the exact
+truncated membership set, prove its nonemptiness, prove that it is an interval,
+or identify its sharp upper edge or sharp critical threshold.
+
+Reproduce: install python-flint==0.9.0; run python certify.py.
+The computation uses Arb real-ball arithmetic at 192-bit midpoint precision.
+Ball radii enclose rounding and transcendental-function errors. It uses exact
+analytic integrals on each spectrum segment, not numerical quadrature. Every
+mass-cell test covers the entire cell, not only its endpoints or midpoint.
+
+INPUTS
+
+All displayed decimal inputs are treated as exact, not as uncertainty intervals.
+E is measured in keV, x=sqrt(E) in sqrt(keV), masses M_i,m in GeV, q in MeV,
+and Galactic/lab speeds in km/s. c_light=299792.458 km/s; a=232; V=544;
+S=V+a=776. hbar*c=0.1973269804 GeV fm.
+
+A=(124,126,128,129,130,131,132,134,136).
+Atomic masses (in u):
+(123.9058920,125.9042983,127.9035310,128.9047808611,129.903509349,
+ 130.90508406,131.9041550856,133.90539466,135.907214484).
+Source: NIST, https://physics.nist.gov/cgi-bin/Compositions/stand_alone.pl?ascii=ascii&ele=Xe
+Nuclear M_i=atomic_i*0.93149410242-54*0.00051099895.
+Abundances are precisely the nine numbers in the question, divided by their sum.
+Q_i=A_i-54-(1-4*0.23857)*54.
+Helm radius R_i^2=(1.23*A_i^(1/3)-0.60)^2+7*pi^2*0.52^2/3-5*0.9^2.
+H_i(E)=[3(sin z-z cos z)/z^3]^2 exp[-(p*0.9)^2],
+p=sqrt(2*M_i*E*10^-6)/(hbar*c), z=p*R_i.
+
+The central spectrum column is the continuous piecewise-linear interpolant,
+with raw integral 0.999986544, renormalized to integral one. Its support ends
+at U=16.36 MeV; 16.34 is the last positive node, not the zero endpoint.
+SHA256 b07b3ba052c08cf675c8fcc5c5f674e0946390b721a0ea4da719077bdf5bc892.
+This is the supplied Bahcall table, not an independently supplied Winter table.
+The literal discontinuous cutoff at 16.34 is not certified by this package.
+
+Set
+ W_i(E)=f_i*M_i*A_i^2*H_i(E),
+ N(E)=sum_i f_i*M_i*Q_i^2*H_i(E)*Psi(sqrt(M_i*E/2)).
+There is no flux, weak-interaction, exposure, or mean-nuclear-mass multiplier.
+The freely adjustable positive normalization can be absorbed into the halo,
+so equality is always written D=N. Exclusion also applies to nonnegative
+speed measures, a larger class than ordinary speed densities.
+
+THEOREM A: THE STRICT SET AT 0.51 keV IS EMPTY
+
+Index isotopes from 0=124Xe. Define
+ lambda_i=c_light*sqrt(M_i*10^-6/2)*(1/m+1/M_i),
+ z_i=alpha_i^2=(M_0/M_i)*[(m+M_i)/(m+M_0)]^2,
+ E_b=2*U^2/M_0=4.639042693471716638... keV,
+ rho=0.98, E_0=rho^2 E_b=4.455336602810236659... keV,
+ y(E)=eta(lambda_0 sqrt(E)), T(E)=N(E)/W_0(E),
+ r_i(E)=W_i(E)/W_0(E).
+
+At E_b, N(E_b)=0 and all W_i are positive. Hence y(E_b)=0; since eta is
+nonnegative and nonincreasing, y(E)=0 for all E>=E_b. On the measured interval,
+  y(E)=T(E)-sum_{i=1}^8 r_i(E)y(z_i E).                 (A.1)
+No physical support assumption beyond nonnegativity and monotonicity is needed
+to propagate this terminal zero.
+
+The following inequalities suffice for the five-term termination:
+  1<alpha_1<alpha_2<...<alpha_8,
+  max(alpha_3,alpha_1^2)<1/rho,
+  min(alpha_4,alpha_1^3,alpha_1 alpha_2)>1/rho.          (A.2)
+The only words whose product of dilations is below 1/rho are then
+  empty, (1), (2), (3), (1,1).
+Indeed every one-letter word beyond 3 is too large; every two-letter word
+other than (1,1) is at least alpha_1 alpha_2; every word of length three or
+more is at least alpha_1^3. Repeated substitution in (A.1) therefore gives
+  y(E_0)=T(E_0)-r_1(E_0)T(z_1 E_0)
+       +r_1(E_0)r_1(z_1 E_0)T(z_1^2 E_0)
+       -r_2(E_0)T(z_2 E_0)-r_3(E_0)T(z_3 E_0).        (A.3)
+
+For the stated normalization, the five terms at m=7 GeV are approximately
+  +5.46526348709344544e-10
+  -9.62458711533917540e-11
+  +1.35261809321223299e-11
+  -3.20592427696401344e-10
+  -6.35523906130690073e-10,
+with certified sum -4.9230967533901629738292081575689...e-10.
+The previous -1.92831...e-10 used an additional overall rate normalization;
+the value is scale dependent, while its sign is not.
+
+The code adaptively partitions the EXACT rational interval [6.65,7.80] into
+39 cells, verifies (A.2) throughout each cell, and evaluates (A.3) by ball
+arithmetic throughout each cell. The resulting global upper bound is
+  y(E_0)<-2.15e-10.
+This is an interval certificate, not the earlier high-precision agreement test.
+The sharper previous uniform numerical bound is not needed or claimed here.
+
+For m<6.65, all isotope speeds near E_b exceed S: in this mass range lambda_i
+increases with M_i, and the lightest-isotope endpoint condition requires
+  m >= 6.6866193171333994309... GeV.
+Thus D vanishes on a terminal open interval where N is positive. For m>7.80,
+Theorem B1 below applies, since max_i m_hi_i=7.793213017286722501... GeV.
+Together these exclusions cover every positive m. QED.
+
+THEOREM B1: WEIGHTED CURVATURE, WITHOUT A SMALL-DILATION ASSUMPTION
+
+Let x=sqrt(E), write H_i(x)=H_i(x^2), and ell_i=log H_i. Let p,r be constants.
+If on an open x interval
+  2 ell_i'+p >=0,
+  ell_i''+(ell_i')^2+p ell_i'+r <=0                   (B.1)
+for every isotope, and lambda_i x<a for every isotope, then
+  L D <=0 distributionally, L=d^2/dx^2+p d/dx+r.      (B.2)
+
+Proof. Put g_i(x)=eta(lambda_i x). Then g_i>=0, g_i'<=0 and g_i''<=0
+distributionally on this interval. Product differentiation gives
+  L[W_i g_i]=W_i[g_i''+(2 ell_i'+p)g_i'
+                    +(ell_i''+(ell_i')^2+p ell_i'+r)g_i]<=0.
+Sum over isotopes. This proof requires no bound on alpha_i-1 or Q_i^2/A_i^2.
+For this target the certificate additionally checks L[H_i Psi(q_i)]/H_i>0
+for every isotope separately, so the weak-charge spread requires no smallness
+condition either. QED.
+
+At threshold 0.51, choose p=0.146 keV^-1/2 and r=0.092 keV^-1. Throughout
+E in [0.51,0.510000001] keV, the interval computation verifies
+  min_i(2 ell_i'+p)>0.000690,
+  max_i(ell_i''+(ell_i')^2+p ell_i'+r)<-0.00123,
+  L N>1.006e6
+in the above raw normalization. The full balls are in results.json.
+In fact min_i L[H_i Psi(q_i)]/H_i>1.3700 on the same interval.
+
+Define mu_hi_i=c_light*sqrt(M_i*E_thr*10^-6/2)/a and
+  m_hi_i=M_i*mu_hi_i/(M_i-mu_hi_i).
+The extreme values at E_thr=.51 are
+  m_hi_124=7.4628366000548516566... GeV,
+  m_hi_136=7.7932130172867225011... GeV.
+Every isotope speed at threshold is below a if m>m_hi_136. Since each speed
+decreases with m, this remains true for arbitrarily large m even when the
+ordering of isotope speeds changes.
+For such m define
+  Delta=min(10^-9, min_i[(a/lambda_i)^2-.51])/2>0.
+On (.51,.51+Delta), also shortened to E_cut when necessary, (B.2) contradicts
+L N>0. Therefore, for every E_cut>.51,
+  M(.51,E_cut) is a subset of (0,7.7932130172867225011...].
+No sufficiency or sharpness is inferred from this bound. The reported binned
+edge 8.14 GeV is not an edge for equality of continuous spectra.
+
+LEMMA: FINITE POINT FUNCTIONALS HAVE AN EXACT FINITE SHELL TEST
+
+For fixed observed energies E_j and coefficients d_j, define
+  A[G]=sum_j d_j G(E_j)/N(E_j).
+Let K_m(E,u)=sum_i W_i(E)k(lambda_i sqrt(E),u) be a boosted-shell rate.
+For each fixed E, on every u interval excluding the breakpoints
+  0, V, |lambda_i sqrt(E)-a|, lambda_i sqrt(E)+a,
+the function K_m(E,u) is of the form A+B/u. Consequently the same holds for
+A[K_m(.,u)], whose maximum on such an interval is attained at an endpoint.
+Checking the finitely many relevant breakpoints proves its sign for all u>0.
+The u=0 shell is checked separately, or by an explicit low-u argument.
+If A[K_m(.,u)]<=0 for all u while A[N]>0, no nonnegative speed measure can
+produce N. This follows immediately by integrating the inequality against F.
+
+THEOREM B2: THE PROPOSED SUFFICIENCY STATEMENT IS FALSE
+
+At E_thr=.51, E_cut=3.5, all individual endpoint-support conditions hold for
+  m=6.0233 GeV,
+because their largest required mass is
+  max_i m_support_i(3.5)=6.0232769564069224721... GeV.
+Nevertheless m=6.0233 is NOT in M(.51,3.5).
+
+Certificate. Let E_j=.51+2.99*j/99 keV. Use the exact decimal coefficients
+  j     d_j
+   0   -0.0000001
+  86   -2.5091846054218256e-08
+  89   +4.232602196532087e-07
+  92   -3.12282552577074e-06
+  93   -5.49029821603542e-05
+  94   -0.0029039370021078214
+  97   +0.04322536788188634
+  98   -0.49420890705022336
+  99   +0.45960331182823005.
+Then
+  A[N]=sum_j d_j=0.005658108018472682650444>0.
+For u<=400, every positive-coefficient observation has all isotope speeds
+greater than 632=u_bound+a, so its kernel is zero; A[K]<=0.
+For u in [400,544], the code checks every relevant breakpoint (83 including
+the two interval boundaries), obtaining
+  A[K_m(.,u)] < -1.81e-9.
+The lemma proves the exclusion for all shells, hence all speed measures. QED.
+
+The necessity claimed for the proposed lower edge also does not follow from
+support: a positive isotope SUM needs at least one contributing isotope, not
+every isotope. Bare support gives a necessary minimum over isotopes, equal
+to 5.7641076891152682379... GeV at E_cut=3.5. It is not sufficient.
+
+Even for one isotope, finite-cutoff support is not the whole extension
+condition. If w_c>V-a, then eta is convex above w_c and
+  eta(w_c) <= (S-w_c)(-eta'(w_c)).                    (B.3)
+Proof: for w>V-a each contributing shell is (u+a-w)_+/(2au), and
+(u+a-w)_+ <= (S-w) 1_{u+a>w}; integrate.
+For the target Psi(mu w), this requires
+  mu >= [q_c+Psi(q_c)/(2h(q_c))]/S
+in consistent natural units. The additional positive term disappears only
+at a true zero endpoint. This illustrates the lost terminal data at E_cut.
+
+Small dilations alone do not supply a Neumann-series proof. Translation by
+any nonzero distance on bounded continuous functions on R differs from the
+identity by operator norm 2; in log velocity, dilation is translation. A
+contraction requires an additional norm, regularity estimates and positivity
+margins, none of which follow from |alpha_i-1| being small for all admissible
+halos. The certificate above directly rules out the proposed universal claim.
+
+THEOREM B3: AN EXPLICIT, NON-SHARP CRITICAL-THRESHOLD EXCLUSION
+
+For E_cut=3.5 and every E_thr<=0.30 keV,
+  M(E_thr,3.5) is empty.
+
+Proof. If m<5.764, bare support excludes equality at 3.5. For the entire
+interval 5.764<=m<=5.893 use the preceding finite-point lemma with only
+  d_0=-0.0000001,
+  d_93=-0.18393443965754055,
+  d_99=+0.8160655603424595.
+Its target value is 0.63213102068491895>0. The code verifies its shell sign
+throughout this mass interval using five interval cells. All these energy
+points lie in [E_thr,3.5].
+
+For m>5.893 every isotope is below a at .30, because
+  max_i m_hi_i(.30)=5.8925713382733308205...<5.893.
+At .30 choose p=.113 keV^-1/2 and r=.089 keV^-1. On
+[.30,.300000001], the code verifies (B.1) and L N>6.53e5, so the local
+curvature obstruction applies to every remaining mass. QED.
+
+This establishes emptiness below .30; it does not locate the exact critical
+threshold. In particular no assertion of membership just above .30 is made.
+
+CUTOFF DEPENDENCE AND THE EXACT GAP
+
+Raising E_cut or lowering E_thr can only shrink the membership set. Thus the
+6.0233 counterexample and the .30-keV empty-set theorem also apply when the
+upper cut is raised above 3.5. Theorem B1 is local and applies to every
+E_cut>E_thr at the specified threshold. Theorem A uses observation of the
+actual zero endpoint E_b and does not establish emptiness at E_cut=3.5.
+
+For a truncated interval, (A.1) has unknown terminal values: y(E) need not
+vanish above E_cut. Substituting zero there changes the problem. Solving for
+those terminal values subject to the global tail-positivity/equality
+constraints is the remaining existence problem. Neither a grid-feasible
+halo nor the upper-edge differential inequality solves it.
+
+Unproved: the exact M(.51,3.5), existence at any specified mass on that
+interval, connectedness of M, the sharp upper edge, and the sharp critical
+threshold. This package contains exclusion certificates only, with an
+explicit counterexample to the requested sufficiency statement.
