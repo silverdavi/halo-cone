@@ -3,7 +3,10 @@
 Code and interval-arithmetic certificates for D. H. Silver, *Isotropy, not the Maxwellian, decides
 where solar ⁸B neutrinos can exactly mimic dark matter in xenon* (submitted to JCAP).
 
-<!-- DOI-BADGE -->
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23824845.svg)](https://doi.org/10.5281/zenodo.23824845)
+
+Archive: Zenodo, concept DOI [10.5281/zenodo.23824845](https://doi.org/10.5281/zenodo.23824845) (all versions);
+v1.0.1 is [10.5281/zenodo.23824846](https://doi.org/10.5281/zenodo.23824846).
 
 Solar ⁸B neutrinos scattering coherently on xenon give a recoil spectrum close to that of a light
 dark-matter particle. If any dark-matter velocity distribution is allowed, some distribution
@@ -114,6 +117,7 @@ a dark disk) are outside the theorem.
   version   = {v1.0.1},
   publisher = {Zenodo},
   year      = {2026},
+  doi       = {10.5281/zenodo.23824845},
   url       = {https://github.com/silverdavi/halo-cone}
 }
 ```
