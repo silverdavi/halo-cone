@@ -8,10 +8,11 @@ them without matplotlib.
 """
 from __future__ import annotations
 
+import os
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-FIGDIR = ROOT / "paper" / "figs"
+FIGDIR = Path(os.environ.get("HALO_FIGDIR", ROOT / "paper" / "figs"))
 
 FONT_STACK = ["TeX Gyre Heros", "Helvetica Neue", "Arial", "DejaVu Sans"]
 FONT_CSS = ", ".join(FONT_STACK + ["sans-serif"])
@@ -43,9 +44,10 @@ ROLES = {
 
 SEQUENTIAL = "cividis"           # ordered strata; sampled only on the dark half
 
-# figure widths in inches for a two-column APS page
+# figure widths in inches for a two-column APS page; HALO_FIG_W2 sets the full width
+# for a single-column journal (JCAP text width: 440 pt = 6.09 in)
 W1 = 3.375
-W2 = 7.0
+W2 = float(os.environ.get("HALO_FIG_W2", 7.0))
 
 
 def c(name: str) -> str:
@@ -169,4 +171,4 @@ def save_fig(fig, name: str) -> None:
     FIGDIR.mkdir(parents=True, exist_ok=True)
     fig.savefig(FIGDIR / f"{name}.pdf", bbox_inches=None, facecolor="white")
     fig.savefig(FIGDIR / f"{name}.png", dpi=300, bbox_inches=None, facecolor="white")
-    print(f"saved paper/figs/{name}.pdf and .png")
+    print(f"saved {FIGDIR}/{name}.pdf and .png")

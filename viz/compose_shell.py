@@ -47,10 +47,13 @@ PANEL_H = 400
 TOP = 92                          # room for panel letters and regime lines
 H = TOP + PANEL_H + 40
 D_X = 3 * PANEL_W + 40            # panel d origin
-D_W = W - D_X - 10
 
-FS = 30      # 7.2 pt at 300 units/in
-FS_SMALL = 26
+# HALO_SHELL_FONT_SCALE enlarges the type when the figure is printed narrower than 7 in
+# (1.146 keeps 7.2/6.2 pt at the 440 pt JCAP text width)
+_FONT_SCALE = float(os.environ.get("HALO_SHELL_FONT_SCALE", 1.0))
+FS = round(30 * _FONT_SCALE)      # 7.2 pt at 300 units/in
+FS_SMALL = round(26 * _FONT_SCALE)
+D_W = W - D_X - 10 - round(300 * (_FONT_SCALE - 1))   # larger type needs a right margin
 INK = C["ink"]
 
 W_VALUES = (100, 400, 700)

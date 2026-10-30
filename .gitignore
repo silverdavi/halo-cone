@@ -24,8 +24,8 @@ data/
 # cached mono-energetic response grid (rebuilt by analysis.py from the release)
 results/mono_grid.npz
 
-# Manuscript text and journal submission package: not public before acceptance
-# (the manuscript is not posted as a preprint). numbers.tex, tables/ and figs/ are code outputs and are kept.
+# Manuscript text and journal submission packages: not public until the arXiv version is posted
+# (branch paper-source adds them). numbers.tex, tables/ and figs/ are code outputs and are kept.
 paper/main.tex
 paper/macros.tex
 paper/sections/
@@ -51,3 +51,6 @@ viz/out/shell.svg
 hero/out/
 hero/*.svg
 hero/*.png
+
+# Notes for other projects (video scripts)
+script/

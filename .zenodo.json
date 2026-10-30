@@ -3,7 +3,7 @@
   "upload_type": "software",
   "access_right": "open",
   "license": "MIT",
-  "description": "Analysis code and interval-arithmetic certificates for the paper \"Isotropy, not the Maxwellian, decides where solar 8B neutrinos can exactly mimic dark matter in xenon\". The pipeline computes the convex cone of dark-matter recoil spectra for arbitrary and for isotropic halos on the released XENONnT light-WIMP response and on an ideal xenon detector, the exact degeneracy window with solar 8B coherent neutrino scattering, the halo-independent discovery limit and neutrino-fog index, background-corrected and profiled separation exposures, annual modulation, and the CaWO4 complementarity forecast. Two standalone certificates (exact rational interval arithmetic; Arb ball arithmetic via python-flint) prove the convexity lemma and the natural-xenon upper edge. fetch_data.sh downloads the public inputs (XENONnT release v0.0.1, CRESST-III Detector A, solar fluxes) and checks their SHA-256 hashes; run_all.sh rebuilds every number, table and figure with one command.",
+  "description": "Analysis code and interval-arithmetic certificates for the paper \"Isotropy, not the Maxwellian, decides where solar 8B neutrinos can exactly mimic dark matter in xenon\" (D. H. Silver, submitted to JCAP). Version v1.0.1 is the code of the JCAP submission; its numbers are those of v1.0.0, and it adds single-column figure rendering. The pipeline computes the convex cone of dark-matter recoil spectra for arbitrary and for isotropic halos on the released XENONnT light-WIMP response and on an ideal xenon detector, the exact degeneracy window with solar 8B coherent neutrino scattering, the halo-independent discovery limit and neutrino-fog index, background-corrected and profiled separation exposures, annual modulation, and the CaWO4 complementarity forecast. Three standalone certificates (exact rational interval arithmetic; Arb ball arithmetic via python-flint) prove the convexity of the 8B target, the natural-xenon upper edge and its form-factor robustness. fetch_data.sh downloads the public inputs (XENONnT release v0.0.1, CRESST-III Detector A, solar fluxes) and checks their SHA-256 hashes; run_all.sh rebuilds the results, tables and figures.",
   "creators": [
     {
       "name": "Silver, David H.",
@@ -12,14 +12,15 @@
     }
   ],
   "keywords": [
-    "neutrino fog",
+    "dark matter",
+    "direct detection",
     "neutrino floor",
-    "halo-independent methods",
-    "isotropic velocity distribution",
+    "neutrino fog",
+    "xenon",
     "solar 8B neutrinos",
     "coherent elastic neutrino-nucleus scattering",
-    "light dark matter",
-    "xenon detectors",
+    "halo-independent methods",
+    "isotropic velocity distribution",
     "interval arithmetic"
   ],
   "related_identifiers": [
@@ -28,5 +29,7 @@
       "relation": "requires",
       "scheme": "doi"
     }
-  ]
+  ],
+  "version": "v1.0.1",
+  "publication_date": "2026-10-30"
 }
