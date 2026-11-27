@@ -14,6 +14,7 @@ if [ -z "${SKIP_SLOW:-}" ]; then
   $PY robustness.py    # yields, v_E, v_esc, spectrum source, tolerance                 -> results/robustness.json
   $PY discovery.py     # halo-independent discovery limit and fog index                 -> results/discovery.json
   $PY complement.py    # CaWO4 exposure that lifts the degeneracy                        -> results/complement.json
+  $PY targets.py       # windows and critical thresholds for Xe, I, Ge, Ar, Si, Na, F     -> results/targets.json
 
   echo "== Interval-arithmetic certificates =="
   $PY verification/certify.py                   # convexity of the 8B target (q_*, E_*)

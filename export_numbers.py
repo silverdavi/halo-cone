@@ -343,6 +343,15 @@ def main():
     N["comp_factor_range"] = [min(f), max(f)]
     N["comp_masses_inside"] = sorted(pairs)
 
+    # --- other targets (targets.py)
+    tg = json.load(open(RES / "targets.json"))
+    N["q_c_MeV"] = tg["q_c_MeV"]
+    N["mu_lo_GeV"] = tg["mu_lo_GeV"]
+    N["mu_star_GeV"] = tg["q_star_MeV"] * 1e-3 * A.C_KM / A.V_EARTH
+    N["targets"] = {k: dict(E_end=v["E_end_keV"], E_c=v["E_c_keV"], m_lo=v["m_lo_analytic"],
+                            thresholds=v["thresholds"], m_hi=v["m_hi_analytic"],
+                            windows={t: v["numeric"][t]["window"] for t in v["numeric"]})
+                    for k, v in tg["targets"].items()}
     (RES / "numbers.json").write_text(json.dumps(N, indent=1, default=float))
     write_macros(N)
     write_tables(N)
@@ -427,6 +436,13 @@ def write_macros(N):
         L.append(f"\\newcommand{{\\{name}}}{{{value}}}  % {src}")
 
     mac("nVE", f"{N['vE']:.0f}", "analysis.V_EARTH")
+    mac("nQc", f"{N['q_c_MeV']:.2f}", "q_c = U v_E/(v_esc+v_E), targets.py")
+    mac("nMuLo", f"{N['mu_lo_GeV']:.2f}", "mu_lo = U/(v_esc+v_E) in GeV, targets.py")
+    mac("nMuStar", f"{N['mu_star_GeV']:.2f}", "q_*/v_E in GeV, targets.py")
+    mac("nTargetsN", f"{len(N['targets'])}", "number of targets in targets.py")
+    for key, nm in (("Ar", "Ar"), ("Ge", "Ge"), ("Si", "Si"), ("Na", "Na"), ("I", "I"), ("F", "F")):
+        mac(f"nEc{nm}", f"{N['targets'][key]['E_c']:.2f}", f"E_c for {key}, targets.py")
+        mac(f"nMlo{nm}", f"{N['targets'][key]['m_lo']:.1f}", f"m_lo for {key}, targets.py")
     mac("nVesc", f"{N['vesc']:.0f}", "analysis.V_ESC")
     mac("nVmax", f"{N['vmax']:.0f}", "v_esc + v_E")
     mac("nVEmin", f"{N['vE_min']:.0f}", "annual minimum of the Earth speed")
@@ -736,6 +752,19 @@ def write_tables(N):
         w = N["ideal_windows"][t]
         rows.append(f"{t:.2f} & {N['ideal_analytic_m_hi'][str(t)]:.2f} & {win(w['1e-12'])} & {win(w['0.001'])} \\\\")
     (PAPER / "tables" / "ideal.tex").write_text("\n".join(rows) + "\n")
+
+    def win2(w):
+        return f"[{w[0]:.1f}, {w[1]:.1f}]" if w else "none"
+    names = {"Xe": "Xe (natural)", "I": r"$^{127}$I", "Ge": "Ge (natural)", "Ar": "Ar (natural)",
+             "Si": "Si (natural)", "Na": r"$^{23}$Na", "F": r"$^{19}$F"}
+    trows = []
+    for key in ("Xe", "I", "Ge", "Ar", "Si", "Na", "F"):
+        t = N["targets"][key]
+        below, at = t["thresholds"][0], t["thresholds"][2]
+        trows.append(f"{names[key]} & {t['E_end']:.1f} & {t['E_c']:.2f} & {t['m_lo']:.1f} & "
+                     f"{at:.2f} & {t['m_hi'][str(at)]:.1f} & {win2(t['windows'][str(at)]['1e-12'])} & "
+                     f"{win2(t['windows'][str(below)]['1e-12'])} \\\\")
+    (PAPER / "tables" / "targets.tex").write_text("\n".join(trows) + "\n")
 
     rob = N["rob"]
     iso = lambda k: rob[k + " | isotropic"]  # noqa: E731

@@ -418,6 +418,81 @@ def fig_separation():
     plt.close(fig)
 
 
+def fig_targets():
+    """One momentum wedge for every nucleus (a); the critical threshold falls as 1/m_N (b)."""
+    tg = load("targets.json")
+    q_c = tg["q_c_MeV"]
+    mu_lo = tg["mu_lo_GeV"]
+    ckm = A.C_KM
+    order = ["Xe", "I", "Ge", "Ar", "Si", "Na", "F"]
+    fig, ax = plt.subplots(1, 2, figsize=(fs.W2, 2.6), gridspec_kw=dict(width_ratios=[1.25, 1]))
+
+    # (a) reduced mass against momentum threshold, with every target's cone-test windows mapped in
+    q = np.linspace(2.5, 12.0, 300)
+    mu_hi = q * 1e-3 * ckm / A.V_EARTH
+    a = ax[0]
+    a.fill_between(q, mu_lo, mu_hi, where=mu_hi > mu_lo, color=WINDOW, lw=0, zorder=0)
+    a.plot(q, mu_hi, color=ISO, lw=1.4, zorder=3)
+    a.axhline(mu_lo, color=ANY, lw=1.15, zorder=3)
+    a.axvline(q_c, color=EDGE, lw=0.6, ls=":")
+    a.axvline(tg["q_star_MeV"], color=NU, lw=0.6, ls="--")
+    n_pts = 0
+    for key in order:
+        t = tg["targets"][key]
+        isos = t["isotopes"]
+        A_mean = sum(a_ * f for a_, _z, f in isos) / sum(f for _a, _z, f in isos)
+        m_N = A_mean * A.AMU
+        for thr, rec in t["numeric"].items():
+            w = rec["window"]["1e-12"]
+            qt = np.sqrt(m_N * float(thr) * 1e-6 / 2.0) * 1e3
+            if w:
+                mus = [m * m_N / (m + m_N) for m in w]
+                a.plot([qt, qt], mus, color=INK, lw=0.7, zorder=4)
+                a.plot([qt, qt], mus, "_", color=INK, ms=4, mew=0.8, zorder=4)
+            else:
+                a.plot(qt, mu_lo, "x", color=INK, ms=3.5, mew=0.8, zorder=4)
+            n_pts += 1
+    tag(a, q_c, 3.05, rf"$q_c={q_c:.2f}$ MeV", EDGE, ha="left", va="bottom", dx=3)
+    tag(a, tg["q_star_MeV"], 13.6, rf"$q_*={tg['q_star_MeV']:.2f}$ MeV", NU, ha="left", va="top", dx=3)
+    tag(a, 11.7, 13.4, r"$\mu_N=q_{\rm thr}/v_E$", ISO, ha="right", va="top")
+    tag(a, 11.7, mu_lo, rf"$\mu_N={mu_lo:.2f}$ GeV", ANY, ha="right", va="top", dy=-3)
+    a.set_xlim(2.5, 12.0)
+    a.set_ylim(2.8, 14.0)
+    a.set_xlabel(r"momentum threshold $q_{\rm thr}$ (MeV)")
+    a.set_ylabel(r"reduced mass $\mu_N$ (GeV)")
+    fs.panel_label(a, "a")
+
+    # (b) critical threshold against mass number
+    b = ax[1]
+    Ag = np.geomspace(15, 150, 200)
+    b.plot(Ag, 2 * (q_c * 1e-3) ** 2 / (Ag * A.AMU) * 1e6, color=EDGE, lw=1.0, zorder=2)
+    for key in order:
+        t = tg["targets"][key]
+        isos = t["isotopes"]
+        A_mean = sum(a_ * f for a_, _z, f in isos) / sum(f for _a, _z, f in isos)
+        b.plot(A_mean, t["E_c_keV"], "o", color=ISO, ms=3.6, zorder=4)
+        if key == "I":
+            tag(b, A_mean, t["E_c_keV"], key, ISO, ha="right", va="top", dx=-4, dy=-2)
+        else:
+            tag(b, A_mean, t["E_c_keV"], key, ISO, ha="left", va="bottom", dx=4, dy=3)
+    b.set_xscale("log")
+    b.set_yscale("log")
+    b.set_xlim(15, 160)
+    b.set_ylim(0.3, 4.0)
+    b.set_xticks([20, 30, 50, 100, 150])
+    b.set_xticklabels(["20", "30", "50", "100", "150"])
+    b.set_yticks([0.3, 0.5, 1, 2, 3])
+    b.set_yticklabels(["0.3", "0.5", "1", "2", "3"])
+    b.minorticks_off()
+    b.set_xlabel(r"mass number $A$")
+    b.set_ylabel(r"critical threshold $E_c$ (keV)")
+    fs.panel_label(b, "b")
+    fig.subplots_adjust(left=0.07, right=0.985, bottom=0.17, top=0.92, wspace=0.28)
+    fs.save_fig(fig, "targets")
+    plt.close(fig)
+    print("targets figure: cone-test windows mapped", n_pts)
+
+
 if __name__ == "__main__":
     for role_name, on in (("isotropic", "#ffffff"), ("isotropic", WINDOW),
                           ("neutrino", "#ffffff"), ("shm", "#ffffff")):
@@ -431,3 +506,4 @@ if __name__ == "__main__":
     fig_edges()
     fig_discovery()
     fig_separation()
+    fig_targets()

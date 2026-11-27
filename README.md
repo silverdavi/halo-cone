@@ -26,6 +26,11 @@ standalone interval-arithmetic certificates.
 | any velocity distribution | every m ≥ 6.7 GeV (ideal ¹³¹Xe detector); every m ≥ 4.6 GeV in the released XENONnT observable |
 | isotropic in the Galactic frame | 6.7 ≤ m ≤ 7.7 GeV (¹³¹Xe, 0.51 keV threshold, exact); 5.0–12.6 GeV in the released observable at residual 10⁻³ |
 
+Every target: in momentum transfer the window is the same for every nucleus,
+U/(v_esc+v_E) <= mu_N <= q_thr/v_E, and it is empty below q_c = U v_E/(v_esc+v_E) = 4.89 MeV
+(critical threshold 0.40 keV for I, 0.73 keV for Ge, 1.42 keV for Ar, 1.83 keV for Si, 2.23 keV
+for Na, 2.70 keV for F). `targets.py` checks this with the same cone test on each target.
+
 Why: the halo function of every isotropic halo is concave in v_min below the Earth's speed v_E,
 while the ⁸B spectrum written as a halo function is strictly convex. Exact equality therefore
 needs v_min(E_thr) ≥ v_E (upper edge) and v_min(E_end) ≤ v_esc + v_E (lower edge). For natural
