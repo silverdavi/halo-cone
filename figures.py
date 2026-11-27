@@ -493,6 +493,31 @@ def fig_targets():
     print("targets figure: cone-test windows mapped", n_pts)
 
 
+def fig_cover_targets():
+    """Cover-letter figure: the momentum window, with every target's critical threshold marked on it."""
+    tg = load("targets.json")
+    q_c, mu_lo = tg["q_c_MeV"], tg["mu_lo_GeV"]
+    fig, a = plt.subplots(figsize=(fs.W1, 2.45))
+    q = np.linspace(3.0, 11.0, 300)
+    mu_hi = q * 1e-3 * A.C_KM / A.V_EARTH
+    a.fill_between(q, mu_lo, mu_hi, where=mu_hi > mu_lo, color=WINDOW, lw=0, zorder=0)
+    a.plot(q, mu_hi, color=ISO, lw=1.4, zorder=3)
+    a.axhline(mu_lo, color=ANY, lw=1.1, zorder=3)
+    a.axvline(q_c, color=EDGE, lw=0.6, ls=":")
+    tag(a, q_c, 12.6, rf"$q_c={q_c:.2f}$ MeV", EDGE, ha="left", va="top", dx=3)
+    N = numbers()
+    ecs = f"Xe {N['E_c_131']:.2f}, " + ", ".join(f"{k} {tg['targets'][k]['E_c_keV']:.2f}" for k in ("Ge", "Ar", "F"))
+    a.text(10.8, 4.0, "critical threshold (keV):\n" + ecs, color=INK, fontsize=6.3, ha="right", va="center")
+    a.text(8.6, 8.9, "exact isotropic\nmimic", color=INK, fontsize=7, ha="center", va="center")
+    a.set_xlim(3.0, 11.0)
+    a.set_ylim(3.0, 13.0)
+    a.set_xlabel(r"momentum threshold $q_{\rm thr}$ (MeV)")
+    a.set_ylabel(r"reduced mass $\mu_N$ (GeV)")
+    fig.subplots_adjust(left=0.15, right=0.97, bottom=0.17, top=0.97)
+    fs.save_fig(fig, "cover_targets")
+    plt.close(fig)
+
+
 if __name__ == "__main__":
     for role_name, on in (("isotropic", "#ffffff"), ("isotropic", WINDOW),
                           ("neutrino", "#ffffff"), ("shm", "#ffffff")):
@@ -507,3 +532,4 @@ if __name__ == "__main__":
     fig_discovery()
     fig_separation()
     fig_targets()
+    fig_cover_targets()
